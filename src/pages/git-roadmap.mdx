@@ -194,6 +194,15 @@ Working Directory → Staging Area → Repository
 2. **Staging Area (Index)** - Commit-ə hazır olan dəyişikliklər
 3. **Repository (.git)** - Commit edilmiş dəyişikliklər
 
+### 🧠 Deep Dive: .git Folderinin İçi
+`git init` edəndə yaranan o gizli folderdə nə var?
+*   **HEAD**: Cari branch-a olan referans (məs: `ref: refs/heads/main`).
+*   **objects/**: Git-in "verilənlər bazası". Hər commit, ağac (tree) və fayl (blob) burada sıxılmış şəkildə saxlanır.
+*   **refs/**: Branch və tag-lərin göstəriciləri (pointerlər).
+*   **config**: Repository konfiqurasiyası.
+
+---
+
 ## Əsas Komandalar
 
 ### git status
@@ -526,6 +535,19 @@ git commit -m "Resolve merge conflict"
 git merge --abort
 ```
 
+### 🥊 Merge Conflict Gym
+**Tapşırıq**: Conflict qorxusunu məğlub et!
+1.  Yeni bir repo yarad: `mkdir gym && cd gym && git init`.
+2.  `main` branch-da `file.txt` yarat və "Hello World" yaz. Commit et.
+3.  Yeni branch yarat: `git checkout -b feature`.
+4.  `file.txt`-də "Hello World" əvəzinə "Hello Galaxy" yaz. Commit et.
+5.  `main`-ə qayıt: `git checkout main`.
+6.  `file.txt`-də "Hello World" əvəzinə "Hello Universe" yaz. Commit et.
+7.  Merge et: `git merge feature`. **BOOM! Conflict!** 💥
+8.  Faylı aç, conflict-i həll et və commit et.
+
+---
+
 ## Rebase
 
 Alternative merge method - commit-ləri yenidən yazır.
@@ -832,6 +854,38 @@ git cherry-pick abc123 --no-commit
 # Abort
 git cherry-pick --abort
 ```
+
+## 🛠️ Expert Tools
+
+### git bisect (Bug Hunter)
+Kodda hansı commit-in bug yaratdığını tapmaq üçün "Binary Search" edir.
+```bash
+git bisect start
+git bisect bad            # Cari versiya xarabdır
+git bisect good abc123    # Bu versiya işləyirdi
+
+# Git səni ortadakı commit-ə atacaq. Yoxla:
+# İşləyirsə: git bisect good
+# İşləmirsə: git bisect bad
+# Tapanadək davam et!
+```
+
+### git reflog (Time Machine)
+"Səhvən sildim", "Reset etdim peşman oldum" deyirsənsə:
+```bash
+git reflog
+# Sənə bütün hərəkətlərini göstərir (reset, checkout daxil).
+# Silinmiş commit-i tap və geri qaytar:
+git reset --hard HEAD@{3}
+```
+
+### git rerere (Reuse Recorded Resolution)
+Eyni conflict-i bir dəfə həll et, Git yadda saxlasın və gələn dəfə avtomatik etsin.
+```bash
+git config --global rerere.enabled true
+```
+
+---
 
 ## Reset, Revert, Restore
 

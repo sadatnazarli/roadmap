@@ -140,6 +140,11 @@ clear
 - `Ctrl + P` - əvvəlki komanda (↑)
 - `Ctrl + N` - növbəti komanda (↓)
 
+### 🧠 Deep Dive: Kernel vs User Space
+Linux iki dünyadan ibarətdir:
+1.  **User Space**: Sənin proqramlarının (Chrome, VS Code, ls) işlədiyi yer. Bura təhlükəsizdir, bir proqram çökərsə sistemi dağıtmaz.
+2.  **Kernel Space**: RAM, CPU və disklə birbaşa danışan "BOSS". Sənin proqramın fayl oxumaq istəyəndə Kernel-ə xahiş edir (**System Call**).
+
 <ProgressTracker  lessonId="linux-level-0" roadmapSlug="linux" />
 
 <QuizBlock 
@@ -282,6 +287,16 @@ sudo chown user file.txt
 sudo chown user:group file.txt
 sudo chown -R user:group folder/
 ```
+
+### 🧠 Deep Dive: Inodes
+Sən faylın adını ("file.txt") görürsən, amma Linux onu **Inode Number** (məs: 123456) kimi görür.
+Inode faylın metadatasını saxlayır:
+*   Sahibi kimdir?
+*   İcazələr nədir?
+*   Diskdə harada yerləşir?
+`ls -i` yazaraq faylların inode nömrəsini görə bilərsən. Faylın adını dəyişsən belə Inode eyni qalır!
+
+---
 
 ## Wildcards (Patterns)
 
@@ -625,6 +640,11 @@ for fruit in "${fruits[@]}"; do
     echo $fruit
 done
 ```
+
+### 🥊 Scripting Gym: Automation Challenges
+1.  **Backup Script**: `backup.sh` yaz. Arqument kimi folder qəbul etsin, onu `.tar.gz` etsin və adına tarix əlavə etsin (`backup_2024-02-17.tar.gz`).
+2.  **Log Analyzer**: Log faylından "ERROR" sözü keçən sətirləri tapıb `errors.txt` faylına yazan script.
+3.  **User Creator**: Massivdəki adlar siyahısını oxuyub hər biri üçün user yaradan (sudo ilə) script.
 
 <ProgressTracker  lessonId="linux-level-3" roadmapSlug="linux" />
 
