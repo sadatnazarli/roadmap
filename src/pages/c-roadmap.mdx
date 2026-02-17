@@ -426,6 +426,12 @@ int factorial(int n) {
 - Hanoi Tower problemi (rekursiya)
 - Menyu əsaslı proqram (funksiyalarla)
 
+### 🧠 Mini-Challenge: Funksiya Ustası
+> **Tapşırıq**: `calculator(int a, int b, char op)` adlı funksiya yaz.
+> - `op` '+', '-', '*', '/' ola bilər.
+> - Uyğun əməliyyatı yerinə yetirib nəticəni qaytarsın.
+> - Yanlış operator daxil edilərsə 0 qaytarsın və error mesajı versin.
+
 <ProgressTracker  lessonId="c-level-1" roadmapSlug="c" />
 
 <QuizBlock 
@@ -582,6 +588,10 @@ printf("%d\n", *(p+2));  // 30
 
 p++;
 printf("%d\n", *p);      // 20
+
+> **💡 Pro Tip: Pointer Arithmetic**
+> Pointeri artırdıqda (`p++`), o yaddaşda `1 bayt` yox, `sizeof(type)` qədər irəliləyir.
+> Məsələn, `int *p` üçün `p+1` əslində yaddaşda 4 bayt irəli gedir. Buna görə massivlərdə gəzmək mümkündür!
 ```
 
 ### Pointer və Massivlər:
@@ -848,6 +858,12 @@ fclose(fp);
 - Log sistemi
 - Tələbə qeydləri (fayla save/load)
 - Failə şifrələnmiş mətn yazmaq
+
+### 🧠 Mini-Challenge: Log Sistemi
+> **Tapşırıq**: Sadə bir log sistemi qur.
+> - `log_save(char *message)` funksiyası yaz.
+> - Bu funksiya cari tarixi və saatı alıb, `logs.txt` faylının sonuna `[YYYY-MM-DD HH:MM] Mesaj` formatında yazsın.
+> - Fayl yoxdursa yaradılsın.
 
 <ProgressTracker  lessonId="c-level-2" roadmapSlug="c" />
 
@@ -1207,6 +1223,13 @@ gcc -g program.c -o program
 # GDB-də işə sal
 gdb ./program
 
+> **💡 Pro Tip: Segfault Debugging**
+> Proqram "Segmentation fault" verib çöksə, qorxma!
+> 1. `ulimit -c unlimited` yaz (core dump aktivləşdir).
+> 2. Proqramı işlət (çökəcək).
+> 3. `gdb ./program core` yaz.
+> 4. `bt` (backtrace) komandasını ver. GDB sənə xətanın hansı funksiyada və neçənci sətirdə baş verdiyini dəqiq deyəcək.
+
 # GDB komandaları
 break main          # breakpoint
 run                 # proqramı başlat
@@ -1237,6 +1260,12 @@ void test_add() {
 - GDB ilə debug et
 - Memory leak-ləri tap və düzəlt
 - Test suite yaz
+
+### 🧠 Mini-Challenge: Binary Search Structs
+> **Tapşırıq**: `Student` struct massivi yaradın (ID-yə görə sıralı).
+> - `binary_search_student(Student students[], int n, int targetID)` funksiyası yazın.
+> - Funksiya tapılan tələbənin adını qaytarmalıdır (və ya NULL).
+> - 1000 elementli massivdə performansını xətti axtarışla müqayisə edin.
 
 <ProgressTracker  lessonId="c-level-3" roadmapSlug="c" />
 
@@ -1538,6 +1567,12 @@ int main() {
 }
 ```
 
+### 🧠 Mini-Challenge: Signal Interceptor
+> **Tapşırıq**: `SIGINT` (Ctrl+C) siqnalını tutan proqram yazın.
+> - Proqram sonsuz döngüdə "İşləyir..." çap etsin.
+> - İstifadəçi Ctrl+C basdıqda proqram dayanmasın, "Zəhmət olmasa 'exit' yazın" desin.
+> - Yalnız 3-cü Ctrl+C cəhdində proqram sonlansın.
+
 <ProgressTracker  lessonId="c-level-4" roadmapSlug="c" />
 
 <QuizBlock 
@@ -1746,6 +1781,34 @@ char *shared = (char*)shmat(shmid, NULL, 0);
 
 ---
 
+---
+
+# 🏋️‍♂️ Algorithm Gym
+
+Bu bölmə səviyyələrdən asılı deyil. İstənilən vaxt bura gəlib "əzələ yığa" bilərsən. Məqsəd alqoritmik düşüncəni inkişaf etdirməkdir.
+
+## 🤸 Warm-up (İsinmə)
+1.  **String Reversal**: Bir stringi yerindəcə (yeni massiv yaratmadan) tərsinə çevir.
+2.  **Palindrome Check**: Verilən sözün palindrom olub-olmadığını yoxla (məs: "ana", "radar").
+3.  **Anagram Check**: İki sözün bir-birinin anaqramı olduğunu yoxla (məs: "listen" və "silent").
+
+## 💪 Data Structures (Güc Məşqləri)
+1.  **Stack implementation**: Array istifadə edərək `push`, `pop`, `peek` funksiyalarını yaz.
+2.  **Queue implementation**: Linked List istifadə edərək növbəli sistem qurun.
+3.  **BST (Binary Search Tree)**: Ağaca element əlavə etmək (`insert`) və axtarış (`search`) funksiyalarını yaz.
+
+## 🏃 Sorting Arena (Kardio)
+Aşağıdakı alqoritmləri implementasiya et və 10,000 elementli massivdə yarışdır:
+*   [ ] Bubble Sort 🐢
+*   [ ] Selection Sort 🐢
+*   [ ] Insertion Sort 🚶
+*   [ ] Merge Sort 🐇
+*   [ ] Quick Sort 🚀
+
+> **Pro Tip**: `clock()` funksiyası ilə hər birinin işləmə müddətini ölç və nəticələri müqayisə et.
+
+---
+
 # 🛠️ Tools və Development Environment
 
 ## Compiler və Build Tools
@@ -1850,46 +1913,97 @@ int add(int a, int b) {
 
 ---
 
-# 📚 Layihə İdeyaları
+# 💻 Praktiki Layihələr Portfoliosu
 
-## Başlanğıc Layihələri:
-1. Sadə kalkulator
-2. Tələbə qeyd sistemi
-3. Tic-Tac-Toe oyunu
-4. To-Do list app
-5. Rəqəm təxmin oyunu
-6. Parol generatoru
-7. ASCII art generatoru
+Bu bölmədəki layihələr sənin portfoliosunu gücləndirəcək real-dünya tapşırıqlarıdır. Hər bir layihəni tamamladıqdan sonra GitHub-a yükləməyi unutma.
 
-## Orta Səviyyə:
-1. Text editor
-2. Kitabxana idarəetmə sistemi
-3. Mini database
-4. Snake oyunu (terminal)
-5. File compressor
-6. Basic shell
-7. Sudoku solver
-8. Chat application (terminal)
+## 🟢 Başlanğıc (Junior)
 
-## Advanced:
-1. Custom malloc implementation
-2. HTTP server
-3. JSON parser
-4. Virtual machine
-5. Compiler (sadə dil üçün)
-6. Memory allocator
-7. Thread pool library
-8. Custom container library (vector, map, etc.)
+### 1. Tələbə İdarəetmə Sistemi (Student Management System)
+Structlar, File I/O və Array-lər ilə işləmə bacarığını artır.
+- **Tələblər**:
+  - `Student` struct (ad, soyad, ID, ortalama bal).
+  - Yeni tələbə əlavə etmək.
+  - ID ilə tələbə axtarmaq.
+  - Bütün tələbələri siyahılamaq.
+  - Məlumatları faylda saxlamaq (proqram bağlansa da itməsin).
+- **Bonus**:
+  - Tələbəni silmək funksiyası.
+  - Ortalama bala görə sıralamaq.
 
-## Master:
-1. Operating system kernel (mini)
-2. Garbage collector
-3. JIT compiler
-4. Network protocol implementation
-5. File system
-6. Debugger
-7. Regular expression engine
-8. Emulator (CPU)
+### 2. Tic-Tac-Toe (X-O Oyunu)
+Məntiq qurma və 2D massivlərlə iş.
+- **Tələblər**:
+  - 3x3 oyun sahəsi.
+  - İki oyunçu (X və O) növbəli oynasın.
+  - Qalibiyyət yoxlanışı (sətir, sütun, diaqonal).
+  - Bərabərlik (draw) vəziyyəti.
+- **Bonus**:
+  - Kompüterə qarşı oynamaq (random gedişlər).
+  - Rəngli terminal çıxışı.
+
+---
+
+## 🟡 Orta Səviyyə (Mid-Level)
+
+### 3. Bank İdarəetmə Sistemi
+Daha kompleks məlumat strukturları və təhlükəsizlik.
+- **Tələblər**:
+  - İstifadəçi qeydiyyatı və giriş (Login/Register).
+  - Hesab balansı yoxlamaq.
+  - Pul köçürmə (bir istifadəçidən digərinə).
+  - Tranzaksiya tarixçəsi (faylda loglamaq).
+- **Bonus**:
+  - Şifrələri `hash` (sadə XOR şifrələmə) edərək saxlamaq.
+  - Admin paneli (bütün istifadəçiləri görmək).
+
+### 4. Sadə Text Editor (e.g., "mini-vim")
+String manipulyasiyası və fayl əməliyyatları.
+- **Tələblər**:
+  - Faylı açıb oxumaq.
+  - Mətnə əlavələr etmək (append).
+  - Sətir silmək.
+  - Dəyişiklikləri yadda saxlamaq.
+- **Bonus**:
+  - Axtarış funksiyası (söz tapmaq).
+  - "Undo" (geri qaytarmaq) funksiyası (Stack istifadə edərək).
+
+---
+
+## 🔴 Qabaqcıl (Senior/System)
+
+### 5. Custom Shell (Terminal)
+Əməliyyat sistemi konseptləri (Process, fork, exec).
+- **Tələblər**:
+  - Sonsuz döngüdə istifadəçidən əmr gözləmək (`myshell> `).
+  - Əsas əmrləri icra etmək (`ls`, `pwd`, `echo`, `cat`).
+  - `cd` əmrini implementasiya etmək (chdir syscall).
+  - `exit` ilə çıxmaq.
+- **Bonus**:
+  - Pipe (`|`) dəstəyi (məsələn: `ls | grep c`).
+  - Arxa planda işlətmək (`&`).
+  - Command history (yuxarı ox düyməsi).
+
+### 6. HTTP Server
+Şəbəkə proqramlaşdırması və soketlər.
+- **Tələblər**:
+  - Müəyyən portu dinləmək (məsələn: 8080).
+  - Browserdən gələn GET sorğusunu qəbul etmək.
+  - `index.html` faylını oxuyub browserə göndərmək.
+  - 404 xətası qaytarmaq (əgər fayl yoxdursa).
+- **Bonus**:
+  - Multithreading (eyni anda birdən çox istifadəçi).
+  - POST sorğularını qəbul etmək.
+
+### 7. Memory Allocator (malloc/free)
+Yaddaş idarəetməsini dərindən anlamaq.
+- **Tələblər**:
+  - `mymalloc(size_t size)` - Linked list istifadə edərək boş blok tapıb ayırmaq.
+  - `myfree(void* ptr)` - Bloku azad edib siyahıya qaytarmaq.
+  - Heap fragmentation-u azaltmaq üçün sadə strategiya (first-fit).
+- **Bonus**:
+  - `myrealloc` və `mycalloc`.
+  - Thread-safety (mutex ilə).
 
 ---
 
@@ -1990,6 +2104,12 @@ int add(int a, int b) {
 - [ ] OS concepts
 - [ ] Performance tuning
 - [ ] Embedded programming
+
+### 🧠 Mini-Challenge: Custom Allocator
+> **Tapşırıq**: Sabit ölçülü (məs: 1024 bayt) bir buffer idarə edən allocator yazın.
+> - `void* my_malloc(size_t size)`: Buffer-dən yer ayırır.
+> - `void my_free(void* ptr)`: Yeri boşaldır.
+> - Bitmap və ya Linked List istifadə edərək boş blokları izləyin.
 
 <ProgressTracker  lessonId="c-level-5" roadmapSlug="c" />
 
