@@ -1,13 +1,18 @@
+---
+layout: ../layouts/RoadmapLayout.astro
+title: "Linux & Terminal - Sıfırdan Master Səviyyəyə Roadmap"
+description: "Command Line və Linux sistem idarəetməsinin tam bələdçisi"
+---
 
-import ProgressTracker from '../components/interactive/ProgressTracker';
-import QuizBlock from '../components/interactive/QuizBlock';
-import CodeBlock from '../components/content/CodeBlock';
-import InfoBox from '../components/content/InfoBox';
-import LevelCard from '../components/content/LevelCard';
-import CommandCard from '../components/content/CommandCard';
-import ConceptCard from '../components/content/ConceptCard';
-import TaskList from '../components/content/TaskList';
-import DiagramCard from '../components/content/DiagramCard';
+import ProgressTracker from '../components/interactive/ProgressTracker.jsx';
+import QuizBlock from '../components/interactive/QuizBlock.jsx';
+import CodeBlock from '../components/content/CodeBlock.astro';
+import InfoBox from '../components/content/InfoBox.astro';
+import LevelCard from '../components/content/LevelCard.astro';
+import CommandCard from '../components/content/CommandCard.astro';
+import ConceptCard from '../components/content/ConceptCard.astro';
+import TaskList from '../components/content/TaskList.astro';
+import DiagramCard from '../components/content/DiagramCard.astro';
 
 
 # Linux & Terminal - Sıfırdan Master Səviyyəyə Roadmap 🐧
@@ -140,9 +145,9 @@ clear
 - `Ctrl + P` - əvvəlki komanda (↑)
 - `Ctrl + N` - növbəti komanda (↓)
 
-<ProgressTracker  lessonId="linux-level-0" roadmapSlug="linux" />
+<ProgressTracker client:visible lessonId="linux-level-0" roadmapSlug="linux" />
 
-<QuizBlock 
+<QuizBlock client:visible
   questions={[
     {
       q: "Terminal (Command Line) nədir?",
@@ -298,9 +303,9 @@ mkdir folder{1..5}    # folder1-folder5
 touch file{A,B,C}.txt # fileA.txt, fileB.txt, fileC.txt
 ```
 
-<ProgressTracker  lessonId="linux-level-1" roadmapSlug="linux" />
+<ProgressTracker client:visible lessonId="linux-level-1" roadmapSlug="linux" />
 
-<QuizBlock 
+<QuizBlock client:visible
   questions={[
     {
       q: "Linux file sistemi hansı simvolla başlarsa?",
@@ -426,9 +431,9 @@ command &> output.log           # stdout və stderr
 command < input.txt
 ```
 
-<ProgressTracker  lessonId="linux-level-2" roadmapSlug="linux" />
+<ProgressTracker client:visible lessonId="linux-level-2" roadmapSlug="linux" />
 
-<QuizBlock 
+<QuizBlock client:visible
   questions={[
     {
       q: "grep komandası nə enində istifadə olunur?",
@@ -626,9 +631,9 @@ for fruit in "${fruits[@]}"; do
 done
 ```
 
-<ProgressTracker  lessonId="linux-level-3" roadmapSlug="linux" />
+<ProgressTracker client:visible lessonId="linux-level-3" roadmapSlug="linux" />
 
-<QuizBlock 
+<QuizBlock client:visible
   questions={[
     {
       q: "Shebang (#!) nə enində istifadə olunur?",
@@ -722,9 +727,9 @@ uptime                  # uptime və load average
 w                       # logged in users
 ```
 
-<ProgressTracker  lessonId="linux-level-4" roadmapSlug="linux" />
+<ProgressTracker client:visible lessonId="linux-level-4" roadmapSlug="linux" />
 
-<QuizBlock 
+<QuizBlock client:visible
   questions={[
     {
       q: "ps komandası nə göstərir?",
@@ -951,9 +956,9 @@ crontab -l
 @hourly command              # hər saat
 ```
 
-<ProgressTracker  lessonId="linux-level-5" roadmapSlug="linux" />
+<ProgressTracker client:visible lessonId="linux-level-5" roadmapSlug="linux" />
 
-<QuizBlock 
+<QuizBlock client:visible
   questions={[
     {
       q: "Docker nə enində istifadə olunur?",

@@ -1,13 +1,17 @@
+---
+layout: ../layouts/RoadmapLayout.astro
+title: "C Proqramlaşdırma Dili - Tam Roadmap"
+---
 
-import ProgressTracker from '../components/interactive/ProgressTracker';
-import QuizBlock from '../components/interactive/QuizBlock';
-import CodeBlock from '../components/content/CodeBlock';
-import InfoBox from '../components/content/InfoBox';
-import LevelCard from '../components/content/LevelCard';
-import CommandCard from '../components/content/CommandCard';
-import ConceptCard from '../components/content/ConceptCard';
-import TaskList from '../components/content/TaskList';
-import DiagramCard from '../components/content/DiagramCard';
+import ProgressTracker from '../components/interactive/ProgressTracker.jsx';
+import QuizBlock from '../components/interactive/QuizBlock.jsx';
+import CodeBlock from '../components/content/CodeBlock.astro';
+import InfoBox from '../components/content/InfoBox.astro';
+import LevelCard from '../components/content/LevelCard.astro';
+import CommandCard from '../components/content/CommandCard.astro';
+import ConceptCard from '../components/content/ConceptCard.astro';
+import TaskList from '../components/content/TaskList.astro';
+import DiagramCard from '../components/content/DiagramCard.astro';
 
 # C Proqramlaşdırma Dili - Tam Roadmap 🚀
 
@@ -69,9 +73,9 @@ gcc hello.c -o hello
 ./hello
 ```
 
-<ProgressTracker  lessonId="c-level-0" roadmapSlug="c" />
+<ProgressTracker client:visible lessonId="c-level-0" roadmapSlug="c" />
 
-<QuizBlock 
+<QuizBlock client:visible
   questions={[
     {
       q: "C dilinin ilk versiyası nə zaman yaradılmışdır?",
@@ -426,9 +430,9 @@ int factorial(int n) {
 - Hanoi Tower problemi (rekursiya)
 - Menyu əsaslı proqram (funksiyalarla)
 
-<ProgressTracker  lessonId="c-level-1" roadmapSlug="c" />
+<ProgressTracker client:visible lessonId="c-level-1" roadmapSlug="c" />
 
-<QuizBlock 
+<QuizBlock client:visible
   questions={[
     {
       q: "C-də int data tippi neçə bayt yer tutur? (əksər sistemlərdə)",
@@ -849,9 +853,9 @@ fclose(fp);
 - Tələbə qeydləri (fayla save/load)
 - Failə şifrələnmiş mətn yazmaq
 
-<ProgressTracker  lessonId="c-level-2" roadmapSlug="c" />
+<ProgressTracker client:visible lessonId="c-level-2" roadmapSlug="c" />
 
-<QuizBlock 
+<QuizBlock client:visible
   questions={[
     {
       q: "Massiv indekslənməsi necə başlayır?",
@@ -1238,9 +1242,9 @@ void test_add() {
 - Memory leak-ləri tap və düzəlt
 - Test suite yaz
 
-<ProgressTracker  lessonId="c-level-3" roadmapSlug="c" />
+<ProgressTracker client:visible lessonId="c-level-3" roadmapSlug="c" />
 
-<QuizBlock 
+<QuizBlock client:visible
   questions={[
     {
       q: "Dynamic memory allocation üçün hansı funksiya istifadə olunur?",
@@ -1538,9 +1542,9 @@ int main() {
 }
 ```
 
-<ProgressTracker  lessonId="c-level-4" roadmapSlug="c" />
+<ProgressTracker client:visible lessonId="c-level-4" roadmapSlug="c" />
 
-<QuizBlock 
+<QuizBlock client:visible
   questions={[
     {
       q: "Bitwise AND operatoru (&) nə qaytar?",
@@ -1991,9 +1995,9 @@ int add(int a, int b) {
 - [ ] Performance tuning
 - [ ] Embedded programming
 
-<ProgressTracker  lessonId="c-level-5" roadmapSlug="c" />
+<ProgressTracker client:visible lessonId="c-level-5" roadmapSlug="c" />
 
-<QuizBlock 
+<QuizBlock client:visible
   questions={[
     {
       q: "Compiler nə edir?",

@@ -1,14 +1,3 @@
-
-import ProgressTracker from '../components/interactive/ProgressTracker';
-import QuizBlock from '../components/interactive/QuizBlock';
-import CodeBlock from '../components/content/CodeBlock';
-import InfoBox from '../components/content/InfoBox';
-import LevelCard from '../components/content/LevelCard';
-import CommandCard from '../components/content/CommandCard';
-import ConceptCard from '../components/content/ConceptCard';
-import TaskList from '../components/content/TaskList';
-import DiagramCard from '../components/content/DiagramCard';
-
 # C Proqramlaşdırma Dili - Tam Roadmap 🚀
 
 > Sıfırdan Ultra Advanced Səviyyəyə Qədər Tam Təlimat
@@ -68,43 +57,6 @@ gcc --version
 gcc hello.c -o hello
 ./hello
 ```
-
-<ProgressTracker  lessonId="c-level-0" roadmapSlug="c" />
-
-<QuizBlock 
-  questions={[
-    {
-      q: "C dilinin ilk versiyası nə zaman yaradılmışdır?",
-      options: ["1970", "1972", "1975", "1980"],
-      correctIndex: 1,
-      explanation: "C dili 1972-ci ildə Denis Ritchie tərəfindən yaradılmışdır."
-    },
-    {
-      q: "Kompyüterdə C proqramını işə salmaq üçün neçə addım lazımdır?",
-      options: ["1 - Birbaşa run et", "2 - Yaz və run et", "3 - Yaz, kompilyasiya et, run et", "4 - Xüsusi software lazımdır"],
-      correctIndex: 2,
-      explanation: "C proqramını yazırıq, sonra kompilyatordən istifadə edərək kompilyasiya edirik, sonra run edirik."
-    },
-    {
-      q: "Windows-da C kompilyatoru olmadığı zaman nə quraşdırmalı?",
-      options: ["Visual Studio Code", "MinGW-w64 və ya MSYS2", "CLion", "Notepad"],
-      correctIndex: 1,
-      explanation: "Windows-da MinGW-w64 və ya MSYS2 quraşdırmalı, bunlar kompilator təmin edirlər."
-    },
-    {
-      q: "main() funksiyası C proqramında nə eninə istifadə olunur?",
-      options: ["Birinci funksiya", "Proqramın girişi", "Proqramdan çıxış", "Heç nə"],
-      correctIndex: 1,
-      explanation: "main() funksiyası proqramın girişi və başlanğıcıdır. Hər C proqramında main() olmalıdır."
-    },
-    {
-      q: "printf() funksiyası nə eninə istifadə olunur?",
-      options: ["Dəyişən yaratmaq üçün", "Mətn və məlumat çap etmək üçün", "Faylı açmaq üçün", "Rəqəm əlavə etmək üçün"],
-      correctIndex: 1,
-      explanation: "printf() funksiyası mətn, rəqəm və digər məlumatları terminala çap etmək üçün istifadə olunur."
-    }
-  ]}
-/>
 
 ---
 
@@ -425,43 +377,6 @@ int factorial(int n) {
 - Palindrom yoxlama funksiyası
 - Hanoi Tower problemi (rekursiya)
 - Menyu əsaslı proqram (funksiyalarla)
-
-<ProgressTracker  lessonId="c-level-1" roadmapSlug="c" />
-
-<QuizBlock 
-  questions={[
-    {
-      q: "C-də int data tippi neçə bayt yer tutur? (əksər sistemlərdə)",
-      options: ["1 bayt", "2 bayt", "4 bayt", "8 bayt"],
-      correctIndex: 2,
-      explanation: "Əksər sistemlərdə int 4 bayt (32 bit) yer tutur."
-    },
-    {
-      q: "printf() funksiyasında float-i çap etmək üçün hansı format specifier istifadə olunur?",
-      options: ["%d", "%f", "%s", "%c"],
-      correctIndex: 1,
-      explanation: "%f format specifier float və double tipləri çap etmək üçün istifadə olunur."
-    },
-    {
-      q: "x++ və ++x arasında fərq nədir?",
-      options: ["Fərq yoxdur", "x++ post-increment, ++x pre-increment", "++x daha sürətlidir", "x++ daha yaxşıdır"],
-      correctIndex: 1,
-      explanation: "x++ əvvəl x-dən istifadə sonra artır, ++x əvvəl artır sonra istifadə olunur."
-    },
-    {
-      q: "scanf() funksiyasında istifadəçidən int qəbul etmək üçün nə yazmalı?",
-      options: ["scanf(\"%d\" , x);", "scanf(\"%d\" , &x);", "scanf(\"%s\" , &x);", "scanf(\"%f\" , &x);"],
-      correctIndex: 1,
-      explanation: "scanf()-da dəyişənin ünvanını ilə (&) göndərməli, belə ki dəyişən modifikasiya olsun."
-    },
-    {
-      q: "if-else şərt ifadəsində else if neçə dəfə istifadə edilə bilər?",
-      options: ["Bir dəfə", "İki dəfə", "Sınırsız", "Heç vaxt"],
-      correctIndex: 2,
-      explanation: "else if sınırsız sayda istifadə edilə bilər, çoxlu şərtləri check etmək üçün."
-    }
-  ]}
-/>
 
 ---
 
@@ -849,43 +764,6 @@ fclose(fp);
 - Tələbə qeydləri (fayla save/load)
 - Failə şifrələnmiş mətn yazmaq
 
-<ProgressTracker  lessonId="c-level-2" roadmapSlug="c" />
-
-<QuizBlock 
-  questions={[
-    {
-      q: "Massiv indekslənməsi necə başlayır?",
-      options: ["1-dən", "0-dan", "-1-dən", "Təsadüfi"],
-      correctIndex: 1,
-      explanation: "C-də massivlərin indekslənməsi 0-dan başlayır. Birinci element arr[0]-dir."
-    },
-    {
-      q: "İki ölçülü massiv necə yaradılır?",
-      options: ["int arr[]", "int arr[5]", "int arr[5][5]", "int arr[,]"],
-      correctIndex: 2,
-      explanation: "İki ölçülü massiv int arr[rows][cols] şəklində yaradılır."
-    },
-    {
-      q: "String nə ilə bitir?",
-      options: ["Boş jay", "Yeni sətir", "Null terminator (\\0)", "Xüsusi simvol"],
-      correctIndex: 2,
-      explanation: "C-də stringlər həmiş \\0 (null terminator) ilə bitir, bunun sayı 1-dir."
-    },
-    {
-      q: "strlen() funksiyası nə qaytar?",
-      options: ["Massiv ölçüsü", "String uzunluğu", "Karakter sayı", "Bayt sayı"],
-      correctIndex: 1,
-      explanation: "strlen() funksiyası string-in uzunluğunu (null terminator daxil olmadan) qaytarır."
-    },
-    {
-      q: "Fayl açmaq üçün hansı funksiya istifadə olunur?",
-      options: ["read()", "open()", "fopen()", "load()"],
-      correctIndex: 2,
-      explanation: "C-də fopen() funksiyası fayl açmaq üçün istifadə olunur. fopen(filename, mode) şəklində."
-    }
-  ]}
-/>
-
 ---
 
 # Level 3: Qabaqcıl 🚀
@@ -1238,43 +1116,6 @@ void test_add() {
 - Memory leak-ləri tap və düzəlt
 - Test suite yaz
 
-<ProgressTracker  lessonId="c-level-3" roadmapSlug="c" />
-
-<QuizBlock 
-  questions={[
-    {
-      q: "Dynamic memory allocation üçün hansı funksiya istifadə olunur?",
-      options: ["alloc()", "malloc()", "new()", "create()"],
-      correctIndex: 1,
-      explanation: "C-də malloc() funksiyası dinamik yaddaş ayırmaq üçün istifadə olunur."
-    },
-    {
-      q: "malloc() ilə ayırdığınız yaddaşı boşaltmaq üçün nə etməli?",
-      options: ["delete()", "free()", "release()", "clear()"],
-      correctIndex: 1,
-      explanation: "malloc() ilə ayırdığınız yaddaş free() funksiyası ilə boşaltılmalıdır."
-    },
-    {
-      q: "Pointer to pointer nə enində istifadə olunur?",
-      options: ["Biraz zaman boşa öldürmək üçün", "Əsas pointeri dəyişmək üçün", "İki massivi birləşdirmək üçün", "String yaratmaq üçün"],
-      correctIndex: 1,
-      explanation: "Pointer to pointer (int **ptr) əsas pointeri dəyişmək üçün lazım olur."
-    },
-    {
-      q: "Struktur üzvlərinə nəsə ilə daxil edirik?",
-      options: ["[", ".", "-", ":"],
-      correctIndex: 1,
-      explanation: "Struktur üzvlərinə . (nöqtə) ilə daxil edirik. Məsələn: person.age"
-    },
-    {
-      q: "Pointer vasitəsi ilə struct üzvlərinə necə daxil edirik?",
-      options: ["ptr.member", "ptr[member]", "ptr->member", "ptr:member"],
-      correctIndex: 2,
-      explanation: "Pointer vasitəsi ilə struct üzvlərinə -> operatoru ilə daxil edirik."
-    }
-  ]}
-/>
-
 ---
 
 # Level 4: Expert 🎖️
@@ -1537,43 +1378,6 @@ int main() {
     return 0;
 }
 ```
-
-<ProgressTracker  lessonId="c-level-4" roadmapSlug="c" />
-
-<QuizBlock 
-  questions={[
-    {
-      q: "Bitwise AND operatoru (&) nə qaytar?",
-      options: ["Hər iki bitin 1 olduğu yerləri", "Ən azı bir bitin 1 olduğu yerləri", "Bitin xor-u", "Tamamlayıcı"],
-      correctIndex: 0,
-      explanation: "Bitwise AND operatoru (&) hər iki bitin 1 olduğu yerdə 1 qaytarır, başqa yerlərdə 0 qaytarır."
-    },
-    {
-      q: "left shift (<<) operatoru nə edir?",
-      options: ["Bitləri sağa aparır", "Bitləri sola aparır və 0 əlavə edir", "Bitleri tərsinə çevirir", "Xor əməliyyatı edir"],
-      correctIndex: 1,
-      explanation: "Left shift (<<) operatoru bitləri sola aparır və sağ tərəfə 0 əlavə edir. Məsələn: 5 << 1 = 10"
-    },
-    {
-      q: "File pointer fseek() ilə nə edilir?",
-      options: ["Fayl oxunur", "Fayl yazılır", "Faylda mövqe dəyişdirilir", "Fayl bağlanır"],
-      correctIndex: 2,
-      explanation: "fseek() funksiyası fayl oxuma/yazma mövqeyini dəyişmək üçün istifadə olunur."
-    },
-    {
-      q: "Makro (macro) nə üçün istifadə olunur?",
-      options: ["Funksiya yaratmaq üçün", "Kod əvəzlərmə üçün", "Dəyişən yaratmaq üçün", "Xətaları əslahətmək üçün"],
-      correctIndex: 1,
-      explanation: "Makrolar (#define) taym-əvvəl kodun hissəsini sıxışdırmaq üçün istifadə olunur."
-    },
-    {
-      q: "assert() makrosu nə enində istifadə olunur?",
-      options: ["Massivin ölçüsünü tapmaq", "Şərt doğru olub olmadığını yoxlamaq", "Fayl açmaq", "Yaddaş ayırmaq"],
-      correctIndex: 1,
-      explanation: "assert() makrosu şərt doğru dəyildirirsə proqramı dayandırmaq üçün istifadə olunur."
-    }
-  ]}
-/>
 
 ---
 
@@ -1990,43 +1794,6 @@ int add(int a, int b) {
 - [ ] OS concepts
 - [ ] Performance tuning
 - [ ] Embedded programming
-
-<ProgressTracker  lessonId="c-level-5" roadmapSlug="c" />
-
-<QuizBlock 
-  questions={[
-    {
-      q: "Compiler nə edir?",
-      options: ["Proqramı dərhal işə salır", "Bu kodu maşın koduna çevirir", "Səhvləri göstərir", "Faylları yardım edir"],
-      correctIndex: 1,
-      explanation: "Compiler insan-readable C kodunu maşın kodu (binary) ilə çevirir."
-    },
-    {
-      q: "Linker nə qaytar?",
-      options: ["Kitabxanalar linked et", "Object fayllarını birləşdir", "Executable yaratır", "Hamısı doğru"],
-      correctIndex: 3,
-      explanation: "Linker object fayllarını birləşdirir, kitabxanalar bağlayır və executable faylı yaradır."
-    },
-    {
-      q: "Memory layout-da stack-ə nə qatılır?",
-      options: ["Global dəyişənlər", "Lokal dəyişənlər və funksiya arqumentləri", "Dinamik yaddaş", "Kod"],
-      correctIndex: 1,
-      explanation: "Stack-ə lokal dəyişənlər və funksiya arqumentləri qatılır və reverse LIFO sırası ilə çıxır."
-    },
-    {
-      q: "Heap-ə nə qatılır?",
-      options: ["Funksiya arqumentləri", "Global dəyişənlər", "malloc() ilə ayırdığınız dinamik yaddaş", "Funksiya kodu"],
-      correctIndex: 2,
-      explanation: "Heap-ə malloc(), calloc() və ya realloc() ilə ayırdığınız dinamik yaddaş qatılır."
-    },
-    {
-      q: "Virtual memory nədir?",
-      options: ["Fiktiv yaddaş", "Fiziki RAM-ın diske genişləndirilməsi", "RAM-ın hər bölməsi", "Cache"],
-      correctIndex: 1,
-      explanation: "Virtual memory OS-ün RAM-ı disk-ə genişləndirməsidir, böylə daha çox memory istifadə edə bilərik."
-    }
-  ]}
-/>
 
 ---
 

@@ -1,13 +1,18 @@
+---
+layout: ../layouts/RoadmapLayout.astro
+title: "Git - Sıfırdan Master Səviyyəyə Roadmap"
+description: "Version Control System-in tam bələdçisi"
+---
 
-import ProgressTracker from '../components/interactive/ProgressTracker';
-import QuizBlock from '../components/interactive/QuizBlock';
-import CodeBlock from '../components/content/CodeBlock';
-import InfoBox from '../components/content/InfoBox';
-import LevelCard from '../components/content/LevelCard';
-import CommandCard from '../components/content/CommandCard';
-import ConceptCard from '../components/content/ConceptCard';
-import TaskList from '../components/content/TaskList';
-import DiagramCard from '../components/content/DiagramCard';
+import ProgressTracker from '../components/interactive/ProgressTracker.jsx';
+import QuizBlock from '../components/interactive/QuizBlock.jsx';
+import CodeBlock from '../components/content/CodeBlock.astro';
+import InfoBox from '../components/content/InfoBox.astro';
+import LevelCard from '../components/content/LevelCard.astro';
+import CommandCard from '../components/content/CommandCard.astro';
+import ConceptCard from '../components/content/ConceptCard.astro';
+import TaskList from '../components/content/TaskList.astro';
+import DiagramCard from '../components/content/DiagramCard.astro';
 
 
 # Git - Sıfırdan Master Səviyyəyə Roadmap 🚀
@@ -113,9 +118,9 @@ git config user.name
 
 **Remote** - Kodun online saxlandığı yer (GitHub, GitLab, Bitbucket).
 
-<ProgressTracker  lessonId="git-level-0" roadmapSlug="git" />
+<ProgressTracker client:visible lessonId="git-level-0" roadmapSlug="git" />
 
-<QuizBlock 
+<QuizBlock client:visible
   questions={[
     {
       q: "Git nə enində istifadə olunur?",
@@ -355,9 +360,9 @@ git show abc123
 git show abc123:file.txt
 ```
 
-<ProgressTracker  lessonId="git-level-1" roadmapSlug="git" />
+<ProgressTracker client:visible lessonId="git-level-1" roadmapSlug="git" />
 
-<QuizBlock 
+<QuizBlock client:visible
   questions={[
     {
       q: "git init nə edir?",
@@ -569,9 +574,9 @@ git rebase -i HEAD~5
 
 Komandalar: pick, reword, edit, squash, fixup, drop
 
-<ProgressTracker  lessonId="git-level-2" roadmapSlug="git" />
+<ProgressTracker client:visible lessonId="git-level-2" roadmapSlug="git" />
 
-<QuizBlock 
+<QuizBlock client:visible
   questions={[
     {
       q: "git branch nə edir?",
@@ -960,9 +965,9 @@ apt install git-lfs   # Linux
 # Initialize
 git lfs install
 
-<ProgressTracker  lessonId="git-level-3" roadmapSlug="git" />
+<ProgressTracker client:visible lessonId="git-level-3" roadmapSlug="git" />
 
-<QuizBlock 
+<QuizBlock client:visible
   questions={[
     {
       q: "git push nə edir?",
@@ -1114,9 +1119,9 @@ Hər developer Git-lə işləyərkən problem yaşayıb. Məsələ səhv etməm�
 - 🤝 Team ilə collaborate et
 - 🐛 Səhvlərdən öyrən
 - 🌟 Open source-a contribute et
-<ProgressTracker  lessonId="git-level-4" roadmapSlug="git" />
+<ProgressTracker client:visible lessonId="git-level-4" roadmapSlug="git" />
 
-<QuizBlock 
+<QuizBlock client:visible
   questions={[
     {
       q: "git stash nə edir?",

@@ -1,33 +1,42 @@
 {
-  "name": "roadmap-website",
+  "name": "roadmap-v2",
+  "private": true,
+  "version": "0.0.0",
   "type": "module",
-  "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@astrojs/mdx": "^2.0.0",
-    "@astrojs/react": "^3.0.0",
-    "@astrojs/tailwind": "^5.0.0",
-    "astro": "^4.1.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "tailwindcss": "^3.3.0"
+    "@mdx-js/react": "^3.1.1",
+    "canvas-confetti": "^1.9.4",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.34.1",
+    "fuse.js": "^7.1.0",
+    "lucide-react": "^0.574.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-router-dom": "^7.13.0",
+    "tailwind-merge": "^3.4.1"
   },
-  "description": "> Sıfırdan Ultra Advanced Səviyyəyə Qədər Tam Təlimat",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sadatnazarli/roadmap.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/sadatnazarli/roadmap/issues"
-  },
-  "homepage": "https://github.com/sadatnazarli/roadmap#readme"
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@mdx-js/rollup": "^3.1.1",
+    "@tailwindcss/postcss": "^4.1.18",
+    "@tailwindcss/typography": "^0.5.19",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.1",
+    "autoprefixer": "^10.4.24",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "globals": "^16.5.0",
+    "postcss": "^8.5.6",
+    "rehype-slug": "^6.0.0",
+    "tailwindcss": "^4.1.18",
+    "vite": "^7.3.1"
+  }
 }

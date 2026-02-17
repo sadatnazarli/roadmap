@@ -1,0 +1,56 @@
+---
+import { Copy, Check } from 'lucide-react';
+
+interface Props {
+  command: string;
+  description?: string;
+}
+
+const { command, description } = Astro.props;
+---
+
+<div class="my-6 rounded-lg overflow-hidden border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-900">
+  <!-- Header -->
+  <div class="flex items-center justify-between px-4 py-3 bg-gray-50 dark:bg-slate-800 border-b border-gray-200 dark:border-slate-700">
+    <span class="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">
+      Əmr
+    </span>
+    <button
+      class="p-1.5 rounded hover:bg-gray-200 dark:hover:bg-slate-700 text-gray-600 dark:text-gray-400 transition-colors command-copy-btn"
+      data-command={command}
+      title="Copy command"
+    >
+      <Copy size={16} />
+    </button>
+  </div>
+
+  <!-- Command -->
+  <div class="px-4 py-3 bg-gray-900 dark:bg-gray-950">
+    <code class="font-mono text-sm text-gray-100 break-all">{command}</code>
+  </div>
+
+  <!-- Description -->
+  {description && (
+    <div class="px-4 py-3 border-t border-gray-200 dark:border-slate-700">
+      <p class="text-sm text-gray-700 dark:text-gray-300">{description}</p>
+    </div>
+  )}
+</div>
+
+<script>
+  document.querySelectorAll('.command-copy-btn').forEach((btn) => {
+    btn.addEventListener('click', async (e) => {
+      const command = btn.getAttribute('data-command');
+      try {
+        await navigator.clipboard.writeText(command);
+        const icon = btn.innerHTML;
+        btn.innerHTML = '<svg size="16" class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>';
+        setTimeout(() => {
+          btn.innerHTML = icon;
+        }, 2000);
+      } catch (err) {
+        console.error('Failed to copy:', err);
+      }
+    });
+  });
+</script>

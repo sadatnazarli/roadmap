@@ -1,0 +1,103 @@
+---
+import ThemeToggle from '../interactive/ThemeToggle.jsx';
+import SearchModal from '../interactive/SearchModal.jsx';
+
+// Navigation links
+const navLinks = [
+  { title: 'C Dili', url: '/c-roadmap' },
+  { title: 'Git', url: '/git-roadmap' },
+  { title: 'Linux', url: '/linux-roadmap' },
+  { title: 'Vim', url: '/vim-roadmap' },
+];
+---
+
+<nav class="sticky top-0 z-40 w-full bg-white dark:bg-slate-900 border-b border-gray-200 dark:border-slate-700">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex h-16 items-center justify-between gap-8">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-2 font-bold text-xl text-primary dark:text-blue-400 hover:text-primary-dark transition-colors flex-shrink-0">
+        <span class="text-2xl">📚</span>
+        <span class="hidden sm:inline">DevRoadmap</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <div class="hidden md:flex items-center gap-8">
+        {navLinks.map(link => (
+          <a
+            href={link.url}
+            class="text-gray-700 dark:text-gray-300 font-medium text-sm hover:text-primary dark:hover:text-blue-400 transition-colors"
+          >
+            {link.title}
+          </a>
+        ))}
+      </div>
+
+      <!-- Right Actions -->
+      <div class="flex items-center gap-4 ml-auto">
+        <!-- Search Modal (hidden on mobile) -->
+        <div class="hidden sm:block">
+          <SearchModal client:load />
+        </div>
+
+        <!-- Theme Toggle -->
+        <ThemeToggle client:load />
+
+        <!-- Mobile Menu Button (hidden on desktop) -->
+        <button
+          id="mobile-menu-btn"
+          class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors text-gray-700 dark:text-gray-300"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation (hidden by default) -->
+    <div
+      id="mobile-nav"
+      class="hidden md:hidden border-t border-gray-200 dark:border-slate-700"
+    >
+      <div class="space-y-1 py-2">
+        {navLinks.map(link => (
+          <a
+            href={link.url}
+            class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors text-sm font-medium"
+          >
+            {link.title}
+          </a>
+        ))}
+      </div>
+    </div>
+  </div>
+</nav>
+
+<script>
+  // Mobile menu toggle
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileNav = document.getElementById('mobile-nav');
+
+  if (mobileMenuBtn && mobileNav) {
+    mobileMenuBtn.addEventListener('click', () => {
+      const isHidden = mobileNav.classList.contains('hidden');
+      if (isHidden) {
+        mobileNav.classList.remove('hidden');
+        mobileMenuBtn.setAttribute('aria-expanded', 'true');
+      } else {
+        mobileNav.classList.add('hidden');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Close menu when a link is clicked
+    mobileNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.add('hidden');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+</script>

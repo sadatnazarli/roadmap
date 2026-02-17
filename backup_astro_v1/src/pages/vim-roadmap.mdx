@@ -1,3 +1,18 @@
+---
+layout: ../layouts/RoadmapLayout.astro
+title: "Vim - Sıfırdan Master Səviyyəyə Roadmap"
+---
+
+import ProgressTracker from '../components/interactive/ProgressTracker.jsx';
+import QuizBlock from '../components/interactive/QuizBlock.jsx';
+import CodeBlock from '../components/content/CodeBlock.astro';
+import InfoBox from '../components/content/InfoBox.astro';
+import LevelCard from '../components/content/LevelCard.astro';
+import CommandCard from '../components/content/CommandCard.astro';
+import ConceptCard from '../components/content/ConceptCard.astro';
+import TaskList from '../components/content/TaskList.astro';
+import DiagramCard from '../components/content/DiagramCard.astro';
+
 # Vim - Sıfırdan Master Səviyyəyə Roadmap 🎯
 
 > Modal Text Editor-un Tam Bələdçisi
@@ -117,6 +132,43 @@ Vim-in əsas fərqi: **Modal Editor** olmasıdır.
 6. **Ex Mode**
    - `Q` ilə daxil ol (nadir istifadə olunur)
 
+<ProgressTracker client:visible lessonId="vim-level-0" roadmapSlug="vim" />
+
+<QuizBlock client:visible
+  questions={[
+    {
+      q: "Vim nə enində istifadə olunur?",
+      options: ["Qrafika redaktəsi", "Mətn redaktoru", "Səs redaktəsi", "Vidio redaktəsi"],
+      correctIndex: 1,
+      explanation: "Vim mətn redaktoru olub, komanda xəttində işləyən güclü bir redaktordur."
+    },
+    {
+      q: "Vim-in əsas modları nə qədərdir?",
+      options: ["1", "2", "3", "4"],
+      correctIndex: 2,
+      explanation: "Vim-in 3 əsas modu var: Normal Mode, Insert Mode, Ex Mode. Həmçinin Visual Mode də var."
+    },
+    {
+      q: "Normal Mode-da nəsə basıb Insert Mode-a keçilir?",
+      options: ["Ctrl+I", "i", "Shift+I", ":i"],
+      correctIndex: 1,
+      explanation: "Normal Mode-da 'i' yerə basaraq Insert Mode-a keçilir. 'I' sətrin əvvəlinə, 'a' sonuna keçir."
+    },
+    {
+      q: "Insert Mode-dan Normal Mode-a çıxmaq üçün nə edilir?",
+      options: ["Ctrl+C", "Esc", "q", "Shift+I"],
+      correctIndex: 1,
+      explanation: "Insert Mode-dan çıxmaq üçün Esc düyməsinə basılır və Normal Mode-a qayıdılır."
+    },
+    {
+      q: "Ex Mode-a daxil olmaq üçün nəsə basılır?",
+      options: [":", ":", "'", "Shift+:"],
+      correctIndex: 1,
+      explanation: "Normal Mode-da ':' basaraq Ex Mode-a daxil olunur, bu da Vim əmrləri icra etməyə imkan verir."
+    }
+  ]}
+/>
+
 ---
 
 # Level 1: Survival - Sağ Qalmaq 🆘
@@ -184,6 +236,43 @@ P   - yapışdır - cursor-dan əvvəl
 6. `:wq` yaz - save və çıx
 
 **1 həftə hər gün 30 dəqiqə praktika et!**
+
+<ProgressTracker client:visible lessonId="vim-level-1" roadmapSlug="vim" />
+
+<QuizBlock client:visible
+  questions={[
+    {
+      q: "Vim-də sağa bir simvol hərəkət etmək üçün nəsə basılır?",
+      options: ["a", "l", "→", "j"],
+      correctIndex: 1,
+      explanation: "Vim-də 'l' sağa, 'h' sola, 'j' aşağıya, 'k' yuxarıya hərəkət etir (arrow keys əvəzinə)."
+    },
+    {
+      q: "Söz silmək üçün Vim-də nə edilir?",
+      options: ["x", "dw", "dd", "cw"],
+      correctIndex: 1,
+      explanation: "'dw' (delete word) söz sil, 'dd' bütün sətri sil, 'x' bir simvol sil, 'cw' söz dəyiş."
+    },
+    {
+      q: "Undo etmək üçün Vim-də nəsə basılır?",
+      options: ["Ctrl+Z", "u", ":u", "Ctrl+U"],
+      correctIndex: 1,
+      explanation: "Vim-də 'u' undo, 'Ctrl+r' redo-dur. Ctrl+Z fərqlər qoyur (OS-ə göndərir)."
+    },
+    {
+      q: "Faylı save et və Vim-dən çıx üçün nə edilir?",
+      options: [":q", ":w", ":wq", ":x"],
+      correctIndex: 2,
+      explanation: ":wq (write and quit) faylı save edib Vim-dən çıxır. :x də eyniyə bərabərdir, :q yalnız çıxır."
+    },
+    {
+      q: "Axtarış etmək üçün Vim-də nəsə basılır?",
+      options: [":f", "?pattern", "/pattern", ":search"],
+      correctIndex: 2,
+      explanation: "/pattern axtar etməyə başlayır, ?pattern geriyə doğru axtar etir. 'n' sonrakısı, 'N' əvvəlkini axtar."
+    }
+  ]}
+/>
 
 ---
 
@@ -322,6 +411,43 @@ T{char}  - simvoldan əvvələ get (backward)
 2. **Code fayllarını** Vim ilə edit et
 3. `vimtutor` komandası ilə built-in tutorial-ı tamamla
 4. Hər gün ən azı 1 saat praktika
+
+<ProgressTracker client:visible lessonId="vim-level-2" roadmapSlug="vim" />
+
+<QuizBlock client:visible
+  questions={[
+    {
+      q: "Vim-də seçmə üçün nəsə basılır?",
+      options: ["s", "v", "V", "Ctrl+A"],
+      correctIndex: 1,
+      explanation: "'v' visual selection başlayır, 'V' sətir seçir, 'Ctrl+v' blok seçir."
+    },
+    {
+      q: "Kopya etmək üçün Vim-də nəsə  istifadə olunur?",
+      options: ["Ctrl+C", "y (yank)", "c", "a"],
+      correctIndex: 1,
+      explanation: "'y' (yank) kopya edir, 'yy' bütün sətri kopya, 'yw' söz kopya edir."
+    },
+    {
+      q: "Yapışdırmaq üçün Vim-də nəsə basılır?",
+      options: ["Ctrl+V", "p", "P", "i"],
+      correctIndex: 1,
+      explanation: "'p' kursordən sonra yapışdırır, 'P' kursordən əvvəl yapışdırır."
+    },
+    {
+      q: "Sətir indentation (boşluq) artırmaq üçün nə edilir?",
+      options: [">>", "<<", "tab", "space"],
+      correctIndex: 0,
+      explanation: "'>>' sağa indent, '<<' sola indent edir. Code formatting-də çox istifadə olunur."
+    },
+    {
+      q: "Vim-də bir xanaya daxil olmaq üçün nəsə basılır?",
+      options: ["c", "r", "s", "x"],
+      correctIndex: 2,
+      explanation: "'s' (substitute) bir simvolu dəyişir, 'r' bir simvolu sadəcə əvəz edir."
+    }
+  ]}
+/>
 
 ---
 
@@ -516,6 +642,43 @@ zk    - əvvəlki fold
 3. Text objects-i master et
 4. Registers ilə effektiv kopyala
 5. Real layihələrdə işlə
+
+<ProgressTracker client:visible lessonId="vim-level-3" roadmapSlug="vim" />
+
+<QuizBlock client:visible
+  questions={[
+    {
+      q: "Vim-də operator+motion kombinasiyası nə deməkdir?",
+      options: ["Random əmr", "Operatordan sonra motion yazıb sürətli redaktə", "İki operatoru birlikdə istifadə", "Mouse ilə hərəkət"],
+      correctIndex: 1,
+      explanation: "Operator+motion (məs. dw, cj, y3l) Vim-in gücünün ən əsas principi olub, sürətli redaktə etməyə imkan verir."
+    },
+    {
+      q: "Text object nə deməkdir?",
+      options: ["Mətnin şəkli", "Simvol(lar), söz, sətir kimi semantik vahidlər", "Redaktə alətlər", "Rəng sxemi"],
+      correctIndex: 1,
+      explanation: "Text objects - söz (w), sətir (l), cümlə (s), paragraf (p), block (B) kimi semantik vahidlərdir."
+    },
+    {
+      q: "'iw' (inner word) vs 'aw' (a word) fərqi nədir?",
+      options: ["Fərq yoxdur", "'iw' söz qalır, 'aw' söz+boşluq", "'aw' söz qalır, 'iw' söz+boşluq", "'iw' daha cəld"],
+      correctIndex: 1,
+      explanation: "'iw' söz sillər, 'aw' söz+əvvəlkisinin boşluğu sillər. 'diw' söz sil, 'daw' söz+boş sil."
+    },
+    {
+      q: "Vim register nə deməkdir?",
+      options: ["Faylı save et", "Kopyalanmış mətnni saxlayan xüsusi yaddaş", "Ekrana çap et", "Kodu kompilyasiya et"],
+      correctIndex: 1,
+      explanation: "Register kopya/cut edil mətnin saxlandığı yaddaş. Bir neçə register var (a-z), o hər biri ayrı mətnə sahib."
+    },
+    {
+      q: "Repeat son əmrlər etmək üçün Vim-də nəsə basılır?",
+      options: ["r", ".", "R", "Ctrl+R"],
+      correctIndex: 1,
+      explanation: "'.' (nöqtə) son əmri təkrar edir. Məs. dw etdikdən sonra . basmaqla yenə söz sil."
+    }
+  ]}
+/>
 
 ---
 
@@ -844,6 +1007,46 @@ function! TrimWhitespace()
     call winrestview(l:save)
 endfunction
 
+<ProgressTracker client:visible lessonId="vim-level-4" roadmapSlug="vim" />
+
+<QuizBlock client:visible
+  questions={[
+    {
+      q: ".vimrc fayli nə enində istifadə olunur?",
+      options: ["Vim-i açmaq", "Vim-i konfigurə etmek (.vim faylı)", "Undo tarixinin(history)", "Redaktə edilmemiş faylları sil"],
+      correctIndex: 1,
+      explanation: ".vimrc Vim-in konfiqurasiyon faylı olub, öncə seçimlər, keybindings, plugins burada yaranır."
+    },
+    {
+      q: "Plugin manager nə enində istifadə olunur?",
+      options: ["Vim aç", "Vim əmrlərini yazı", "Plugins quraşdırmaq və idarə etmek", "Faylları kopyala"],
+      correctIndex: 2,
+      explanation: "Plugin managers (vim-plug, vundle, packer) Vim pluginlərini avtomatik quraşdırıb update edir."
+    },
+    {
+      q: "Mark nə enində istifadə olunur?",
+      options: ["Mətnə rəngləndirmə", "Spesifik mövqeyi saxlamaq hızlı qayıtmaq", "Sətir nömrələndirmə", "Fayl save"],
+      correctIndex: 1,
+      explanation: "Mark spesifik mövqeyi etiketləb o mövqeyə hızlı qayıtmağa imkan verir. m{letter} mark, '{letter} qayıt."
+    },
+    {
+      q: "Macro nə deməkdir?",
+      options: ["Qısa yazı", "Əmrlər sırasını saxlab yenidən çala bilən record", "Redaktə alətı", "Fayl tipi"],
+      correctIndex: 1,
+      explanation: "Macro əmrlər sırasını record edib sonra təkrar çalır. q{letter} record başla, @{letter} çala."
+    },
+    {
+      q: "Vim custom keybinding nə enində istifadə olunur?",
+      options: ["Default keys dəyişir", "Hər eyl üçün custom key tapmaq", "Plugin silinib", "Səs sxemi dəyişir"],
+      correctIndex: 1,
+      explanation: "Custom keybindings .vimrc-də map komandası ilə təyin edib, sürətli workflow yarada bilər."
+    }
+  ]}
+/>
+
+---
+
+# Level 5: Vim Master 🏆
 command! TrimWhitespace call TrimWhitespace()
 
 " Auto-format on save

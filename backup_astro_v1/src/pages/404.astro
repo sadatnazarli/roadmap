@@ -1,0 +1,83 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import TopNav from '../components/layout/TopNav.astro';
+import Footer from '../components/layout/Footer.astro';
+---
+
+<BaseLayout
+  title="404 - Səhifə Tapılmadı | DevRoadmap.az"
+  description="Paradçı! Axtardığınız səhifə tapılmadı."
+>
+  <TopNav />
+  
+  <main class="flex flex-col items-center justify-center min-h-[70vh] px-4 py-20">
+    <div class="text-center max-w-2xl mx-auto">
+      <!-- Large 404 -->
+      <div class="mb-8">
+        <h1 class="text-9xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400">
+          404
+        </h1>
+      </div>
+
+      <!-- Error Message -->
+      <h2 class="text-3xl font-bold mb-4 text-gray-900 dark:text-white">
+        Səhifə Tapılmadı
+      </h2>
+      
+      <p class="text-lg text-gray-600 dark:text-gray-400 mb-8">
+        Maalesef, axtardığınız səhifə mövcud deyil. Ehtimal ki, URL düzgün deyil və ya səhifə silinib.
+      </p>
+
+      <!-- Suggestions -->
+      <div class="bg-blue-50 dark:bg-slate-800 border-l-4 border-blue-500 p-6 mb-8 text-left">
+        <h3 class="font-semibold text-gray-900 dark:text-white mb-3">Bəlkə bunları cəsarətləndirə bilərsiniz:</h3>
+        <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+          <li>✓ Sonrakı Yol Xəritəsindən birinə baxın</li>
+          <li>✓ Qlobal axtarış istifadə edin (<kbd class="bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded text-sm">Ctrl + K</kbd>)</li>
+          <li>✓ Ev səhifəsinə qayıdın</li>
+        </ul>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="/"
+          class="px-8 py-3 bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white font-semibold rounded-lg transition-colors"
+        >
+          Ev Səhifəsinə Qayıt
+        </a>
+        
+        <a
+          href="/c-roadmap"
+          class="px-8 py-3 border-2 border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-slate-800 font-semibold rounded-lg transition-colors"
+        >
+          C Yol Xəritəsi
+        </a>
+      </div>
+
+      <!-- Additional Links -->
+      <div class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
+        <p class="text-gray-600 dark:text-gray-400 mb-4">Digər Yol Xəritələri:</p>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <a href="/git-roadmap" class="text-blue-600 dark:text-blue-400 hover:underline font-medium">
+            Git
+          </a>
+          <a href="/vim-roadmap" class="text-blue-600 dark:text-blue-400 hover:underline font-medium">
+            Vim
+          </a>
+          <a href="/linux-roadmap" class="text-blue-600 dark:text-blue-400 hover:underline font-medium">
+            Linux
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  kbd {
+    font-family: 'JetBrains Mono', monospace;
+  }
+</style>

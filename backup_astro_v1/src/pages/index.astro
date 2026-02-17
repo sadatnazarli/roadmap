@@ -1,0 +1,162 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Footer from '../components/layout/Footer.astro';
+---
+
+<BaseLayout title="Ev">
+  <!-- Hero Section -->
+  <section class="bg-blue-50 dark:bg-slate-900 py-16 sm:py-24 border-b-4 border-primary text-center transition-colors duration-300">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <h1 class="text-primary-dark dark:text-blue-400 text-4xl sm:text-5xl font-bold mb-4 tracking-tight">
+        Proqramlaşdırma Roadmapları
+      </h1>
+      <p class="text-slate-700 dark:text-slate-300 text-lg sm:text-xl mb-8 max-w-2xl mx-auto">
+        Sıfırdan master səviyyəyə qədər tam öyrənmə yolları
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="/c-roadmap" class="btn btn-primary text-lg px-8 py-3 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200">
+          C Dili
+        </a>
+        <a href="/vim-roadmap" class="btn btn-primary text-lg px-8 py-3 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200">
+          Vim
+        </a>
+        <a href="/git-roadmap" class="btn btn-primary text-lg px-8 py-3 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200">
+          Git
+        </a>
+        <a href="/linux-roadmap" class="btn btn-primary text-lg px-8 py-3 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200">
+          Linux
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="py-16 bg-white dark:bg-slate-800 transition-colors duration-300">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <h2 class="text-primary-dark dark:text-blue-400 text-3xl font-bold mb-12 text-center border-l-0 pl-0">
+        Nə qədər ətraflı?
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white dark:bg-slate-700 p-8 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-slate-200 dark:border-slate-600">
+          <div class="text-4xl mb-4">📚</div>
+          <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Ətraflı Məzmun</h3>
+          <p class="text-slate-600 dark:text-slate-300">
+            Hər bir mövzu ətraflı şərh edilib. Əsaslardan advanced mövzulara qədər bütün detallar var.
+          </p>
+        </div>
+        <div class="bg-white dark:bg-slate-700 p-8 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-slate-200 dark:border-slate-600">
+          <div class="text-4xl mb-4">💡</div>
+          <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Praktiki Məşqlər</h3>
+          <p class="text-slate-600 dark:text-slate-300">
+            Hər bölmədə kod nümunələri, praktiki məşqlər və real layihə təklifləri.
+          </p>
+        </div>
+        <div class="bg-white dark:bg-slate-700 p-8 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-slate-200 dark:border-slate-600">
+          <div class="text-4xl mb-4">🎯</div>
+          <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Səviyyə Sistemi</h3>
+          <p class="text-slate-600 dark:text-slate-300">
+            Level 0-dan Level 5-ə qədər strukturlaşdırılmış öyrənmə yolu. Sənin sürətində.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roadmaps Section -->
+  <section class="py-16 bg-slate-50 dark:bg-slate-900 transition-colors duration-300">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <h2 class="text-primary-dark dark:text-blue-400 text-3xl font-bold mb-12 text-center border-l-0 pl-0">
+        Mövcud Roadmaplar
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <!-- C Roadmap Card -->
+        <a href="/c-roadmap" class="group block bg-white dark:bg-slate-800 p-8 rounded-xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-slate-200 dark:border-slate-700">
+          <div class="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">🚀</div>
+          <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-primary dark:group-hover:text-blue-400 transition-colors">C Proqramlaşdırma</h3>
+          <p class="text-slate-600 dark:text-slate-300 mb-6">
+            Sıfırdan ultra advanced səviyyəyə qədər
+          </p>
+          <div class="text-sm text-slate-500 dark:text-slate-400 mb-6 font-medium">
+            6 səviyyə • 50+ mövzu • 1800+ satır
+          </div>
+          <div class="text-primary dark:text-blue-400 font-semibold group-hover:underline flex items-center gap-2">
+            Roadmapa daxil ol <span>→</span>
+          </div>
+        </a>
+
+        <!-- Vim Roadmap Card -->
+        <a href="/vim-roadmap" class="group block bg-white dark:bg-slate-800 p-8 rounded-xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-slate-200 dark:border-slate-700">
+          <div class="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">🎯</div>
+          <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-primary dark:group-hover:text-blue-400 transition-colors">Vim Əl Kitabı</h3>
+          <p class="text-slate-600 dark:text-slate-300 mb-6">
+            Modal text editor sıfırdan master səviyyəyə
+          </p>
+          <div class="text-sm text-slate-500 dark:text-slate-400 mb-6 font-medium">
+            6 səviyyə • 40+ mövzu • 1200+ satır
+          </div>
+          <div class="text-primary dark:text-blue-400 font-semibold group-hover:underline flex items-center gap-2">
+            Roadmapa daxil ol <span>→</span>
+          </div>
+        </a>
+
+        <!-- Git Roadmap Card -->
+        <a href="/git-roadmap" class="group block bg-white dark:bg-slate-800 p-8 rounded-xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-slate-200 dark:border-slate-700">
+          <div class="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">🌳</div>
+          <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-primary dark:group-hover:text-blue-400 transition-colors">Git Sürümü İdarəetməsi</h3>
+          <p class="text-slate-600 dark:text-slate-300 mb-6">
+            Version control sıfırdan expert səviyyəyə
+          </p>
+          <div class="text-sm text-slate-500 dark:text-slate-400 mb-6 font-medium">
+            6 səviyyə • 45+ mövzu • 950+ satır
+          </div>
+          <div class="text-primary dark:text-blue-400 font-semibold group-hover:underline flex items-center gap-2">
+            Roadmapa daxil ol <span>→</span>
+          </div>
+        </a>
+
+        <!-- Linux Roadmap Card -->
+        <a href="/linux-roadmap" class="group block bg-white dark:bg-slate-800 p-8 rounded-xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-slate-200 dark:border-slate-700">
+          <div class="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">🐧</div>
+          <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-primary dark:group-hover:text-blue-400 transition-colors">Linux & Terminal</h3>
+          <p class="text-slate-600 dark:text-slate-300 mb-6">
+            Command line və sistem idarəetməsi master səviyyəyə
+          </p>
+          <div class="text-sm text-slate-500 dark:text-slate-400 mb-6 font-medium">
+            5 səviyyə • 60+ mövzu • 2550+ satır
+          </div>
+          <div class="text-primary dark:text-blue-400 font-semibold group-hover:underline flex items-center gap-2">
+            Roadmapa daxil ol <span>→</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 bg-blue-50 dark:bg-slate-900 border-t-4 border-primary transition-colors duration-300">
+    <div class="container mx-auto px-4 max-w-4xl text-center">
+      <h2 class="text-primary-dark dark:text-blue-400 text-3xl font-bold mb-6 border-l-0 pl-0">
+        Başlamağa hazır?
+      </h2>
+      <p class="text-slate-700 dark:text-slate-300 text-lg mb-8">
+        Seç, başla, ustalaş. Hər roadmap tamamilə pulsuz və açıq mənbəli.
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="/c-roadmap" class="btn btn-primary text-lg px-8 py-3 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200">
+          C Dili ilə Başla
+        </a>
+        <a href="/vim-roadmap" class="btn btn-primary text-lg px-8 py-3 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200">
+          Vim ilə Başla
+        </a>
+        <a href="/git-roadmap" class="btn btn-primary text-lg px-8 py-3 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200">
+          Git ilə Başla
+        </a>
+        <a href="/linux-roadmap" class="btn btn-primary text-lg px-8 py-3 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200">
+          Linux ilə Başla
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</BaseLayout>

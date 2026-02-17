@@ -5,9 +5,13 @@ import react from '@astrojs/react';
 
 export default defineConfig({
   integrations: [
-    mdx(),
-    tailwind(),
+    mdx({
+      syntaxHighlight: false,
+    }),
+    tailwind({
+      applyBaseStyles: false,
+    }),
     react(),
   ],
-  site: 'https://example.com',
+  site: 'https://devroad.az',
 });
