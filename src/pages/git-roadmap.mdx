@@ -1,0 +1,950 @@
+---
+layout: ../layouts/RoadmapLayout.astro
+title: "Git - Sıfırdan Master Səviyyəyə Roadmap"
+description: "Version Control System-in tam bələdçisi"
+---
+
+# Git - Sıfırdan Master Səviyyəyə Roadmap 🚀
+
+**Git nədir?**  
+Distributed version control system - kodunuzu idarə edən, dəyişiklikləri izləyən və komanda ilə əməkdaşlıq etməyə imkan verən güclü alət.
+
+**Niyə Git öyrənməliyik?**
+- ✅ Hər developer-in bilməli olduğu əsas alət
+- ✅ Komanda əməkdaşlığı üçün vacib
+- ✅ Kodun tarixini saxlayır
+- ✅ Parallel işləməyə imkan verir
+- ✅ Backup və recovery
+- ✅ Open source contribution üçün mütləq
+
+## 🎯 Öyrənmə Səviyyələri
+
+**Səviyyə 0:** Hazırlıq - 1-2 gün  
+**Səviyyə 1:** Əsaslar - 1 həftə  
+**Səviyyə 2:** Branching & Merging - 2-3 həftə  
+**Səviyyə 3:** Collaboration - 1 ay  
+**Səviyyə 4:** Advanced - 1-2 ay  
+**Səviyyə 5:** Expert - 3+ ay
+
+---
+
+# Level 0: Hazırlıq və Quraşdırma 🔰
+
+## Git Quraşdırma
+
+### Linux
+```bash
+# Ubuntu/Debian
+sudo apt update
+sudo apt install git
+
+# Arch Linux
+sudo pacman -S git
+
+# Fedora
+sudo dnf install git
+
+# Yoxla
+git --version
+```
+
+### macOS
+```bash
+# Homebrew ilə (tövsiyə olunur)
+brew install git
+
+# Və ya Xcode Command Line Tools
+xcode-select --install
+
+# Yoxla
+git --version
+```
+
+### Windows
+```powershell
+# Git for Windows yüklə
+# https://git-scm.com/download/win
+
+# Və ya Chocolatey ilə
+choco install git
+
+# PowerShell-də yoxla
+git --version
+```
+
+## İlk Konfiqurasiya
+
+```bash
+# İstifadəçi məlumatları (mütləq!)
+git config --global user.name "Sizin Adınız"
+git config --global user.email "email@example.com"
+
+# Default branch adı
+git config --global init.defaultBranch main
+
+# Editor seçimi
+git config --global core.editor "vim"
+# və ya
+git config --global core.editor "code --wait"  # VS Code
+
+# Rəngli output
+git config --global color.ui auto
+
+# Konfiqurasiyanı yoxla
+git config --list
+git config user.name
+```
+
+**Pro Tip:** Email ünvanınız GitHub email-i ilə eyni olmalıdır ki, commit-lər düzgün hesaba bağlansın!
+
+## Git Əsas Konseptlər
+
+**Repository (Repo)** - Layihənizin bütün faylları və tarixinin saxlandığı yer. `.git` folder-i.
+
+**Commit** - Layihənin müəyyən andakı snapshot-ı. Hər commit unikal ID (hash) ilə identify olunur.
+
+**Branch** - Layihənin paralel versiyası. Main development xəttindən ayrılıb müstəqil işləməyə imkan verir.
+
+**Remote** - Kodun online saxlandığı yer (GitHub, GitLab, Bitbucket).
+
+---
+
+# Level 1: Əsaslar 📖
+
+## Repository Yaratmaq
+
+### Yeni Repo
+
+```bash
+# Folder yarat və içəri gir
+mkdir my-project
+cd my-project
+
+# Git repository initialize et
+git init
+
+# Status yoxla
+git status
+```
+
+### Mövcud Repo Clone
+
+```bash
+# HTTPS ilə
+git clone https://github.com/username/repo.git
+
+# SSH ilə
+git clone git@github.com:username/repo.git
+
+# Başqa folder adı ilə
+git clone https://github.com/username/repo.git my-folder
+
+# Spesifik branch
+git clone -b develop https://github.com/username/repo.git
+```
+
+## Git Workflow - Əsas 3 Sahə
+
+Working Directory → Staging Area → Repository
+
+1. **Working Directory** - Faylları edit etdiyiniz yer
+2. **Staging Area (Index)** - Commit-ə hazır olan dəyişikliklər
+3. **Repository (.git)** - Commit edilmiş dəyişikliklər
+
+## Əsas Komandalar
+
+### git status
+
+Cari vəziyyəti göstərir - hansı fayllar dəyişib, staging area-da nə var, və s.
+
+```bash
+git status
+git status -s  # qısa format
+```
+
+### git add
+
+Faylları staging area-ya əlavə edir.
+
+```bash
+git add file.txt           # tək fayl
+git add file1.txt file2.txt  # çoxlu fayl
+git add *.js               # pattern
+git add .                  # hamısı (cari directory)
+git add -A                 # hamısı (bütün repo)
+git add -p                 # interactive (hissə-hissə)
+```
+
+### git commit
+
+Staging area-dakı dəyişiklikləri repository-yə save edir.
+
+```bash
+git commit -m "Commit mesajı"
+git commit -am "Mesaj"  # add ampersand commit (tracked files)
+git commit --amend      # sonuncu commit-i edit et
+git commit --amend --no-edit  # mesajı dəyişmədən
+```
+
+**Commit Mesaj Best Practices:**
+- Qısa və aydın (50 char-dan az)
+- Imperative mood: "Add feature" (not "Added")
+- Nə dəyişdiyin yox, niyə dəyişdiyini yaz
+- Body əlavə edərsənsə, 72 char wrap et
+
+## Dəyişiklikləri Görmək
+
+### git diff
+
+```bash
+# Working directory vs staging
+git diff
+
+# Staging vs repository
+git diff --staged
+git diff --cached
+
+# Spesifik fayl
+git diff file.txt
+
+# İki commit arasında
+git diff commit1 commit2
+
+# Statistika
+git diff --stat
+```
+
+## Faylları Silmək və Adını Dəyişmək
+
+```bash
+# Sil
+git rm file.txt           # faylı sil və stage et
+git rm --cached file.txt  # Git-dən sil, faylı saxla
+
+# Ad dəyişdir
+git mv old-name.txt new-name.txt
+```
+
+## .gitignore
+
+Müəyyən faylları Git-dən ignore et.
+
+```gitignore
+# Node.js
+node_modules/
+npm-debug.log
+.env
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.env
+
+# Java
+*.class
+target/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Build
+build/
+dist/
+*.exe
+```
+
+## Tarix və Log
+
+### git log
+
+```bash
+# Adi log
+git log
+
+# Qısa format
+git log --oneline
+
+# Qrafik şəklində
+git log --graph --oneline --all
+
+# Son 5 commit
+git log -5
+
+# Müəllif üzrə
+git log --author="Ali"
+
+# Tarix üzrə
+git log --since="2 weeks ago"
+git log --after="2024-01-01" --before="2024-02-01"
+
+# Fayl üzrə
+git log -- file.txt
+
+# Gözəl format
+git log --pretty=format:"%h - %an, %ar : %s"
+
+# Statistika
+git log --stat
+git log --shortstat
+```
+
+### git show
+
+```bash
+# Son commit
+git show
+
+# Spesifik commit
+git show abc123
+
+# Spesifik fayl spesifik commit-də
+git show abc123:file.txt
+```
+
+---
+
+# Level 2: Branching & Merging 🌿
+
+## Branch Nədir?
+
+Branch - layihənin parallel development xətti. Main koddan ayrılıb feature əlavə edə, bug fix edə bilərsən, sonra geri birləşdirə bilərsən.
+
+## Branch Komandaları
+
+```bash
+# Branch-ları göstər
+git branch              # local
+git branch -r           # remote
+git branch -a           # hamısı
+
+# Yeni branch yarat
+git branch feature-name
+
+# Branch yarat və keç
+git checkout -b feature-name
+# və ya (Git 2.23+)
+git switch -c feature-name
+
+# Branch-ə keç
+git checkout feature-name
+git switch feature-name
+
+# Branch-ı sil
+git branch -d feature-name     # safe (merged olmalı)
+git branch -D feature-name     # force
+
+# Branch-ı rename et
+git branch -m old-name new-name
+
+# Cari branch
+git branch --show-current
+```
+
+## Branch Strategiyaları
+
+### Git Flow
+
+- `main/master` - production code
+- `develop` - development code
+- `feature/*` - yeni feature-lər
+- `hotfix/*` - critical bug fixes
+- `release/*` - release hazırlığı
+
+### GitHub Flow (Sadə)
+
+**Prosedur:**
+1. `main`-dən branch yarat
+2. Commit-lər et
+3. Pull Request aç
+4. Review al
+5. Merge et
+6. Deploy et
+
+## Merging
+
+### Əsas Merge
+
+```bash
+# main-ə keç
+git checkout main
+
+# feature-u merge et
+git merge feature-branch
+```
+
+### Merge Options
+
+```bash
+# Normal merge
+git merge feature
+
+# No fast-forward (həmişə merge commit)
+git merge --no-ff feature
+
+# Fast-forward only
+git merge --ff-only feature
+
+# Merge-i abort et
+git merge --abort
+
+# Conflict-ləri automatic resolve et
+git merge -X theirs feature   # onların versiyası
+git merge -X ours feature     # bizim versiya
+```
+
+## Merge Conflicts
+
+### İki branch eyni fayl, eyni yerdə fərqli dəyişikliklər edibsə conflict olur.
+
+```bash
+git merge feature
+
+# Auto-merging file.txt
+# CONFLICT (content): Merge conflict in file.txt
+# Automatic merge failed; fix conflicts and then commit.
+
+# Conflict-li faylları göstər
+git status
+```
+
+### Conflict Marker-ları
+
+Faylda belə göstərilər:
+```
+<<<<<<<< HEAD
+Bu bizim versiyamızdır (main)
+========
+Bu onların versiyasıdır (feature)
+>>>>>>>> feature-branch
+```
+
+Həll addımları:
+1. Faylı aç
+2. Conflict marker-ları tap
+3. Düzgün kodu seç və ya birləşdir
+4. Marker-ları sil
+5. Stage et və commit et
+
+```bash
+# Conflict-i düzəlt faylda
+# Sonra:
+git add file.txt
+git commit -m "Resolve merge conflict"
+
+# Və ya abort et
+git merge --abort
+```
+
+## Rebase
+
+Alternative merge method - commit-ləri yenidən yazır.
+
+```bash
+# feature branch-indəyik
+git rebase main
+
+# Interactive rebase
+git rebase -i HEAD~3  # son 3 commit
+
+# Rebase davam et
+git rebase --continue
+
+# Rebase skip
+git rebase --skip
+
+# Rebase abort
+git rebase --abort
+```
+
+**Qayda:** Public branch-ləri rebase etmə! (məs. main, develop)
+
+### Interactive Rebase
+
+```bash
+git rebase -i HEAD~5
+
+# Editor açılır:
+# pick abc123 First commit
+# pick def456 Second commit
+# pick ghi789 Third commit
+
+# Dəyişdir:
+# pick abc123 First commit
+# squash def456 Second commit  # birləşdir
+# reword ghi789 Better message  # mesajı dəyişdir
+# edit jkl012 Fourth commit     # edit et
+# drop mno345 Fifth commit      # sil
+```
+
+Komandalar: pick, reword, edit, squash, fixup, drop
+
+---
+
+# Level 3: Remote & Collaboration 🌐
+
+## Remote Repository
+
+### SSH Key yaratmaq
+
+```bash
+# SSH key generate et
+ssh-keygen -t ed25519 -C "your_email@example.com"
+
+# Public key-i kopyala
+cat ~/.ssh/id_ed25519.pub
+
+# GitHub-a əlavə et:
+# Settings → SSH and GPG keys → New SSH key
+
+# Test et
+ssh -T git@github.com
+```
+
+### Remote Əlavə Etmək
+
+```bash
+# Remote əlavə et
+git remote add origin git@github.com:username/repo.git
+
+# Remote-ləri göstər
+git remote -v
+
+# Remote URL dəyişdir
+git remote set-url origin new-url
+
+# Remote sil
+git remote remove origin
+
+# Remote haqqında info
+git remote show origin
+```
+
+## Push & Pull
+
+### git push
+
+Local commit-ləri remote-a göndərir.
+
+```bash
+# İlk push
+git push -u origin main
+
+# Normal push
+git push
+
+# Bütün branch-lar
+git push --all
+
+# Force push (təhlükəli!)
+git push --force
+git push --force-with-lease  # daha təhlükəsiz
+
+# Branch-ı remote-a push et
+git push origin feature-branch
+
+# Branch-ı remote-dan sil
+git push origin --delete feature-branch
+```
+
+### git pull
+
+Remote-dan dəyişiklikləri local-a gətirir.
+
+```bash
+# Pull (fetch ampersand merge)
+git pull
+
+# Spesifik branch
+git pull origin main
+
+# Rebase ilə pull
+git pull --rebase
+
+# Force pull
+git fetch origin
+git reset --hard origin/main
+```
+
+### git fetch
+
+Remote-dan məlumat gətirir amma merge etmir.
+
+```bash
+# Fetch
+git fetch
+
+# Bütün remote-lar
+git fetch --all
+
+# Prune (silinmiş branch-ları təmizlə)
+git fetch --prune
+
+# Remote branch-ları göstər
+git branch -r
+```
+
+## Pull Requests (GitHub)
+
+### PR Workflow
+
+1. Branch Yarat: `git checkout -b feature/new-feature`
+2. Kod Yaz və Commit Et: `git add .` və `git commit -m "Add new feature"`
+3. Push Et: `git push origin feature/new-feature`
+4. PR Aç: GitHub-da "New Pull Request" düyməsinə bas
+5. Review: Komanda üzvləri review edir, komment yazır
+6. Merge: Təsdiq edildikdən sonra merge edilir
+
+### PR Best Practices
+
+**Yaxşı PR:**
+- Kiçik və focused (1 feature)
+- Aydın title və description
+- Test-lər əlavə edilib
+- Documentation update
+- No conflicts
+
+**Pis PR:**
+- 50+ fayl dəyişikliyi
+- Multiple unrelated changes
+- No description
+- Broken tests
+
+## Fork & Contribute
+
+Open source layihələrə contribute etmək:
+
+```bash
+# 1. GitHub-da repo-nu fork et
+
+# 2. Clone et
+git clone git@github.com:your-username/repo.git
+cd repo
+
+# 3. Upstream əlavə et
+git remote add upstream git@github.com:original-owner/repo.git
+
+# 4. Sync et
+git fetch upstream
+git checkout main
+git merge upstream/main
+
+# 5. Feature branch yarat
+git checkout -b fix-bug
+
+# 6. Kod yaz və commit et
+git add .
+git commit -m "Fix bug"
+
+# 7. Push et
+git push origin fix-bug
+
+# 8. PR aç (forked repo → original repo)
+```
+
+---
+
+# Level 4: Advanced Git 🎓
+
+## Stash
+
+Dəyişiklikləri müvəqqəti saxla.
+
+```bash
+# Stash et
+git stash
+git stash save "Work in progress"
+
+# Stash list
+git stash list
+
+# Stash apply (saxla)
+git stash apply
+git stash apply stash@{0}
+
+# Stash pop (apply və sil)
+git stash pop
+
+# Stash drop (sil)
+git stash drop stash@{0}
+
+# Hamısını sil
+git stash clear
+
+# Stash diff
+git stash show
+git stash show -p
+
+# Untracked faylları da stash et
+git stash -u
+
+# Branch yarat stash-dən
+git stash branch new-branch-name
+```
+
+## Cherry-pick
+
+Spesifik commit-i başqa branch-a köçür.
+
+```bash
+# Tək commit
+git cherry-pick abc123
+
+# Çoxlu commit
+git cherry-pick abc123 def456 ghi789
+
+# Range
+git cherry-pick abc123..def456
+
+# Edit message
+git cherry-pick abc123 --edit
+
+# No commit (staging-də saxla)
+git cherry-pick abc123 --no-commit
+
+# Abort
+git cherry-pick --abort
+```
+
+## Reset, Revert, Restore
+
+### git reset
+
+Commit tarixini dəyişdir.
+
+```bash
+# Soft reset (commit-ləri unstage et, fayllar dəyişməz)
+git reset --soft HEAD~1
+
+# Mixed reset (default - unstage, fayllar dəyişməz)
+git reset HEAD~1
+git reset --mixed HEAD~1
+
+# Hard reset (HƏR ŞEYİ SİL - TEHLÜKƏLİ!)
+git reset --hard HEAD~1
+
+# Spesifik commit-ə
+git reset --hard abc123
+
+# Faylı unstage et
+git reset HEAD file.txt
+```
+
+**DİQQƏT:** `git reset --hard` dəyişiklikləri silir - geri gətirmək çətindir!
+
+### git revert
+
+Commit-i undo edən yeni commit yaradır (tarix saxlanır).
+
+```bash
+# Son commit-i revert et
+git revert HEAD
+
+# Spesifik commit
+git revert abc123
+
+# Çoxlu commit
+git revert abc123 def456
+
+# No commit (manual commit)
+git revert --no-commit abc123
+
+# Merge commit revert
+git revert -m 1 abc123
+```
+
+### git restore
+
+Faylları restore edir.
+
+```bash
+# Working directory-ni restore et
+git restore file.txt
+
+# Staging-dən unstage et
+git restore --staged file.txt
+
+# Spesifik commit-dən restore
+git restore --source=abc123 file.txt
+
+# Hamısını restore et
+git restore .
+```
+
+## Reflog
+
+Git-in "trash bin"-i - silinmiş commit-ləri tap.
+
+```bash
+# Reflog göstər
+git reflog
+
+# Spesifik branch
+git reflog show branch-name
+
+# Format
+git reflog --pretty=oneline
+
+# Commit-i geri qaytar
+git reset --hard HEAD@{2}
+git checkout HEAD@{5}
+```
+
+## Git Aliases
+
+Custom command-lar yarat.
+
+```bash
+# ~/.gitconfig-ə əlavə et
+
+[alias]
+    s = status -s
+    st = status
+    a = add
+    aa = add --all
+    c = commit
+    cm = commit -m
+    ca = commit --amend
+    cane = commit --amend --no-edit
+    co = checkout
+    br = branch
+    l = log --oneline
+    d = diff
+    ds = diff --staged
+    p = push
+    pl = pull
+    undo = reset --soft HEAD~1
+    unstage = reset HEAD
+```
+
+---
+
+# Level 5: Expert & Best Practices 🏆
+
+## Performance Optimization
+
+### Git LFS
+
+```bash
+# Install Git LFS
+brew install git-lfs  # macOS
+apt install git-lfs   # Linux
+
+# Initialize
+git lfs install
+
+# Track large files
+git lfs track "*.psd"
+git lfs track "*.zip"
+git lfs track "videos/*"
+
+# Check tracking
+git lfs ls-files
+```
+
+### Shallow Clone
+
+```bash
+# Yalnız son commit
+git clone --depth 1 https://github.com/user/repo.git
+
+# Son 10 commit
+git clone --depth 10 https://github.com/user/repo.git
+
+# Single branch
+git clone --single-branch --branch main https://github.com/user/repo.git
+```
+
+## Security Best Practices
+
+**HEÇ VAXT COMMIT ETMƏ:**
+- Passwords
+- API keys
+- Private keys
+- Tokens
+- Credentials
+- .env faylları
+
+### Secret-ləri Sil
+
+```bash
+# Tarixdən fayl sil
+git filter-branch --force --index-filter \
+  "git rm --cached --ignore-unmatch path/to/secret.txt" \
+  --prune-empty --tag-name-filter cat -- --all
+```
+
+Tarixdən sildikdən sonra da secret-i rotate et!
+
+## Debugging Git
+
+```bash
+# Verbose output
+GIT_TRACE=1 git pull
+
+# SSH debug
+GIT_SSH_COMMAND="ssh -v" git pull
+
+# Curl verbose
+GIT_CURL_VERBOSE=1 git pull
+```
+
+## Git Tips & Tricks
+
+### Search in Code History
+
+```bash
+# Kod içində axtarış
+git log -S "function_name" --source --all
+
+# File history
+git log --follow -- file.txt
+```
+
+### Blame
+
+```bash
+# Kim hansı sətri yazıb?
+git blame file.txt
+
+# Specific lines
+git blame -L 10,20 file.txt
+```
+
+### Clean Repo
+
+```bash
+# Untracked faylları göstər
+git clean -n
+
+# Untracked faylları sil
+git clean -f
+
+# Directories də sil
+git clean -fd
+```
+
+---
+
+# 🏁 Nəticə
+
+Git master olmağa hazırsan? İşlə davam et və praktika et! 🚀
+
+Hər developer Git-lə işləyərkən problem yaşayıb. Məsələ səhv etməməkdə deyil, səhvi necə düzəltməkdə!
+
+**Əsas məsləhətlər:**
+- 🔄 Hər gün praktika et
+- 📖 Documentation oxu
+- 🤝 Team ilə collaborate et
+- 🐛 Səhvlərdən öyrən
+- 🌟 Open source-a contribute et

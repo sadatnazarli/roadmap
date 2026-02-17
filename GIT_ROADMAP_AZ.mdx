@@ -1,0 +1,1857 @@
+---
+title: "Git - Sıfırdan Master Səviyyəyə Roadmap"
+description: "Version Control System-in tam bələdçisi"
+author: "DevRoadmap.az"
+date: "2024"
+tags: ["git", "version-control", "devops", "azerbaijani"]
+difficulty: "beginner-to-advanced"
+estimatedTime: "2-6 ay"
+---
+
+# Git - Sıfırdan Master Səviyyəyə Roadmap 🚀
+
+<IntroCard>
+**Git nədir?**  
+Distributed version control system - kodunuzu idarə edən, dəyişiklikləri izləyən və komanda ilə əməkdaşlıq etməyə imkan verən güclü alət.
+
+**Niyə Git öyrənməliyik?**
+- ✅ Hər developer-in bilməli olduğu əsas alət
+- ✅ Komanda əməkdaşlığı üçün vacib
+- ✅ Kodun tarixini saxlayır
+- ✅ Parallel işləməyə imkan verir
+- ✅ Backup və recovery
+- ✅ Open source contribution üçün mütləq
+</IntroCard>
+
+---
+
+## 🎯 Öyrənmə Səviyyələri
+
+<LevelCard level="0" title="Hazırlıq" duration="1-2 gün" />
+<LevelCard level="1" title="Əsaslar" duration="1 həftə" />
+<LevelCard level="2" title="Branching & Merging" duration="2-3 həftə" />
+<LevelCard level="3" title="Collaboration" duration="1 ay" />
+<LevelCard level="4" title="Advanced" duration="1-2 ay" />
+<LevelCard level="5" title="Expert" duration="3+ ay" />
+
+---
+
+# Level 0: Hazırlıq və Quraşdırma 🔰
+
+## Git Quraşdırma
+
+<Tabs>
+<Tab label="Linux">
+```bash
+# Ubuntu/Debian
+sudo apt update
+sudo apt install git
+
+# Arch Linux
+sudo pacman -S git
+
+# Fedora
+sudo dnf install git
+
+# Yoxla
+git --version
+```
+</Tab>
+
+<Tab label="macOS">
+```bash
+# Homebrew ilə (tövsiyə olunur)
+brew install git
+
+# Və ya Xcode Command Line Tools
+xcode-select --install
+
+# Yoxla
+git --version
+```
+</Tab>
+
+<Tab label="Windows">
+```powershell
+# Git for Windows yüklə
+# https://git-scm.com/download/win
+
+# Və ya Chocolatey ilə
+choco install git
+
+# PowerShell-də yoxla
+git --version
+```
+</Tab>
+</Tabs>
+
+## İlk Konfiqurasiya
+
+<CodeBlock language="bash" title="Git konfiqurasiyası">
+```bash
+# İstifadəçi məlumatları (mütləq!)
+git config --global user.name "Sizin Adınız"
+git config --global user.email "email@example.com"
+
+# Default branch adı
+git config --global init.defaultBranch main
+
+# Editor seçimi
+git config --global core.editor "vim"
+# və ya
+git config --global core.editor "code --wait"  # VS Code
+
+# Rəngli output
+git config --global color.ui auto
+
+# Konfiqurasiyanı yoxla
+git config --list
+git config user.name
+```
+</CodeBlock>
+
+<InfoBox type="tip">
+**Pro Tip:** Email ünvanınız GitHub email-i ilə eyni olmalıdır ki, commit-lər düzgün hesaba bağlansın!
+</InfoBox>
+
+## Git Əsas Konseptlər
+
+<ConceptCard title="Repository (Repo)">
+Layihənizin bütün faylları və tarixinin saxlandığı yer. `.git` folder-i.
+</ConceptCard>
+
+<ConceptCard title="Commit">
+Layihənin müəyyən andakı snapshot-ı. Hər commit unikal ID (hash) ilə identify olunur.
+</ConceptCard>
+
+<ConceptCard title="Branch">
+Layihənin paralel versiyası. Main development xəttindən ayrılıb müstəqil işləməyə imkan verir.
+</ConceptCard>
+
+<ConceptCard title="Remote">
+Kodun online saxlandığı yer (GitHub, GitLab, Bitbucket).
+</ConceptCard>
+
+---
+
+# Level 1: Əsaslar 📖
+
+## Repository Yaratmak
+
+### Yeni Repo
+
+<CodeBlock language="bash" title="Lokal repo yaratmaq">
+```bash
+# Folder yarat və içəri gir
+mkdir my-project
+cd my-project
+
+# Git repository initialize et
+git init
+
+# Status yoxla
+git status
+```
+</CodeBlock>
+
+### Mövcud Repo Clone
+
+<CodeBlock language="bash" title="Remote repo clone">
+```bash
+# HTTPS ilə
+git clone https://github.com/username/repo.git
+
+# SSH ilə
+git clone git@github.com:username/repo.git
+
+# Başqa folder adı ilə
+git clone https://github.com/username/repo.git my-folder
+
+# Spesifik branch
+git clone -b develop https://github.com/username/repo.git
+```
+</CodeBlock>
+
+## Git Workflow - Əsas 3 Sahə
+
+<DiagramCard>
+```
+Working Directory  →  Staging Area  →  Repository
+    (edit)          (git add)        (git commit)
+```
+</DiagramCard>
+
+### 1. Working Directory
+Faylları edit etdiyiniz yer.
+
+### 2. Staging Area (Index)
+Commit-ə hazır olan dəyişikliklər.
+
+### 3. Repository (.git)
+Commit edilmiş dəyişikliklər.
+
+## Əsas Komandalar
+
+<CommandCard command="git status">
+Cari vəziyyəti göstərir - hansı fayllar dəyişib, staging area-da nə var, və s.
+
+```bash
+git status
+git status -s  # qısa format
+```
+</CommandCard>
+
+<CommandCard command="git add">
+Faylları staging area-ya əlavə edir.
+
+```bash
+git add file.txt           # tək fayl
+git add file1.txt file2.txt  # çoxlu fayl
+git add *.js               # pattern
+git add .                  # hamısı (cari directory)
+git add -A                 # hamısı (bütün repo)
+git add -p                 # interactive (hissə-hissə)
+```
+</CommandCard>
+
+<CommandCard command="git commit">
+Staging area-dakı dəyişiklikləri repository-yə save edir.
+
+```bash
+git commit -m "Commit mesajı"
+git commit -am "Mesaj"  # add + commit (tracked files)
+git commit --amend      # sonuncu commit-i edit et
+git commit --amend --no-edit  # mesajı dəyişmədən
+```
+</CommandCard>
+
+<InfoBox type="warning">
+**Commit Mesaj Best Practices:**
+- Qısa və aydın (50 char-dan az)
+- Imperative mood: "Add feature" (not "Added")
+- Nə dəyişdiyin yox, niyə dəyişdiyini yaz
+- Body əlavə edərsənsə, 72 char wrap et
+</InfoBox>
+
+## Dəyişiklikləri Görmək
+
+<CodeBlock language="bash" title="git diff">
+```bash
+# Working directory vs staging
+git diff
+
+# Staging vs repository
+git diff --staged
+git diff --cached
+
+# Spesifik fayl
+git diff file.txt
+
+# İki commit arasında
+git diff commit1 commit2
+
+# Statistika
+git diff --stat
+```
+</CodeBlock>
+
+## Faylları Silmək və Adını Dəyişmək
+
+<CodeBlock language="bash">
+```bash
+# Sil
+git rm file.txt           # faylı sil və stage et
+git rm --cached file.txt  # Git-dən sil, faylı saxla
+
+# Ad dəyişdir
+git mv old-name.txt new-name.txt
+```
+</CodeBlock>
+
+## .gitignore
+
+Müəyyən faylları Git-dən ignore et.
+
+<CodeBlock language="bash" title=".gitignore">
+```gitignore
+# Node.js
+node_modules/
+npm-debug.log
+.env
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.env
+
+# Java
+*.class
+target/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Build
+build/
+dist/
+*.exe
+```
+</CodeBlock>
+
+<InfoBox type="tip">
+**gitignore.io** saytından öz layihə tipin üçün template götür!
+</InfoBox>
+
+## Tarix və Log
+
+<CodeBlock language="bash" title="git log">
+```bash
+# Adi log
+git log
+
+# Qısa format
+git log --oneline
+
+# Qrafik şəklində
+git log --graph --oneline --all
+
+# Son 5 commit
+git log -5
+
+# Müəllif üzrə
+git log --author="Ali"
+
+# Tarix üzrə
+git log --since="2 weeks ago"
+git log --after="2024-01-01" --before="2024-02-01"
+
+# Fayl üzrə
+git log -- file.txt
+
+# Gözəl format
+git log --pretty=format:"%h - %an, %ar : %s"
+
+# Statistika
+git log --stat
+git log --shortstat
+```
+</CodeBlock>
+
+<CodeBlock language="bash" title="git show">
+```bash
+# Son commit
+git show
+
+# Spesifik commit
+git show abc123
+
+# Spesifik fayl spesifik commit-də
+git show abc123:file.txt
+```
+</CodeBlock>
+
+## İlk Praktika
+
+<TaskList>
+- [ ] Lokal repo yarat
+- [ ] Bir neçə fayl əlavə et
+- [ ] .gitignore yarat
+- [ ] 5+ commit et
+- [ ] git log-a bax
+- [ ] Faylları edit et və diff-ə bax
+</TaskList>
+
+---
+
+# Level 2: Branching & Merging 🌿
+
+## Branch Nədir?
+
+<ConceptCard>
+Branch - layihənin parallel development xətti. Main koddan ayrılıb feature əlavə edə, bug fix edə bilərsən, sonra geri birləşdirə bilərsən.
+</ConceptCard>
+
+<DiagramCard title="Branch Visualization">
+```
+main:     A---B---C---F---G
+               \       /
+feature:        D---E
+```
+</DiagramCard>
+
+## Branch Komandaları
+
+<CodeBlock language="bash" title="Branch əməliyyatları">
+```bash
+# Branch-ları göstər
+git branch              # local
+git branch -r           # remote
+git branch -a           # hamısı
+
+# Yeni branch yarat
+git branch feature-name
+
+# Branch yarat və keç
+git checkout -b feature-name
+# və ya (Git 2.23+)
+git switch -c feature-name
+
+# Branch-ə keç
+git checkout feature-name
+git switch feature-name
+
+# Branch-ı sil
+git branch -d feature-name     # safe (merged olmalı)
+git branch -D feature-name     # force
+
+# Branch-ı rename et
+git branch -m old-name new-name
+
+# Cari branch
+git branch --show-current
+```
+</CodeBlock>
+
+## Branch Strategiyaları
+
+### Git Flow
+
+<DiagramCard title="Git Flow Model">
+```
+master:      A-------F-------K     (production)
+              \     /       /
+develop:       B---C---G---H---J   (development)
+                \     / \ /
+feature:         D---E   I         (features)
+```
+</DiagramCard>
+
+**Branch-lar:**
+- `main/master` - production code
+- `develop` - development code
+- `feature/*` - yeni feature-lər
+- `hotfix/*` - critical bug fixes
+- `release/*` - release hazırlığı
+
+### GitHub Flow (Sadə)
+
+<DiagramCard>
+```
+main:      A---B---E---F
+                \     /
+feature:         C---D
+```
+</DiagramCard>
+
+**Prosedur:**
+1. `main`-dən branch yarat
+2. Commit-lər et
+3. Pull Request aç
+4. Review al
+5. Merge et
+6. Deploy et
+
+## Merging
+
+### Fast-Forward Merge
+
+<CodeBlock language="bash">
+```bash
+# main-ə keç
+git checkout main
+
+# feature-u merge et
+git merge feature-branch
+```
+</CodeBlock>
+
+<DiagramCard title="Fast-Forward">
+```
+Əvvəl:
+main:     A---B
+               \
+feature:        C---D
+
+Sonra:
+main:     A---B---C---D
+```
+</DiagramCard>
+
+### 3-Way Merge
+
+<CodeBlock language="bash">
+```bash
+git checkout main
+git merge feature-branch
+```
+</CodeBlock>
+
+<DiagramCard title="3-Way Merge">
+```
+Əvvəl:
+main:     A---B---C
+               \
+feature:        D---E
+
+Sonra:
+main:     A---B---C---F
+               \     /
+feature:        D---E
+```
+</DiagramCard>
+
+### Merge Options
+
+<CodeBlock language="bash">
+```bash
+# Normal merge
+git merge feature
+
+# No fast-forward (həmişə merge commit)
+git merge --no-ff feature
+
+# Fast-forward only
+git merge --ff-only feature
+
+# Merge-i abort et
+git merge --abort
+
+# Conflict-ləri automatic resolve et
+git merge -X theirs feature   # onların versiyası
+git merge -X ours feature     # bizim versiya
+```
+</CodeBlock>
+
+## Merge Conflicts
+
+### Conflict Nədir?
+
+İki branch eyni fayl, eyni yerdə fərqli dəyişikliklər edibsə.
+
+<CodeBlock language="bash" title="Conflict görmək">
+```bash
+git merge feature
+
+# Auto-merging file.txt
+# CONFLICT (content): Merge conflict in file.txt
+# Automatic merge failed; fix conflicts and then commit.
+
+# Conflict-li faylları göstər
+git status
+```
+</CodeBlock>
+
+### Conflict Həll Etmək
+
+<CodeBlock language="diff" title="Conflict marker-ları">
+```diff
+<<<<<<< HEAD
+Bu bizim versiyamızdır (main)
+=======
+Bu onların versiyasıdır (feature)
+>>>>>>> feature-branch
+```
+</CodeBlock>
+
+**Həll addımları:**
+1. Faylı aç
+2. Conflict marker-ları tap
+3. Düzgün kodu seç və ya birləşdir
+4. Marker-ları sil
+5. Stage et və commit et
+
+<CodeBlock language="bash">
+```bash
+# Conflict-i düzəlt faylda
+# Sonra:
+git add file.txt
+git commit -m "Resolve merge conflict"
+
+# Və ya abort et
+git merge --abort
+```
+</CodeBlock>
+
+### Merge Tools
+
+<CodeBlock language="bash">
+```bash
+# Built-in merge tool
+git mergetool
+
+# Spesifik tool
+git mergetool --tool=vimdiff
+git mergetool --tool=meld
+
+# Tool konfiqurasiya
+git config --global merge.tool vimdiff
+```
+</CodeBlock>
+
+## Rebase
+
+Alternative merge method - commit-ləri yenidən yazır.
+
+<CodeBlock language="bash" title="git rebase">
+```bash
+# feature branch-indəyik
+git rebase main
+
+# Interactive rebase
+git rebase -i HEAD~3  # son 3 commit
+
+# Rebase davam et
+git rebase --continue
+
+# Rebase skip
+git rebase --skip
+
+# Rebase abort
+git rebase --abort
+```
+</CodeBlock>
+
+<DiagramCard title="Rebase vs Merge">
+```
+Merge:
+main:     A---B---C---F
+               \     /
+feature:        D---E
+
+Rebase:
+main:     A---B---C
+                   \
+feature:            D'---E'
+```
+</DiagramCard>
+
+<InfoBox type="warning">
+**Rebase Qayda:** Public branch-ləri rebase etmə! (məs. main, develop)
+</InfoBox>
+
+### Interactive Rebase
+
+<CodeBlock language="bash">
+```bash
+git rebase -i HEAD~5
+
+# Editor açılır:
+# pick abc123 First commit
+# pick def456 Second commit
+# pick ghi789 Third commit
+
+# Dəyişdir:
+# pick abc123 First commit
+# squash def456 Second commit  # birləşdir
+# reword ghi789 Better message  # mesajı dəyişdir
+# edit jkl012 Fourth commit     # edit et
+# drop mno345 Fifth commit      # sil
+```
+</CodeBlock>
+
+**Komandalar:**
+- `pick` - commit-i saxla
+- `reword` - mesajı dəyişdir
+- `edit` - commit-i edit et
+- `squash` - əvvəlki ilə birləşdir
+- `fixup` - birləşdir, mesajı sil
+- `drop` - commit-i sil
+
+## Praktika
+
+<TaskList>
+- [ ] 3 branch yarat
+- [ ] Hər branch-da fərqli fayllar əlavə et
+- [ ] Branch-ları merge et
+- [ ] Conflict yarat və həll et
+- [ ] Interactive rebase et
+- [ ] Git Flow practice et
+</TaskList>
+
+---
+
+# Level 3: Remote & Collaboration 🌐
+
+## Remote Repository
+
+### GitHub/GitLab Setup
+
+<CodeBlock language="bash" title="SSH Key yaratmaq">
+```bash
+# SSH key generate et
+ssh-keygen -t ed25519 -C "your_email@example.com"
+
+# Public key-i kopyala
+cat ~/.ssh/id_ed25519.pub
+
+# GitHub-a əlavə et:
+# Settings → SSH and GPG keys → New SSH key
+
+# Test et
+ssh -T git@github.com
+```
+</CodeBlock>
+
+### Remote Əlavə Etmək
+
+<CodeBlock language="bash">
+```bash
+# Remote əlavə et
+git remote add origin git@github.com:username/repo.git
+
+# Remote-ləri göstər
+git remote -v
+
+# Remote URL dəyişdir
+git remote set-url origin new-url
+
+# Remote sil
+git remote remove origin
+
+# Remote haqqında info
+git remote show origin
+```
+</CodeBlock>
+
+## Push & Pull
+
+<CommandCard command="git push">
+Local commit-ləri remote-a göndərir.
+
+```bash
+# İlk push
+git push -u origin main
+
+# Normal push
+git push
+
+# Bütün branch-lar
+git push --all
+
+# Force push (təhlükəli!)
+git push --force
+git push --force-with-lease  # daha təhlükəsiz
+
+# Branch-ı remote-a push et
+git push origin feature-branch
+
+# Branch-ı remote-dan sil
+git push origin --delete feature-branch
+```
+</CommandCard>
+
+<CommandCard command="git pull">
+Remote-dan dəyişiklikləri local-a gətirir.
+
+```bash
+# Pull (fetch + merge)
+git pull
+
+# Spesifik branch
+git pull origin main
+
+# Rebase ilə pull
+git pull --rebase
+
+# Force pull
+git fetch origin
+git reset --hard origin/main
+```
+</CommandCard>
+
+<CommandCard command="git fetch">
+Remote-dan məlumat gətirir amma merge etmir.
+
+```bash
+# Fetch
+git fetch
+
+# Bütün remote-lar
+git fetch --all
+
+# Prune (silinmiş branch-ları təmizlə)
+git fetch --prune
+
+# Remote branch-ları göstər
+git branch -r
+```
+</CommandCard>
+
+## Pull Requests (GitHub) / Merge Requests (GitLab)
+
+### PR Workflow
+
+<StepCard number="1" title="Branch Yarat">
+```bash
+git checkout -b feature/new-feature
+```
+</StepCard>
+
+<StepCard number="2" title="Kod Yaz və Commit Et">
+```bash
+git add .
+git commit -m "Add new feature"
+```
+</StepCard>
+
+<StepCard number="3" title="Push Et">
+```bash
+git push origin feature/new-feature
+```
+</StepCard>
+
+<StepCard number="4" title="PR Aç">
+GitHub-da "New Pull Request" düyməsinə bas.
+</StepCard>
+
+<StepCard number="5" title="Review">
+Komanda üzvləri review edir, komment yazır.
+</StepCard>
+
+<StepCard number="6" title="Merge">
+Təsdiq edildikdən sonra merge edilir.
+</StepCard>
+
+### PR Best Practices
+
+<InfoBox type="success">
+**Yaxşı PR:**
+- ✅ Kiçik və focused (1 feature)
+- ✅ Aydın title və description
+- ✅ Test-lər əlavə edilib
+- ✅ Documentation update
+- ✅ No conflicts
+- ✅ CI/CD tests pass
+</InfoBox>
+
+<InfoBox type="error">
+**Pis PR:**
+- ❌ 50+ fayl dəyişikliyi
+- ❌ Multiple unrelated changes
+- ❌ No description
+- ❌ Broken tests
+- ❌ Conflicts
+</InfoBox>
+
+## Fork & Contribute
+
+Open source layihələrə contribute etmək:
+
+<CodeBlock language="bash" title="Fork workflow">
+```bash
+# 1. GitHub-da repo-nu fork et
+
+# 2. Clone et
+git clone git@github.com:your-username/repo.git
+cd repo
+
+# 3. Upstream əlavə et
+git remote add upstream git@github.com:original-owner/repo.git
+
+# 4. Sync et
+git fetch upstream
+git checkout main
+git merge upstream/main
+
+# 5. Feature branch yarat
+git checkout -b fix-bug
+
+# 6. Kod yaz və commit et
+git add .
+git commit -m "Fix bug"
+
+# 7. Push et
+git push origin fix-bug
+
+# 8. PR aç (forked repo → original repo)
+```
+</CodeBlock>
+
+## Conflict Resolution - Remote
+
+<CodeBlock language="bash">
+```bash
+# Remote dəyişiklikləri gətir
+git fetch origin
+
+# Merge et
+git merge origin/main
+
+# Conflict varsa həll et
+# ... düzəlt ...
+git add .
+git commit -m "Resolve conflicts"
+
+# Push et
+git push origin feature-branch
+```
+</CodeBlock>
+
+## Praktika
+
+<TaskList>
+- [ ] GitHub account yarat
+- [ ] SSH key setup et
+- [ ] Repo yarat və push et
+- [ ] Branch push et
+- [ ] Pull Request aç
+- [ ] Repo fork et və contribute et
+- [ ] Upstream sync et
+</TaskList>
+
+---
+
+# Level 4: Advanced Git 🎓
+
+## Stash
+
+Dəyişiklikləri müvəqqəti saxla.
+
+<CodeBlock language="bash" title="git stash">
+```bash
+# Stash et
+git stash
+git stash save "Work in progress"
+
+# Stash list
+git stash list
+
+# Stash apply (saxla)
+git stash apply
+git stash apply stash@{0}
+
+# Stash pop (apply və sil)
+git stash pop
+
+# Stash drop (sil)
+git stash drop stash@{0}
+
+# Hamısını sil
+git stash clear
+
+# Stash diff
+git stash show
+git stash show -p
+
+# Untracked faylları da stash et
+git stash -u
+
+# Branch yarat stash-dən
+git stash branch new-branch-name
+```
+</CodeBlock>
+
+### Stash Nə Vaxt İstifadə Et?
+
+<InfoBox type="tip">
+- ✅ Branch switch etməlisən amma dəyişikliklər commit-ə hazır deyil
+- ✅ Urgent bug fix lazımdır
+- ✅ Yanlış branch-da işləmisən
+- ✅ Pull etməlisən amma conflict olacaq
+</InfoBox>
+
+## Cherry-pick
+
+Spesifik commit-i başqa branch-a köçür.
+
+<CodeBlock language="bash" title="git cherry-pick">
+```bash
+# Tək commit
+git cherry-pick abc123
+
+# Çoxlu commit
+git cherry-pick abc123 def456 ghi789
+
+# Range
+git cherry-pick abc123..def456
+
+# Edit message
+git cherry-pick abc123 --edit
+
+# No commit (staging-də saxla)
+git cherry-pick abc123 --no-commit
+
+# Abort
+git cherry-pick --abort
+```
+</CodeBlock>
+
+## Reset, Revert, Restore
+
+### git reset
+
+Commit tarixini dəyişdir.
+
+<CodeBlock language="bash">
+```bash
+# Soft reset (commit-ləri unstage et, fayllar dəyişməz)
+git reset --soft HEAD~1
+
+# Mixed reset (default - unstage, fayllar dəyişməz)
+git reset HEAD~1
+git reset --mixed HEAD~1
+
+# Hard reset (HƏR ŞEYİ SİL - TEHLÜKƏLİ!)
+git reset --hard HEAD~1
+
+# Spesifik commit-ə
+git reset --hard abc123
+
+# Faylı unstage et
+git reset HEAD file.txt
+```
+</CodeBlock>
+
+<DiagramCard title="Reset Types">
+```
+Soft:   HEAD → staged → working
+Mixed:  HEAD → working (staged clear)
+Hard:   HEAD (staged və working clear)
+```
+</DiagramCard>
+
+<InfoBox type="warning">
+**DİQQƏT:** `git reset --hard` dəyişiklikləri silir - geri gətirmək çətindir!
+</InfoBox>
+
+### git revert
+
+Commit-i undo edən yeni commit yaradır (tarix saxlanır).
+
+<CodeBlock language="bash">
+```bash
+# Son commit-i revert et
+git revert HEAD
+
+# Spesifik commit
+git revert abc123
+
+# Çoxlu commit
+git revert abc123 def456
+
+# No commit (manual commit)
+git revert --no-commit abc123
+
+# Merge commit revert
+git revert -m 1 abc123
+```
+</CodeBlock>
+
+### git restore (Git 2.23+)
+
+Faylları restore edir.
+
+<CodeBlock language="bash">
+```bash
+# Working directory-ni restore et
+git restore file.txt
+
+# Staging-dən unstage et
+git restore --staged file.txt
+
+# Spesifik commit-dən restore
+git restore --source=abc123 file.txt
+
+# Hamısını restore et
+git restore .
+```
+</CodeBlock>
+
+## Reflog
+
+Git-in "trash bin"-i - silinmiş commit-ləri tap.
+
+<CodeBlock language="bash" title="git reflog">
+```bash
+# Reflog göstər
+git reflog
+
+# Spesifik branch
+git reflog show branch-name
+
+# Format
+git reflog --pretty=oneline
+
+# Commit-i geri qaytar
+git reset --hard HEAD@{2}
+git checkout HEAD@{5}
+```
+</CodeBlock>
+
+<InfoBox type="success">
+**Xilas Metodları:**
+- Yanlışlıqla branch sildin? → `git reflog`
+- Hard reset etdin? → `git reflog`
+- Commit-i itirdin? → `git reflog`
+</InfoBox>
+
+## Bisect
+
+Binary search ilə bug-ı tapan commit-i tap.
+
+<CodeBlock language="bash" title="git bisect">
+```bash
+# Bisect başlat
+git bisect start
+
+# Cari commit pis
+git bisect bad
+
+# Keçmişdə yaxşı olan commit
+git bisect good abc123
+
+# Git automated test edir
+# Hər addımda test et və:
+git bisect good  # və ya
+git bisect bad
+
+# Tapıldı!
+# Bisect bitir
+git bisect reset
+```
+</CodeBlock>
+
+### Automated Bisect
+
+<CodeBlock language="bash">
+```bash
+git bisect start HEAD abc123
+git bisect run npm test
+
+# Git automatically tapacaq problemi
+```
+</CodeBlock>
+
+## Submodules
+
+Repo içində repo.
+
+<CodeBlock language="bash" title="git submodule">
+```bash
+# Submodule əlavə et
+git submodule add https://github.com/user/repo.git libs/repo
+
+# Clone repo with submodules
+git clone --recursive https://github.com/user/main-repo.git
+
+# Submodules-i initialize et
+git submodule init
+git submodule update
+
+# və ya
+git submodule update --init --recursive
+
+# Submodule update
+git submodule update --remote
+
+# Submodule sil
+git submodule deinit libs/repo
+git rm libs/repo
+```
+</CodeBlock>
+
+## Worktree
+
+Eyni repo-nun çoxlu working directory-ləri.
+
+<CodeBlock language="bash" title="git worktree">
+```bash
+# Yeni worktree
+git worktree add ../feature-test feature-branch
+
+# List
+git worktree list
+
+# Remove
+git worktree remove ../feature-test
+
+# Prune
+git worktree prune
+```
+</CodeBlock>
+
+## Git Hooks
+
+Müəyyən hadisələrdə automatic script-lər işlədir.
+
+<CodeBlock language="bash" title="Hook-lar">
+```bash
+# Hooks location
+.git/hooks/
+
+# Common hooks:
+# pre-commit      - commit-dən əvvəl
+# prepare-commit-msg - commit mesajı hazırlananda
+# commit-msg      - commit mesajını validate et
+# post-commit     - commit-dən sonra
+# pre-push        - push-dan əvvəl
+# post-merge      - merge-dən sonra
+```
+</CodeBlock>
+
+### Pre-commit Hook Nümunəsi
+
+<CodeBlock language="bash" title=".git/hooks/pre-commit">
+```bash
+#!/bin/bash
+
+# Linter run et
+npm run lint
+
+if [ $? -ne 0 ]; then
+    echo "Linting failed. Commit rejected."
+    exit 1
+fi
+
+# Tests run et
+npm test
+
+if [ $? -ne 0 ]; then
+    echo "Tests failed. Commit rejected."
+    exit 1
+fi
+
+echo "All checks passed!"
+exit 0
+```
+</CodeBlock>
+
+<InfoBox type="tip">
+**Husky** package-i ilə hooks-u asanlıqla idarə et!
+```bash
+npm install husky --save-dev
+npx husky install
+npx husky add .husky/pre-commit "npm test"
+```
+</InfoBox>
+
+## Praktika
+
+<TaskList>
+- [ ] Stash istifadə et
+- [ ] Cherry-pick et
+- [ ] Reset, revert və restore fərqlərini test et
+- [ ] Reflog ilə itirilmiş commit tap
+- [ ] Bisect ilə bug tap
+- [ ] Pre-commit hook yarat
+</TaskList>
+
+---
+
+# Level 5: Expert & Best Practices 🏆
+
+## Git Aliases
+
+Custom command-lar yarat.
+
+<CodeBlock language="bash" title="Useful aliases">
+```bash
+# ~/.gitconfig-ə əlavə et
+
+[alias]
+    # Status
+    s = status -s
+    st = status
+    
+    # Add
+    a = add
+    aa = add --all
+    
+    # Commit
+    c = commit
+    cm = commit -m
+    ca = commit --amend
+    cane = commit --amend --no-edit
+    
+    # Checkout/Switch
+    co = checkout
+    sw = switch
+    
+    # Branch
+    br = branch
+    bra = branch -a
+    
+    # Log
+    l = log --oneline
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    
+    # Diff
+    d = diff
+    ds = diff --staged
+    
+    # Push/Pull
+    p = push
+    pl = pull
+    plo = pull origin
+    pso = push origin
+    
+    # Stash
+    ss = stash save
+    sp = stash pop
+    sl = stash list
+    
+    # Undo
+    undo = reset --soft HEAD~1
+    unstage = reset HEAD
+    
+    # Other
+    last = log -1 HEAD
+    visual = log --graph --all --decorate --oneline
+    aliases = config --get-regexp alias
+```
+</CodeBlock>
+
+## Performance Optimization
+
+### Large Files - Git LFS
+
+<CodeBlock language="bash">
+```bash
+# Install Git LFS
+brew install git-lfs  # macOS
+apt install git-lfs   # Linux
+
+# Initialize
+git lfs install
+
+# Track large files
+git lfs track "*.psd"
+git lfs track "*.zip"
+git lfs track "videos/*"
+
+# Check tracking
+git lfs ls-files
+
+# Add .gitattributes
+git add .gitattributes
+git commit -m "Add Git LFS tracking"
+```
+</CodeBlock>
+
+### Shallow Clone
+
+<CodeBlock language="bash">
+```bash
+# Yalnız son commit
+git clone --depth 1 https://github.com/user/repo.git
+
+# Son 10 commit
+git clone --depth 10 https://github.com/user/repo.git
+
+# Single branch
+git clone --single-branch --branch main https://github.com/user/repo.git
+```
+</CodeBlock>
+
+### Git Maintenance
+
+<CodeBlock language="bash">
+```bash
+# Garbage collection
+git gc
+
+# Aggressive GC
+git gc --aggressive --prune=now
+
+# Optimize repo
+git repack -Ad
+git prune
+
+# Check integrity
+git fsck
+
+# Count objects
+git count-objects -vH
+```
+</CodeBlock>
+
+## Advanced Workflows
+
+### Trunk-Based Development
+
+<ConceptCard>
+Hamı `main` branch-da işləyir, kiçik commit-lər, tez-tez integration.
+</ConceptCard>
+
+### Feature Flags
+
+<CodeBlock language="javascript">
+```javascript
+// Kod-da feature flag
+if (featureFlags.newFeature) {
+    // Yeni feature kodu
+} else {
+    // Köhnə kod
+}
+
+// Bu yolla main-ə merge edə bilərsən
+// Feature production-da disabled
+```
+</CodeBlock>
+
+## Security Best Practices
+
+<InfoBox type="error">
+**HEÇ VAXT COMMIT ETMƏ:**
+- ❌ Passwords
+- ❌ API keys
+- ❌ Private keys
+- ❌ Tokens
+- ❌ Credentials
+- ❌ .env faylları
+</InfoBox>
+
+### Secret-ləri Sil
+
+<CodeBlock language="bash">
+```bash
+# Tarixdən fayl sil
+git filter-branch --force --index-filter \
+  "git rm --cached --ignore-unmatch path/to/secret.txt" \
+  --prune-empty --tag-name-filter cat -- --all
+
+# və ya BFG Repo-Cleaner (daha sürətli)
+bfg --delete-files secret.txt
+git reflog expire --expire=now --all
+git gc --prune=now --aggressive
+```
+</CodeBlock>
+
+<InfoBox type="warning">
+Tarixdən sildikdən sonra da secret-i rotate et!
+</InfoBox>
+
+### GPG Signing
+
+Commit-ləri imzala.
+
+<CodeBlock language="bash">
+```bash
+# GPG key generate
+gpg --full-generate-key
+
+# Key-i GitHub-a əlavə et
+gpg --list-secret-keys --keyid-format LONG
+gpg --armor --export KEY_ID
+
+# Git config
+git config --global user.signingkey KEY_ID
+git config --global commit.gpgsign true
+
+# Signed commit
+git commit -S -m "Signed commit"
+
+# Verify
+git log --show-signature
+```
+</CodeBlock>
+
+## CI/CD Integration
+
+### GitHub Actions
+
+<CodeBlock language="yaml" title=".github/workflows/ci.yml">
+```yaml
+name: CI
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup Node
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+    
+    - name: Install dependencies
+      run: npm ci
+    
+    - name: Run linter
+      run: npm run lint
+    
+    - name: Run tests
+      run: npm test
+    
+    - name: Build
+      run: npm run build
+```
+</CodeBlock>
+
+## Monorepo Strategies
+
+<CodeBlock language="bash">
+```bash
+# Sparse checkout
+git clone --no-checkout https://github.com/user/monorepo.git
+cd monorepo
+git sparse-checkout init --cone
+git sparse-checkout set apps/frontend
+git checkout main
+```
+</CodeBlock>
+
+## Git Tips & Tricks
+
+### Search in Code History
+
+<CodeBlock language="bash">
+```bash
+# Kod içində axtarış
+git log -S "function_name" --source --all
+
+# Regex ilə
+git log -G "pattern" --source --all
+
+# Commit mesajında axtarış
+git log --grep="bug fix"
+
+# File history
+git log --follow -- file.txt
+```
+</CodeBlock>
+
+### Blame
+
+<CodeBlock language="bash">
+```bash
+# Kim hansı sətri yazıb?
+git blame file.txt
+
+# Specific lines
+git blame -L 10,20 file.txt
+
+# Ignore whitespace
+git blame -w file.txt
+```
+</CodeBlock>
+
+### Shortcuts
+
+<CodeBlock language="bash">
+```bash
+# HEAD shortcuts
+HEAD     # son commit
+HEAD~1   # 1 əvvəlki
+HEAD~5   # 5 əvvəlki
+HEAD^    # parent commit
+HEAD^^   # grandparent
+
+# Spesifik commit parts
+abc123^{tree}   # tree object
+abc123^{commit} # commit object
+
+# Date-based
+main@{2.days.ago}
+main@{yesterday}
+```
+</CodeBlock>
+
+### Clean Repo
+
+<CodeBlock language="bash">
+```bash
+# Untracked faylları göstər
+git clean -n
+
+# Untracked faylları sil
+git clean -f
+
+# Directories də sil
+git clean -fd
+
+# .gitignore-dakıları da sil
+git clean -fdx
+```
+</CodeBlock>
+
+## Debugging Git
+
+<CodeBlock language="bash">
+```bash
+# Verbose output
+GIT_TRACE=1 git pull
+
+# SSH debug
+GIT_SSH_COMMAND="ssh -v" git pull
+
+# Curl verbose
+GIT_CURL_VERBOSE=1 git pull
+
+# Git internal logs
+GIT_TRACE_PACKET=1 git pull
+```
+</CodeBlock>
+
+## Migration & Archive
+
+### Export/Import
+
+<CodeBlock language="bash">
+```bash
+# Bundle yarat
+git bundle create repo.bundle --all
+
+# Bundle-dan clone
+git clone repo.bundle my-repo
+
+# Archive yarat
+git archive --format=zip --output=repo.zip main
+
+# Spesifik folder
+git archive --format=tar.gz --output=docs.tar.gz main:docs/
+```
+</CodeBlock>
+
+### Migrate to New Remote
+
+<CodeBlock language="bash">
+```bash
+# Mirror clone
+git clone --mirror https://old-host.com/repo.git
+
+cd repo.git
+
+# Yeni remote
+git remote set-url --push origin https://new-host.com/repo.git
+
+# Push
+git push --mirror
+```
+</CodeBlock>
+
+## Praktika - Real World Projects
+
+<TaskList>
+- [ ] Team ilə collaboration
+- [ ] 50+ commit-li layihə
+- [ ] PR review et
+- [ ] Conflict həll et multiple developers-la
+- [ ] CI/CD setup et
+- [ ] Git hooks integrate et
+- [ ] Open source-a contribute et
+- [ ] Monorepo manage et
+</TaskList>
+
+---
+
+# 🎯 Roadmap Summary
+
+<TimelineCard>
+**Gün 1-7: Əsaslar**
+- Git quraşdır və config et
+- Repository yaratmaq
+- Add, commit, status
+- .gitignore
+
+**Həftə 2-3: Branching**
+- Branch yarat və manage et
+- Merge və conflicts
+- Rebase basics
+
+**Həftə 4-6: Collaboration**
+- Remote repositories
+- Push & pull
+- Pull requests
+- Fork workflow
+
+**Ay 2-3: Advanced**
+- Stash, cherry-pick
+- Reset, revert, restore
+- Reflog, bisect
+- Hooks
+
+**Ay 4+: Mastery**
+- Performance optimization
+- Security best practices
+- CI/CD integration
+- Complex workflows
+</TimelineCard>
+
+---
+
+# 📚 Resurslar
+
+## Online Learning
+
+<ResourceCard 
+  title="Pro Git Book"
+  url="https://git-scm.com/book/en/v2"
+  type="book"
+  free={true}
+/>
+
+<ResourceCard 
+  title="Learn Git Branching"
+  url="https://learngitbranching.js.org/"
+  type="interactive"
+  free={true}
+/>
+
+<ResourceCard 
+  title="Git Immersion"
+  url="https://gitimmersion.com/"
+  type="tutorial"
+  free={true}
+/>
+
+<ResourceCard 
+  title="Atlassian Git Tutorials"
+  url="https://www.atlassian.com/git/tutorials"
+  type="tutorial"
+  free={true}
+/>
+
+## Cheat Sheets
+
+- [GitHub Git Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf)
+- [GitLab Git Cheat Sheet](https://about.gitlab.com/images/press/git-cheat-sheet.pdf)
+- [Interactive Cheat Sheet](https://ndpsoftware.com/git-cheatsheet.html)
+
+## Video Kurslər
+
+- **Corey Schafer** - Git Tutorial for Beginners (YouTube)
+- **The Net Ninja** - Git & GitHub Tutorial (YouTube)
+- **Traversy Media** - Git Crash Course (YouTube)
+
+## Practice
+
+- [Git Exercises](https://gitexercises.fracz.com/)
+- [Codecademy - Learn Git](https://www.codecademy.com/learn/learn-git)
+- [Katacoda Git Scenarios](https://katacoda.com/courses/git)
+
+---
+
+# 💡 Best Practices Summary
+
+<BestPracticeCard title="Commit Messages">
+```
+✅ Add user authentication
+✅ Fix navbar responsive bug
+✅ Update dependencies to latest
+
+❌ fixed stuff
+❌ changes
+❌ asdfasdf
+```
+</BestPracticeCard>
+
+<BestPracticeCard title="Branch Naming">
+```
+✅ feature/user-auth
+✅ bugfix/navbar-responsive
+✅ hotfix/security-vulnerability
+
+❌ test
+❌ new
+❌ asdf123
+```
+</BestPracticeCard>
+
+<BestPracticeCard title="Commit Frequency">
+- Tez-tez commit et (kiçik, logical chunks)
+- Hər commit working state olmalı
+- Unrelated changes-ləri ayır
+</BestPracticeCard>
+
+<BestPracticeCard title="Pull Request">
+- Kiçik və focused
+- Description yaz
+- Tests əlavə et
+- Review-ə açıq ol
+</BestPracticeCard>
+
+---
+
+# 🏁 Final Checklist
+
+## Başlanğıc Səviyyə
+<TaskList>
+- [ ] Git quraşdırıb config etmişəm
+- [ ] Repository yarada bilirəm
+- [ ] Add, commit, status komandalarını bilirəm
+- [ ] .gitignore istifadə edirəm
+- [ ] Git log oxuya bilirəm
+</TaskList>
+
+## Orta Səviyyə
+<TaskList>
+- [ ] Branch-larla rahat işləyirəm
+- [ ] Merge conflict həll edə bilirəm
+- [ ] Remote repository ilə işləyirəm
+- [ ] Pull request aça bilirəm
+- [ ] Fork workflow bilirəm
+</TaskList>
+
+## Qabaqcıl
+<TaskList>
+- [ ] Rebase istifadə edirəm
+- [ ] Stash, cherry-pick bilirəm
+- [ ] Reflog istifadə edə bilirəm
+- [ ] Git hooks yarada bilirəm
+- [ ] Complex workflows idarə edirəm
+</TaskList>
+
+## Expert
+<TaskList>
+- [ ] Performance optimization bilirəm
+- [ ] Security best practices-i follow edirəm
+- [ ] CI/CD integrate edə bilirəm
+- [ ] Team-ə Git öyrədə bilirəm
+- [ ] Open source-a contribute edirəm
+</TaskList>
+
+---
+
+# 🎓 Son Sözlər
+
+Git öyrənmək proqramçının ən vacib skill-lərindən biridir. İlk başda çətin gəlsə də, praktika ilə second nature olacaq.
+
+<QuoteCard author="Linus Torvalds" role="Git Creator">
+"Talk is cheap. Show me the code... and the Git history!"
+</QuoteCard>
+
+**Əsas məsləhətlər:**
+- 🔄 Hər gün praktika et
+- 📖 Documentation oxu
+- 🤝 Team ilə collaborate et
+- 🐛 Səhvlərdən öyrən
+- 🌟 Open source-a contribute et
+
+**Unutma:** Hər developer Git-lə işləyərkən problem yaşayıb. Məsələ səhv etməməkdə deyil, səhvi necə düzəltməkdə!
+
+---
+
+<CTACard>
+Git master olmağa hazırsan? README.md-də digər roadmap-lara bax və öyrənməyə davam et! 🚀
+</CTACard>
+
+---
+
+**Hazırladı:** DevRoadmap.az  
+**Lisenziya:** MIT  
+**Son yeniləmə:** 2024
+
+<SocialShare 
+  title="Git Roadmap - Azərbaycan dilində"
+  url="https://devroadmap.az/git"
+/>

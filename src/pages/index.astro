@@ -1,0 +1,146 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Ev">
+  <style>
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+  </style>
+
+  <!-- Hero Section -->
+  <section style="background-color: #f0f7ff; padding: 4rem 0; border-bottom: 3px solid #3b82f6; text-align: center;">
+    <div class="container">
+      <h1 style="color: #1e3a8a; font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem;">
+        Proqramlaşdırma Roadmapları
+      </h1>
+      <p style="color: #333; font-size: 1.1rem; margin-bottom: 1.5rem;">
+        Sıfırdan master səviyyəyə qədər tam öyrənmə yolları
+      </p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="/c-roadmap" style="background-color: #3b82f6; color: white; padding: 0.75rem 1.5rem; border-radius: 5px; text-decoration: none; font-weight: 600; transition: background-color 0.2s;">
+          C Dili
+        </a>
+        <a href="/vim-roadmap" style="background-color: #3b82f6; color: white; padding: 0.75rem 1.5rem; border-radius: 5px; text-decoration: none; font-weight: 600; transition: background-color 0.2s;">
+          Vim
+        </a>
+        <a href="/git-roadmap" style="background-color: #3b82f6; color: white; padding: 0.75rem 1.5rem; border-radius: 5px; text-decoration: none; font-weight: 600; transition: background-color 0.2s;">
+          Git
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section style="padding: 3rem 0;">
+    <div class="container">
+      <h2 style="color: #1e3a8a; font-size: 2rem; margin-bottom: 2rem; text-align: center;">
+        Nə qədər ətraflı?
+      </h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+        <div style="background-color: white; padding: 2rem; border-radius: 5px; border: 1px solid #ddd; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+          <div style="font-size: 2rem; margin-bottom: 1rem;">📚</div>
+          <h3 style="color: #1e3a8a; margin-bottom: 0.5rem;">Dərəfli Məzmun</h3>
+          <p style="color: #666; font-size: 0.95rem;">
+            Hər bir mövzu ətraflı şərh edilib. Əsaslardan advanced mövzulara qədər bütün detail var.
+          </p>
+        </div>
+        <div style="background-color: white; padding: 2rem; border-radius: 5px; border: 1px solid #ddd; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+          <div style="font-size: 2rem; margin-bottom: 1rem;">💡</div>
+          <h3 style="color: #1e3a8a; margin-bottom: 0.5rem;">Praktiki Məşqlər</h3>
+          <p style="color: #666; font-size: 0.95rem;">
+            Hər bölmədə kod nümunələri, praktiki məşqlər və real layihə təklifləri.
+          </p>
+        </div>
+        <div style="background-color: white; padding: 2rem; border-radius: 5px; border: 1px solid #ddd; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+          <div style="font-size: 2rem; margin-bottom: 1rem;">🎯</div>
+          <h3 style="color: #1e3a8a; margin-bottom: 0.5rem;">Səviyyə Sistemi</h3>
+          <p style="color: #666; font-size: 0.95rem;">
+            Level 0-dan Level 5-ə qədər strukturlaşdırılmış öyrənmə yolu. Sənin sürətində.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roadmaps Section -->
+  <section style="padding: 3rem 0;">
+    <div class="container">
+      <h2 style="color: #1e3a8a; font-size: 2rem; margin-bottom: 2rem; text-align: center;">
+        Mövcud Roadmaplar
+      </h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
+        <!-- C Roadmap Card -->
+        <a href="/c-roadmap" style="background-color: white; padding: 2rem; border-radius: 5px; border: 1px solid #ddd; box-shadow: 0 2px 4px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.2s; cursor: pointer;" onmouseover="this.style.boxShadow='0 4px 12px rgba(59, 130, 246, 0.2)'" onmouseout="this.style.boxShadow='0 2px 4px rgba(0,0,0,0.05)'">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">🚀</div>
+          <h3 style="color: #1e3a8a; font-size: 1.5rem; margin-bottom: 0.5rem;">C Proqramlaşdırma</h3>
+          <p style="color: #666; font-size: 0.95rem; margin-bottom: 1rem;">
+            Sıfırdan ultra advanced səviyyəyə qədər
+          </p>
+          <div style="color: #999; font-size: 0.85rem; margin-bottom: 1rem;">
+            6 səviyyə • 50+ mövzu • 1800+ satır
+          </div>
+          <div style="color: #3b82f6; font-weight: 600;">
+            Roadmapa daxil ol →
+          </div>
+        </a>
+
+        <!-- Vim Roadmap Card -->
+        <a href="/vim-roadmap" style="background-color: white; padding: 2rem; border-radius: 5px; border: 1px solid #ddd; box-shadow: 0 2px 4px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.2s; cursor: pointer;" onmouseover="this.style.boxShadow='0 4px 12px rgba(59, 130, 246, 0.2)'" onmouseout="this.style.boxShadow='0 2px 4px rgba(0,0,0,0.05)'">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">🎯</div>
+          <h3 style="color: #1e3a8a; font-size: 1.5rem; margin-bottom: 0.5rem;">Vim Əl Kitabı</h3>
+          <p style="color: #666; font-size: 0.95rem; margin-bottom: 1rem;">
+            Modal text editor sıfırdan master səviyyəyə
+          </p>
+          <div style="color: #999; font-size: 0.85rem; margin-bottom: 1rem;">
+            6 səviyyə • 40+ mövzu • 1200+ satır
+          </div>
+          <div style="color: #3b82f6; font-weight: 600;">
+            Roadmapa daxil ol →
+          </div>
+        </a>
+
+        <!-- Git Roadmap Card -->
+        <a href="/git-roadmap" style="background-color: white; padding: 2rem; border-radius: 5px; border: 1px solid #ddd; box-shadow: 0 2px 4px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.2s; cursor: pointer;" onmouseover="this.style.boxShadow='0 4px 12px rgba(59, 130, 246, 0.2)'" onmouseout="this.style.boxShadow='0 2px 4px rgba(0,0,0,0.05)'">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">🌳</div>
+          <h3 style="color: #1e3a8a; font-size: 1.5rem; margin-bottom: 0.5rem;">Git Sürümü İdarəetməsi</h3>
+          <p style="color: #666; font-size: 0.95rem; margin-bottom: 1rem;">
+            Version control sıfırdan expert səviyyəyə
+          </p>
+          <div style="color: #999; font-size: 0.85rem; margin-bottom: 1rem;">
+            6 səviyyə • 45+ mövzu • 950+ satır
+          </div>
+          <div style="color: #3b82f6; font-weight: 600;">
+            Roadmapa daxil ol →
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section style="background-color: #f0f7ff; padding: 3rem 0; border-top: 3px solid #3b82f6;">
+    <div class="container" style="text-align: center;">
+      <h2 style="color: #1e3a8a; font-size: 2rem; margin-bottom: 1rem;">
+        Başlamağa hazır?
+      </h2>
+      <p style="color: #666; font-size: 1.05rem; margin-bottom: 2rem;">
+        Seç, başla, ustalaş. Hər roadmap tamamilə pulsuz və açıq mənbəli.
+      </p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="/c-roadmap" style="background-color: #3b82f6; color: white; padding: 0.75rem 2rem; border-radius: 5px; text-decoration: none; font-weight: 600; transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='#1d4ed8'" onmouseout="this.style.backgroundColor='#3b82f6'">
+          C Dili ilə Başla
+        </a>
+        <a href="/vim-roadmap" style="background-color: #3b82f6; color: white; padding: 0.75rem 2rem; border-radius: 5px; text-decoration: none; font-weight: 600; transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='#1d4ed8'" onmouseout="this.style.backgroundColor='#3b82f6'">
+          Vim ilə Başla
+        </a>
+        <a href="/git-roadmap" style="background-color: #3b82f6; color: white; padding: 0.75rem 2rem; border-radius: 5px; text-decoration: none; font-weight: 600; transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='#1d4ed8'" onmouseout="this.style.backgroundColor='#3b82f6'">
+          Git ilə Başla
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
