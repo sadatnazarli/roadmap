@@ -67,7 +67,15 @@ gcc --version
 # İlk proqram kompilyasiya və işə salma
 gcc hello.c -o hello
 ./hello
+./hello
 ```
+
+### 🧠 Deep Dive: Kodu Necə İcra Edirik?
+Sən `gcc hello.c -o hello` yazanda arxa planda 4 mərhələ baş verir:
+1.  **Preprocessing**: `#include` kimi sətirlər real kodla əvəzlənir.
+2.  **Compilation**: C kodu Assembly koduna çevrilir.
+3.  **Assembly**: Assembly kodu maşın dilinə (0 və 1-lər) çevrilir (`.o` faylı).
+4.  **Linking**: Sənin kodunla C kitabxanaları (məs: `printf` kodu) birləşdirilir və `hello` faylı yaranır.
 
 <ProgressTracker  lessonId="c-level-0" roadmapSlug="c" />
 
@@ -161,6 +169,13 @@ bool is_active = true;
 // Unsigned variantları
 unsigned int positive_only = 42;
 ```
+
+### 🧠 Deep Dive: Yaddaşda Dəyişənlər
+Sən `int a = 10;` yazanda:
+1.  RAM-da `4 bayt` yer ayrılır (Stack yaddaşda).
+2.  Bu yerin bir unikal **ünvanı** (address) var (məs: `0x7ffee...`).
+3.  Həmin yerə `10` dəyəri binary formatda (`0000...1010`) yazılır.
+RAM bir böyük rəfli şkaf kimidir, hər rəfin nömrəsi (ünvanı) və içindəki əşya (dəyəri) var.
 
 ### Konstant və Makroslar:
 ```c
@@ -511,6 +526,14 @@ for (int i = 0; i < 3; i++) {
 }
 ```
 
+### 🧠 Deep Dive: Massivlər Yaddaşda Necə Görünür?
+Massivlər yaddaşda **yanaşı** (contiguous) düzülür.
+Əgər `int arr[3] = {10, 20, 30}` varsa və `arr` ünvanı `1000`-dirsə:
+- `arr[0]` -> Ünvan 1000 (Dəyər: 10)
+- `arr[1]` -> Ünvan 1004 (Dəyər: 20) (çünki int 4 baytdır)
+- `arr[2]` -> Ünvan 1008 (Dəyər: 30)
+Buna görə massivlərə indekslə çatmaq çox sürətlidir (`O(1)`), çünki kompüter sadəcə vurma əməliyyatı edir: `Başlanğıc + (İndeks * Ölçü)`.
+
 ### Praktika:
 - Massivin ən böyük/kiçik elementi
 - Massiv sıralama (bubble sort)
@@ -675,6 +698,15 @@ int main() {
     return 0;
 }
 ```
+
+}
+```
+
+### 🧠 Deep Dive: Struct Padding (Memory Alignment)
+Sən düşünə bilərsən ki, `char` (1 bayt) + `int` (4 bayt) = 5 bayt yer tutur. Amma yaddaşda bu **8 bayt** ola bilər!
+Kompüter prosessorları məlumatı 4 və ya 8 baytlıq bloklarla oxumağı sevir.
+Buna görə `char`-dan sonra 3 baytlıq "boşluq" (padding) buraxılır ki, növbəti `int` düzgün ünvana düşsün.
+Bundan qaçmaq üçün `__attribute__((packed))` istifadə olunur (amma sürət azalır).
 
 ### Typedef ilə:
 ```c
@@ -905,6 +937,34 @@ fclose(fp);
 ---
 
 # Level 3: Qabaqcıl 🚀
+
+---
+
+## 2.9 Command Line Arguments
+Professional C proqramları çox vaxt terminaldan arqument qəbul edir (məs: `gcc main.c -o main`).
+
+### argc və argv:
+```c
+int main(int argc, char *argv[]) {
+    // argc: Argument Count (arqument sayı)
+    // argv: Argument Vector (arqumentlərin massivi)
+    
+    printf("Proqram adı: %s\n", argv[0]);
+    
+    if (argc > 1) {
+        printf("Salam, %s!\n", argv[1]);
+    } else {
+        printf("Zəhmət olmasa adınızı yazın.\n");
+    }
+    return 0;
+}
+```
+
+### Praktika:
+- Sadə `echo` proqramı yazın.
+- `add 5 10` kimi işləyən kalkulyator yazın (`atoi` istifadə edərək).
+
+---
 
 ## 3.1 İnkişaf Etmiş Pointerlər
 
@@ -1210,6 +1270,31 @@ $(TARGET): $(OBJ)
 clean:
 	rm -f $(OBJ) $(TARGET)
 ```
+
+---
+
+---
+
+## 3.5 Advanced Types & Storage Classes ("Under the Hood")
+
+### Storage Classes (Yaddaşda Saxlama):
+- **auto**: Varsayılan (default). Blok bitəndə silinir.
+- **register**: CPU registerlərində saxlamağa çalışır (sürət üçün).
+- **static**:
+    - Lokal: Funksiya bitəndə silinmir, dəyərini saxlayır.
+    - Qlobal: Yalnız olduğu faylda görünür (private kimi).
+- **extern**: Başqa faylda təyin olunmuş dəyişəni istifadə etmək üçün.
+
+### Type Qualifiers:
+- **const**: Dəyişdirilə bilməz.
+    - `const int *p`: Dəyər dəyişməz.
+    - `int * const p`: Pointerin özü dəyişməz.
+- **volatile**: Kompilyatora deyir ki, "bunu optimizasiya etmə, hər an dəyişə bilər" (Hardware üçün vacibdir).
+- **restrict**: Pointerlər kəsişmir (optimizasiya üçün).
+
+### Praktika:
+- `static` counter ilə funksiya neçə dəfə çağırıldığını sayın.
+- İki fayllı proqramda `extern` istifadə edin.
 
 ---
 
@@ -1544,6 +1629,51 @@ closedir(dir);
 
 ---
 
+---
+
+## 4.5 The Standard Library Powerhouse
+C standart kitabxanası (`libc`) düşündüyündən daha güclüdür.
+
+### Error Handling (`errno.h`):
+```c
+#include <errno.h>
+#include <string.h>
+
+FILE *f = fopen("yoxdur.txt", "r");
+if (f == NULL) {
+    printf("Xəta kodu: %d\n", errno);
+    perror("Fayl xətası"); // "Fayl xətası: No such file or directory"
+    printf("Mesaj: %s\n", strerror(errno));
+}
+```
+
+### Variadic Functions (`stdarg.h`):
+Siz də `printf` kimi sonsuz arqument alan funksiya yaza bilərsiniz!
+```c
+#include <stdarg.h>
+
+int sum(int count, ...) {
+    va_list args;
+    va_start(args, count);
+    
+    int total = 0;
+    for(int i = 0; i < count; i++) {
+        total += va_arg(args, int);
+    }
+    
+    va_end(args);
+    return total;
+}
+```
+
+### Utility Tools (`stdlib.h`):
+- `qsort`: İstənilən massivi sıralayır (Generic).
+- `bsearch`: Binary search edir.
+- `atexit`: Proqram bağlananda funksiya çağırır.
+- `getenv`: Terminal mühit dəyişənlərini oxuyur.
+
+---
+
 ## 4.6 Signal Handling
 
 ```c
@@ -1758,6 +1888,16 @@ if (pid == 0) {
     wait(NULL);
 }
 ```
+
+    wait(NULL);
+}
+```
+
+### 🧠 Deep Dive: System Calls (User vs Kernel Mode)
+Sənin yazdığın `printf` və ya `fopen` əslində kitabxana funksiyalarıdır. Onlar təkbaşına diskə ya ekrana yaza bilməz.
+Onlar Əməliyyat Sisteminə **System Call** (məs: `write`, `open`) göndərir.
+Bu zaman proqram **User Mode**-dan **Kernel Mode**-a keçir. Kernel (nüvə) təhlükəsizlik yoxlanışı aparır, işi görür və nəticəni qaytarır.
+Hər system call bahalıdır (vaxt aparır), ona görə buffer (məs: `FILE*`) istifadə olunur.
 
 ### Inter-Process Communication:
 ```c
