@@ -633,11 +633,12 @@ zk    - əvvəlki fold
 
 ## Praktika (1-2 ay):
 
-1. Macro ilə repetitiv taskları avtomatlaşdır
-2. Splits ilə birdən çox fayla bax
-3. Text objects-i master et
-4. Registers ilə effektiv kopyala
-5. Real layihələrdə işlə
+1. Macro ilə repetitiv taskları avtomatlaşdır.
+   - **Pro Tip:** *Recursive Macro* (Macro içində eyni macrou çağırmaq): `qa` et, işi gör, sonda yenə `@a` yaz və `q` ilə bitir. Sonra `@a` təkrarla!
+2. Splits ilə birdən çox fayla bax.
+3. Text objects-i master et.
+4. Registers ilə effektiv kopyala.
+5. Real layihələrdə işlə.
 
 <ProgressTracker  lessonId="vim-level-3" roadmapSlug="vim" />
 
@@ -839,16 +840,19 @@ Plug 'preservim/nerdtree'
 nnoremap <leader>n :NERDTreeToggle<CR>
 ```
 
-#### 2. **fzf.vim** - Fuzzy Finder
+#### 2. **fzf.vim / Telescope** - Fuzzy Finder (Layihədə fayl tapmaq)
+Fayl ağacında yuxarı-aşağı getmək əvəzinə faylın adından bir-iki hərf yazmaq daha sürətlidir.
 ```vim
+" Vim üçün fzf:
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 " Mappings
 nnoremap <leader>f :Files<CR>
 nnoremap <leader>b :Buffers<CR>
-nnoremap <leader>g :Rg<CR>
+nnoremap <leader>g :Rg<CR>  " Ripgrep ilə kod daxilində axtarış
 ```
+*Neovim istifadəçiləri üçün müasir alternativ: **Telescope.nvim***
 
 #### 3. **vim-surround** - Surround text
 ```vim
@@ -1131,13 +1135,21 @@ vim.keymap.set('n', '<leader>w', ':w<CR>')
 vim.keymap.set('n', '<leader>q', ':q<CR>')
 ```
 
-### Neovim-specific plugins:
+### Neovim-specific plugins (Müasir IDE Təcrübəsi):
 ```vim
-Plug 'nvim-treesitter/nvim-treesitter'  " Better syntax
-Plug 'nvim-telescope/telescope.nvim'    " Fuzzy finder
+Plug 'nvim-treesitter/nvim-treesitter'  " Çox daha yaxşı rəngləndirmə
+Plug 'nvim-telescope/telescope.nvim'    " Fuzzy finder (Müasir drayvr)
 Plug 'nvim-lua/plenary.nvim'            " Lua functions
-Plug 'neovim/nvim-lspconfig'            " LSP support
+Plug 'neovim/nvim-lspconfig'            " LSP support (Language Server Protocol)
 ```
+
+### LSP (Language Server Protocol) Nədir?
+Microsoft tərəfindən VSCode üçün yaradılıb, amma Neovim də dəstəkləyir! Bu, Vim-ə kodunda səhvləri (error/warning), auto-complete, "Go to definition" (funksiyanın yazıldığı yerə getmək) kimi tam IDE gücünü verir!
+
+## Vim + Tmux (Terminal Multiplexing) 🛠️
+Vim-in içində terminal açmaq olar (`:term`), amma əsil mütəxəssislər **Tmux** istifadə edir.
+- **Tmux** sənə bir terminal pəncərəsini bir neçə yerə bölməyə və arxa planda işlətməyə (Vim-i bağlamadan server-i açıq saxlamağa) imkan verir.
+- Vim və Tmux arasında keçidləri (`Ctrl+h,j,k,l`) problemsiz etmək üçün **`vim-tmux-navigator`** plugini məşhurdur.
 
 ## Performance Optimization
 

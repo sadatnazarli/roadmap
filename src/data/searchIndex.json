@@ -1,0 +1,3271 @@
+[
+  {
+    "id": "c-giriş",
+    "title": "\udcda Giriş",
+    "roadmap": "C",
+    "level": 0,
+    "url": "/c#giriş"
+  },
+  {
+    "id": "c-səviyyələr",
+    "title": "\udfaf Səviyyələr",
+    "roadmap": "C",
+    "level": 0,
+    "url": "/c#səviyyələr"
+  },
+  {
+    "id": "c-proqramlaşdırmaya-giriş",
+    "title": "Proqramlaşdırmaya Giriş",
+    "roadmap": "C",
+    "level": 0,
+    "url": "/c#proqramlaşdırmaya-giriş"
+  },
+  {
+    "id": "c-öyrənməli-konseptlər",
+    "title": "Öyrənməli Konseptlər:",
+    "roadmap": "C",
+    "level": 0,
+    "url": "/c#öyrənməli-konseptlər"
+  },
+  {
+    "id": "c-alətlər",
+    "title": "Alətlər:",
+    "roadmap": "C",
+    "level": 0,
+    "url": "/c#alətlər"
+  },
+  {
+    "id": "c-praktika",
+    "title": "Praktika:",
+    "roadmap": "C",
+    "level": 0,
+    "url": "/c#praktika"
+  },
+  {
+    "id": "c-deep-dive-kodu-necə-icra-edirik",
+    "title": "\udde0 Deep Dive: Kodu Necə İcra Edirik?",
+    "roadmap": "C",
+    "level": 0,
+    "url": "/c#deep-dive-kodu-necə-icra-edirik"
+  },
+  {
+    "id": "c-11-ilk-proqram-və-struktur",
+    "title": "1.1 İlk Proqram və Struktur",
+    "roadmap": "C",
+    "level": 1,
+    "url": "/c#11-ilk-proqram-və-struktur"
+  },
+  {
+    "id": "c-konseptlər",
+    "title": "Konseptlər:",
+    "roadmap": "C",
+    "level": 1,
+    "url": "/c#konseptlər"
+  },
+  {
+    "id": "c-praktika",
+    "title": "Praktika:",
+    "roadmap": "C",
+    "level": 1,
+    "url": "/c#praktika"
+  },
+  {
+    "id": "c-12-dəyişənlər-və-data-tiplər",
+    "title": "1.2 Dəyişənlər və Data Tiplər",
+    "roadmap": "C",
+    "level": 1,
+    "url": "/c#12-dəyişənlər-və-data-tiplər"
+  },
+  {
+    "id": "c-əsas-tiplər",
+    "title": "Əsas Tiplər:",
+    "roadmap": "C",
+    "level": 1,
+    "url": "/c#əsas-tiplər"
+  },
+  {
+    "id": "c-deep-dive-yaddaşda-dəyişənlər",
+    "title": "\udde0 Deep Dive: Yaddaşda Dəyişənlər",
+    "roadmap": "C",
+    "level": 1,
+    "url": "/c#deep-dive-yaddaşda-dəyişənlər"
+  },
+  {
+    "id": "c-konstant-və-makroslar",
+    "title": "Konstant və Makroslar:",
+    "roadmap": "C",
+    "level": 1,
+    "url": "/c#konstant-və-makroslar"
+  },
+  {
+    "id": "c-format-specifiers",
+    "title": "Format Specifiers:",
+    "roadmap": "C",
+    "level": 1,
+    "url": "/c#format-specifiers"
+  },
+  {
+    "id": "c-praktika",
+    "title": "Praktika:",
+    "roadmap": "C",
+    "level": 1,
+    "url": "/c#praktika"
+  },
+  {
+    "id": "c-13-operatorlar",
+    "title": "1.3 Operatorlar",
+    "roadmap": "C",
+    "level": 1,
+    "url": "/c#13-operatorlar"
+  },
+  {
+    "id": "c-arifmetik-operatorlar",
+    "title": "Arifmetik Operatorlar:",
+    "roadmap": "C",
+    "level": 1,
+    "url": "/c#arifmetik-operatorlar"
+  },
+  {
+    "id": "c-müqayisə-operatorları",
+    "title": "Müqayisə Operatorları:",
+    "roadmap": "C",
+    "level": 1,
+    "url": "/c#müqayisə-operatorları"
+  },
+  {
+    "id": "c-məntiqi-operatorlar",
+    "title": "Məntiqi Operatorlar:",
+    "roadmap": "C",
+    "level": 1,
+    "url": "/c#məntiqi-operatorlar"
+  },
+  {
+    "id": "c-artırmaazaltma",
+    "title": "Artırma/Azaltma:",
+    "roadmap": "C",
+    "level": 1,
+    "url": "/c#artırmaazaltma"
+  },
+  {
+    "id": "c-bitwise-operatorlar",
+    "title": "Bitwise Operatorlar:",
+    "roadmap": "C",
+    "level": 1,
+    "url": "/c#bitwise-operatorlar"
+  },
+  {
+    "id": "c-praktika",
+    "title": "Praktika:",
+    "roadmap": "C",
+    "level": 1,
+    "url": "/c#praktika"
+  },
+  {
+    "id": "c-14-inputoutput",
+    "title": "1.4 Input/Output",
+    "roadmap": "C",
+    "level": 1,
+    "url": "/c#14-inputoutput"
+  },
+  {
+    "id": "c-input-almaq",
+    "title": "Input Almaq:",
+    "roadmap": "C",
+    "level": 1,
+    "url": "/c#input-almaq"
+  },
+  {
+    "id": "c-praktika",
+    "title": "Praktika:",
+    "roadmap": "C",
+    "level": 1,
+    "url": "/c#praktika"
+  },
+  {
+    "id": "c-15-şərt-ifadələri",
+    "title": "1.5 Şərt İfadələri",
+    "roadmap": "C",
+    "level": 1,
+    "url": "/c#15-şərt-ifadələri"
+  },
+  {
+    "id": "c-if-else",
+    "title": "if-else:",
+    "roadmap": "C",
+    "level": 1,
+    "url": "/c#if-else"
+  },
+  {
+    "id": "c-ternary-operator",
+    "title": "Ternary Operator:",
+    "roadmap": "C",
+    "level": 1,
+    "url": "/c#ternary-operator"
+  },
+  {
+    "id": "c-switch-case",
+    "title": "switch-case:",
+    "roadmap": "C",
+    "level": 1,
+    "url": "/c#switch-case"
+  },
+  {
+    "id": "c-praktika",
+    "title": "Praktika:",
+    "roadmap": "C",
+    "level": 1,
+    "url": "/c#praktika"
+  },
+  {
+    "id": "c-16-döngülər-loops",
+    "title": "1.6 Döngülər (Loops)",
+    "roadmap": "C",
+    "level": 1,
+    "url": "/c#16-döngülər-loops"
+  },
+  {
+    "id": "c-for-loop",
+    "title": "for Loop:",
+    "roadmap": "C",
+    "level": 1,
+    "url": "/c#for-loop"
+  },
+  {
+    "id": "c-while-loop",
+    "title": "while Loop:",
+    "roadmap": "C",
+    "level": 1,
+    "url": "/c#while-loop"
+  },
+  {
+    "id": "c-do-while-loop",
+    "title": "do-while Loop:",
+    "roadmap": "C",
+    "level": 1,
+    "url": "/c#do-while-loop"
+  },
+  {
+    "id": "c-iç-içə-döngülər",
+    "title": "İç-içə Döngülər:",
+    "roadmap": "C",
+    "level": 1,
+    "url": "/c#iç-içə-döngülər"
+  },
+  {
+    "id": "c-break-və-continue",
+    "title": "break və continue:",
+    "roadmap": "C",
+    "level": 1,
+    "url": "/c#break-və-continue"
+  },
+  {
+    "id": "c-praktika",
+    "title": "Praktika:",
+    "roadmap": "C",
+    "level": 1,
+    "url": "/c#praktika"
+  },
+  {
+    "id": "c-17-funksiyalar-functions",
+    "title": "1.7 Funksiyalar (Functions)",
+    "roadmap": "C",
+    "level": 1,
+    "url": "/c#17-funksiyalar-functions"
+  },
+  {
+    "id": "c-sadə-funksiya",
+    "title": "Sadə Funksiya:",
+    "roadmap": "C",
+    "level": 1,
+    "url": "/c#sadə-funksiya"
+  },
+  {
+    "id": "c-parametrli-funksiyalar",
+    "title": "Parametrli Funksiyalar:",
+    "roadmap": "C",
+    "level": 1,
+    "url": "/c#parametrli-funksiyalar"
+  },
+  {
+    "id": "c-function-prototypes",
+    "title": "Function Prototypes:",
+    "roadmap": "C",
+    "level": 1,
+    "url": "/c#function-prototypes"
+  },
+  {
+    "id": "c-rekursiya",
+    "title": "Rekursiya:",
+    "roadmap": "C",
+    "level": 1,
+    "url": "/c#rekursiya"
+  },
+  {
+    "id": "c-praktika",
+    "title": "Praktika:",
+    "roadmap": "C",
+    "level": 1,
+    "url": "/c#praktika"
+  },
+  {
+    "id": "c-mini-challenge-funksiya-ustası",
+    "title": "\udde0 Mini-Challenge: Funksiya Ustası",
+    "roadmap": "C",
+    "level": 1,
+    "url": "/c#mini-challenge-funksiya-ustası"
+  },
+  {
+    "id": "c-21-massivlər-arrays",
+    "title": "2.1 Massivlər (Arrays)",
+    "roadmap": "C",
+    "level": 2,
+    "url": "/c#21-massivlər-arrays"
+  },
+  {
+    "id": "c-bir-ölçülü-massiv",
+    "title": "Bir Ölçülü Massiv:",
+    "roadmap": "C",
+    "level": 2,
+    "url": "/c#bir-ölçülü-massiv"
+  },
+  {
+    "id": "c-çox-ölçülü-massivlər",
+    "title": "Çox Ölçülü Massivlər:",
+    "roadmap": "C",
+    "level": 2,
+    "url": "/c#çox-ölçülü-massivlər"
+  },
+  {
+    "id": "c-deep-dive-massivlər-yaddaşda-necə-görünür",
+    "title": "\udde0 Deep Dive: Massivlər Yaddaşda Necə Görünür?",
+    "roadmap": "C",
+    "level": 2,
+    "url": "/c#deep-dive-massivlər-yaddaşda-necə-görünür"
+  },
+  {
+    "id": "c-praktika",
+    "title": "Praktika:",
+    "roadmap": "C",
+    "level": 2,
+    "url": "/c#praktika"
+  },
+  {
+    "id": "c-22-stringlər",
+    "title": "2.2 Stringlər",
+    "roadmap": "C",
+    "level": 2,
+    "url": "/c#22-stringlər"
+  },
+  {
+    "id": "c-string-əsasları",
+    "title": "String Əsasları:",
+    "roadmap": "C",
+    "level": 2,
+    "url": "/c#string-əsasları"
+  },
+  {
+    "id": "c-string-funksiyaları",
+    "title": "String Funksiyaları:",
+    "roadmap": "C",
+    "level": 2,
+    "url": "/c#string-funksiyaları"
+  },
+  {
+    "id": "c-praktika",
+    "title": "Praktika:",
+    "roadmap": "C",
+    "level": 2,
+    "url": "/c#praktika"
+  },
+  {
+    "id": "c-23-göstəricilər-pointers-əsas",
+    "title": "2.3 Göstəricilər (Pointers) - Əsas",
+    "roadmap": "C",
+    "level": 2,
+    "url": "/c#23-göstəricilər-pointers-əsas"
+  },
+  {
+    "id": "c-pointer-nədir",
+    "title": "Pointer Nədir:",
+    "roadmap": "C",
+    "level": 2,
+    "url": "/c#pointer-nədir"
+  },
+  {
+    "id": "c-pointer-arifmetikası",
+    "title": "Pointer Arifmetikası:",
+    "roadmap": "C",
+    "level": 2,
+    "url": "/c#pointer-arifmetikası"
+  },
+  {
+    "id": "c-pointer-və-massivlər",
+    "title": "Pointer və Massivlər:",
+    "roadmap": "C",
+    "level": 2,
+    "url": "/c#pointer-və-massivlər"
+  },
+  {
+    "id": "c-praktika",
+    "title": "Praktika:",
+    "roadmap": "C",
+    "level": 2,
+    "url": "/c#praktika"
+  },
+  {
+    "id": "c-24-funksiyalar-və-pointerlər",
+    "title": "2.4 Funksiyalar və Pointerlər",
+    "roadmap": "C",
+    "level": 2,
+    "url": "/c#24-funksiyalar-və-pointerlər"
+  },
+  {
+    "id": "c-pass-by-value-vs-pass-by-reference",
+    "title": "Pass by Value vs Pass by Reference:",
+    "roadmap": "C",
+    "level": 2,
+    "url": "/c#pass-by-value-vs-pass-by-reference"
+  },
+  {
+    "id": "c-funksiyadan-pointer-qaytarmaq",
+    "title": "Funksiyadan Pointer Qaytarmaq:",
+    "roadmap": "C",
+    "level": 2,
+    "url": "/c#funksiyadan-pointer-qaytarmaq"
+  },
+  {
+    "id": "c-praktika",
+    "title": "Praktika:",
+    "roadmap": "C",
+    "level": 2,
+    "url": "/c#praktika"
+  },
+  {
+    "id": "c-25-strukturlar-structures",
+    "title": "2.5 Strukturlar (Structures)",
+    "roadmap": "C",
+    "level": 2,
+    "url": "/c#25-strukturlar-structures"
+  },
+  {
+    "id": "c-struct-yaratmaq",
+    "title": "Struct Yaratmaq:",
+    "roadmap": "C",
+    "level": 2,
+    "url": "/c#struct-yaratmaq"
+  },
+  {
+    "id": "c-deep-dive-struct-padding-memory-alignment",
+    "title": "\udde0 Deep Dive: Struct Padding (Memory Alignment)",
+    "roadmap": "C",
+    "level": 2,
+    "url": "/c#deep-dive-struct-padding-memory-alignment"
+  },
+  {
+    "id": "c-typedef-ilə",
+    "title": "Typedef ilə:",
+    "roadmap": "C",
+    "level": 2,
+    "url": "/c#typedef-ilə"
+  },
+  {
+    "id": "c-nested-structures",
+    "title": "Nested Structures:",
+    "roadmap": "C",
+    "level": 2,
+    "url": "/c#nested-structures"
+  },
+  {
+    "id": "c-struct-və-pointer",
+    "title": "Struct və Pointer:",
+    "roadmap": "C",
+    "level": 2,
+    "url": "/c#struct-və-pointer"
+  },
+  {
+    "id": "c-praktika",
+    "title": "Praktika:",
+    "roadmap": "C",
+    "level": 2,
+    "url": "/c#praktika"
+  },
+  {
+    "id": "c-26-enum-və-union",
+    "title": "2.6 Enum və Union",
+    "roadmap": "C",
+    "level": 2,
+    "url": "/c#26-enum-və-union"
+  },
+  {
+    "id": "c-enum",
+    "title": "Enum:",
+    "roadmap": "C",
+    "level": 2,
+    "url": "/c#enum"
+  },
+  {
+    "id": "c-union",
+    "title": "Union:",
+    "roadmap": "C",
+    "level": 2,
+    "url": "/c#union"
+  },
+  {
+    "id": "c-27-dinamik-yaddaş-dynamic-memory",
+    "title": "2.7 Dinamik Yaddaş (Dynamic Memory)",
+    "roadmap": "C",
+    "level": 2,
+    "url": "/c#27-dinamik-yaddaş-dynamic-memory"
+  },
+  {
+    "id": "c-malloc",
+    "title": "malloc:",
+    "roadmap": "C",
+    "level": 2,
+    "url": "/c#malloc"
+  },
+  {
+    "id": "c-calloc",
+    "title": "calloc:",
+    "roadmap": "C",
+    "level": 2,
+    "url": "/c#calloc"
+  },
+  {
+    "id": "c-realloc",
+    "title": "realloc:",
+    "roadmap": "C",
+    "level": 2,
+    "url": "/c#realloc"
+  },
+  {
+    "id": "c-praktika",
+    "title": "Praktika:",
+    "roadmap": "C",
+    "level": 2,
+    "url": "/c#praktika"
+  },
+  {
+    "id": "c-28-fayllarla-işləmə",
+    "title": "2.8 Fayllarla İşləmə",
+    "roadmap": "C",
+    "level": 2,
+    "url": "/c#28-fayllarla-işləmə"
+  },
+  {
+    "id": "c-fayl-açmaq-və-bağlamaq",
+    "title": "Fayl Açmaq və Bağlamaq:",
+    "roadmap": "C",
+    "level": 2,
+    "url": "/c#fayl-açmaq-və-bağlamaq"
+  },
+  {
+    "id": "c-fayl-modları",
+    "title": "Fayl Modları:",
+    "roadmap": "C",
+    "level": 2,
+    "url": "/c#fayl-modları"
+  },
+  {
+    "id": "c-fayldan-oxumaq",
+    "title": "Fayldan Oxumaq:",
+    "roadmap": "C",
+    "level": 2,
+    "url": "/c#fayldan-oxumaq"
+  },
+  {
+    "id": "c-fayla-yazmaq",
+    "title": "Fayla Yazmaq:",
+    "roadmap": "C",
+    "level": 2,
+    "url": "/c#fayla-yazmaq"
+  },
+  {
+    "id": "c-binary-fayllar",
+    "title": "Binary Fayllar:",
+    "roadmap": "C",
+    "level": 2,
+    "url": "/c#binary-fayllar"
+  },
+  {
+    "id": "c-praktika",
+    "title": "Praktika:",
+    "roadmap": "C",
+    "level": 2,
+    "url": "/c#praktika"
+  },
+  {
+    "id": "c-mini-challenge-log-sistemi",
+    "title": "\udde0 Mini-Challenge: Log Sistemi",
+    "roadmap": "C",
+    "level": 2,
+    "url": "/c#mini-challenge-log-sistemi"
+  },
+  {
+    "id": "c-29-command-line-arguments",
+    "title": "2.9 Command Line Arguments",
+    "roadmap": "C",
+    "level": 3,
+    "url": "/c#29-command-line-arguments"
+  },
+  {
+    "id": "c-argc-və-argv",
+    "title": "argc və argv:",
+    "roadmap": "C",
+    "level": 3,
+    "url": "/c#argc-və-argv"
+  },
+  {
+    "id": "c-praktika",
+    "title": "Praktika:",
+    "roadmap": "C",
+    "level": 3,
+    "url": "/c#praktika"
+  },
+  {
+    "id": "c-31-inkişaf-etmiş-pointerlər",
+    "title": "3.1 İnkişaf Etmiş Pointerlər",
+    "roadmap": "C",
+    "level": 3,
+    "url": "/c#31-inkişaf-etmiş-pointerlər"
+  },
+  {
+    "id": "c-pointer-to-pointer",
+    "title": "Pointer to Pointer:",
+    "roadmap": "C",
+    "level": 3,
+    "url": "/c#pointer-to-pointer"
+  },
+  {
+    "id": "c-function-pointerlər",
+    "title": "Function Pointerlər:",
+    "roadmap": "C",
+    "level": 3,
+    "url": "/c#function-pointerlər"
+  },
+  {
+    "id": "c-void-pointer",
+    "title": "void Pointer:",
+    "roadmap": "C",
+    "level": 3,
+    "url": "/c#void-pointer"
+  },
+  {
+    "id": "c-praktika",
+    "title": "Praktika:",
+    "roadmap": "C",
+    "level": 3,
+    "url": "/c#praktika"
+  },
+  {
+    "id": "c-32-data-strukturları",
+    "title": "3.2 Data Strukturları",
+    "roadmap": "C",
+    "level": 3,
+    "url": "/c#32-data-strukturları"
+  },
+  {
+    "id": "c-linked-list",
+    "title": "Linked List:",
+    "roadmap": "C",
+    "level": 3,
+    "url": "/c#linked-list"
+  },
+  {
+    "id": "c-stack",
+    "title": "Stack:",
+    "roadmap": "C",
+    "level": 3,
+    "url": "/c#stack"
+  },
+  {
+    "id": "c-queue",
+    "title": "Queue:",
+    "roadmap": "C",
+    "level": 3,
+    "url": "/c#queue"
+  },
+  {
+    "id": "c-praktika",
+    "title": "Praktika:",
+    "roadmap": "C",
+    "level": 3,
+    "url": "/c#praktika"
+  },
+  {
+    "id": "c-33-sıralama-və-axtarış-alqoritmləri",
+    "title": "3.3 Sıralama və Axtarış Alqoritmləri",
+    "roadmap": "C",
+    "level": 3,
+    "url": "/c#33-sıralama-və-axtarış-alqoritmləri"
+  },
+  {
+    "id": "c-sıralama",
+    "title": "Sıralama:",
+    "roadmap": "C",
+    "level": 3,
+    "url": "/c#sıralama"
+  },
+  {
+    "id": "c-axtarış",
+    "title": "Axtarış:",
+    "roadmap": "C",
+    "level": 3,
+    "url": "/c#axtarış"
+  },
+  {
+    "id": "c-praktika",
+    "title": "Praktika:",
+    "roadmap": "C",
+    "level": 3,
+    "url": "/c#praktika"
+  },
+  {
+    "id": "c-34-preprocessor-direktivləri",
+    "title": "3.4 Preprocessor Direktivləri",
+    "roadmap": "C",
+    "level": 3,
+    "url": "/c#34-preprocessor-direktivləri"
+  },
+  {
+    "id": "c-makroslar",
+    "title": "Makroslar:",
+    "roadmap": "C",
+    "level": 3,
+    "url": "/c#makroslar"
+  },
+  {
+    "id": "c-conditional-compilation",
+    "title": "Conditional Compilation:",
+    "roadmap": "C",
+    "level": 3,
+    "url": "/c#conditional-compilation"
+  },
+  {
+    "id": "c-include-guards",
+    "title": "Include Guards:",
+    "roadmap": "C",
+    "level": 3,
+    "url": "/c#include-guards"
+  },
+  {
+    "id": "c-praktika",
+    "title": "Praktika:",
+    "roadmap": "C",
+    "level": 3,
+    "url": "/c#praktika"
+  },
+  {
+    "id": "c-35-çox-faylı-layihələr",
+    "title": "3.5 Çox Faylı Layihələr",
+    "roadmap": "C",
+    "level": 3,
+    "url": "/c#35-çox-faylı-layihələr"
+  },
+  {
+    "id": "c-struktur",
+    "title": "Struktur:",
+    "roadmap": "C",
+    "level": 3,
+    "url": "/c#struktur"
+  },
+  {
+    "id": "c-header-faylı-utilsh",
+    "title": "Header Faylı (utils.h):",
+    "roadmap": "C",
+    "level": 3,
+    "url": "/c#header-faylı-utilsh"
+  },
+  {
+    "id": "c-source-faylı-utilsc",
+    "title": "Source Faylı (utils.c):",
+    "roadmap": "C",
+    "level": 3,
+    "url": "/c#source-faylı-utilsc"
+  },
+  {
+    "id": "c-makefile",
+    "title": "Makefile:",
+    "roadmap": "C",
+    "level": 3,
+    "url": "/c#makefile"
+  },
+  {
+    "id": "c-35-advanced-types-storage-classes-under-the-hood",
+    "title": "3.5 Advanced Types & Storage Classes (\"Under the Hood\")",
+    "roadmap": "C",
+    "level": 3,
+    "url": "/c#35-advanced-types-storage-classes-under-the-hood"
+  },
+  {
+    "id": "c-storage-classes-yaddaşda-saxlama",
+    "title": "Storage Classes (Yaddaşda Saxlama):",
+    "roadmap": "C",
+    "level": 3,
+    "url": "/c#storage-classes-yaddaşda-saxlama"
+  },
+  {
+    "id": "c-type-qualifiers",
+    "title": "Type Qualifiers:",
+    "roadmap": "C",
+    "level": 3,
+    "url": "/c#type-qualifiers"
+  },
+  {
+    "id": "c-praktika",
+    "title": "Praktika:",
+    "roadmap": "C",
+    "level": 3,
+    "url": "/c#praktika"
+  },
+  {
+    "id": "c-36-debugging-və-testing",
+    "title": "3.6 Debugging və Testing",
+    "roadmap": "C",
+    "level": 3,
+    "url": "/c#36-debugging-və-testing"
+  },
+  {
+    "id": "c-gdb-gnu-debugger",
+    "title": "GDB (GNU Debugger):",
+    "roadmap": "C",
+    "level": 3,
+    "url": "/c#gdb-gnu-debugger"
+  },
+  {
+    "id": "c-valgrind-memory-leak-detector",
+    "title": "Valgrind (Memory Leak Detector):",
+    "roadmap": "C",
+    "level": 3,
+    "url": "/c#valgrind-memory-leak-detector"
+  },
+  {
+    "id": "c-unit-testing-assert",
+    "title": "Unit Testing (Assert):",
+    "roadmap": "C",
+    "level": 3,
+    "url": "/c#unit-testing-assert"
+  },
+  {
+    "id": "c-praktika",
+    "title": "Praktika:",
+    "roadmap": "C",
+    "level": 3,
+    "url": "/c#praktika"
+  },
+  {
+    "id": "c-mini-challenge-binary-search-structs",
+    "title": "\udde0 Mini-Challenge: Binary Search Structs",
+    "roadmap": "C",
+    "level": 3,
+    "url": "/c#mini-challenge-binary-search-structs"
+  },
+  {
+    "id": "c-41-bitwise-manipulation-advanced",
+    "title": "4.1 Bitwise Manipulation - Advanced",
+    "roadmap": "C",
+    "level": 4,
+    "url": "/c#41-bitwise-manipulation-advanced"
+  },
+  {
+    "id": "c-bit-masking",
+    "title": "Bit Masking:",
+    "roadmap": "C",
+    "level": 4,
+    "url": "/c#bit-masking"
+  },
+  {
+    "id": "c-bit-tricks",
+    "title": "Bit Tricks:",
+    "roadmap": "C",
+    "level": 4,
+    "url": "/c#bit-tricks"
+  },
+  {
+    "id": "c-praktika",
+    "title": "Praktika:",
+    "roadmap": "C",
+    "level": 4,
+    "url": "/c#praktika"
+  },
+  {
+    "id": "c-42-memory-management-deep-dive",
+    "title": "4.2 Memory Management - Deep Dive",
+    "roadmap": "C",
+    "level": 4,
+    "url": "/c#42-memory-management-deep-dive"
+  },
+  {
+    "id": "c-memory-layout",
+    "title": "Memory Layout:",
+    "roadmap": "C",
+    "level": 4,
+    "url": "/c#memory-layout"
+  },
+  {
+    "id": "c-custom-allocator",
+    "title": "Custom Allocator:",
+    "roadmap": "C",
+    "level": 4,
+    "url": "/c#custom-allocator"
+  },
+  {
+    "id": "c-memory-pool",
+    "title": "Memory Pool:",
+    "roadmap": "C",
+    "level": 4,
+    "url": "/c#memory-pool"
+  },
+  {
+    "id": "c-43-multithreading-pthreads",
+    "title": "4.3 Multithreading (pthreads)",
+    "roadmap": "C",
+    "level": 4,
+    "url": "/c#43-multithreading-pthreads"
+  },
+  {
+    "id": "c-thread-yaratmaq",
+    "title": "Thread Yaratmaq:",
+    "roadmap": "C",
+    "level": 4,
+    "url": "/c#thread-yaratmaq"
+  },
+  {
+    "id": "c-mutex-mutual-exclusion",
+    "title": "Mutex (Mutual Exclusion):",
+    "roadmap": "C",
+    "level": 4,
+    "url": "/c#mutex-mutual-exclusion"
+  },
+  {
+    "id": "c-semaphore",
+    "title": "Semaphore:",
+    "roadmap": "C",
+    "level": 4,
+    "url": "/c#semaphore"
+  },
+  {
+    "id": "c-mutex-qarşılıqlı-istisna-race-condition-dan-qorunmaq",
+    "title": "Mutex (Qarşılıqlı İstisna - Race Condition-dan qorunmaq)",
+    "roadmap": "C",
+    "level": 4,
+    "url": "/c#mutex-qarşılıqlı-istisna-race-condition-dan-qorunmaq"
+  },
+  {
+    "id": "c-praktika",
+    "title": "Praktika:",
+    "roadmap": "C",
+    "level": 4,
+    "url": "/c#praktika"
+  },
+  {
+    "id": "c-44-network-programming",
+    "title": "4.4 Network Programming",
+    "roadmap": "C",
+    "level": 4,
+    "url": "/c#44-network-programming"
+  },
+  {
+    "id": "c-socket-programming-sadə-tcp-client-server",
+    "title": "Socket Programming (Sadə TCP Client-Server)",
+    "roadmap": "C",
+    "level": 4,
+    "url": "/c#socket-programming-sadə-tcp-client-server"
+  },
+  {
+    "id": "c-praktika",
+    "title": "Praktika:",
+    "roadmap": "C",
+    "level": 4,
+    "url": "/c#praktika"
+  },
+  {
+    "id": "c-45-advanced-file-io",
+    "title": "4.5 Advanced File I/O",
+    "roadmap": "C",
+    "level": 4,
+    "url": "/c#45-advanced-file-io"
+  },
+  {
+    "id": "c-mmap-memory-mapped-files",
+    "title": "mmap (Memory-mapped files):",
+    "roadmap": "C",
+    "level": 4,
+    "url": "/c#mmap-memory-mapped-files"
+  },
+  {
+    "id": "c-directory-operations",
+    "title": "Directory Operations:",
+    "roadmap": "C",
+    "level": 4,
+    "url": "/c#directory-operations"
+  },
+  {
+    "id": "c-45-the-standard-library-powerhouse",
+    "title": "4.5 The Standard Library Powerhouse",
+    "roadmap": "C",
+    "level": 4,
+    "url": "/c#45-the-standard-library-powerhouse"
+  },
+  {
+    "id": "c-error-handling-errnoh",
+    "title": "Error Handling (`errno.h`):",
+    "roadmap": "C",
+    "level": 4,
+    "url": "/c#error-handling-errnoh"
+  },
+  {
+    "id": "c-variadic-functions-stdargh",
+    "title": "Variadic Functions (`stdarg.h`):",
+    "roadmap": "C",
+    "level": 4,
+    "url": "/c#variadic-functions-stdargh"
+  },
+  {
+    "id": "c-utility-tools-stdlibh",
+    "title": "Utility Tools (`stdlib.h`):",
+    "roadmap": "C",
+    "level": 4,
+    "url": "/c#utility-tools-stdlibh"
+  },
+  {
+    "id": "c-46-signal-handling",
+    "title": "4.6 Signal Handling",
+    "roadmap": "C",
+    "level": 4,
+    "url": "/c#46-signal-handling"
+  },
+  {
+    "id": "c-mini-challenge-signal-interceptor",
+    "title": "\udde0 Mini-Challenge: Signal Interceptor",
+    "roadmap": "C",
+    "level": 4,
+    "url": "/c#mini-challenge-signal-interceptor"
+  },
+  {
+    "id": "c-51-compiler-və-linker",
+    "title": "5.1 Compiler və Linker",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#51-compiler-və-linker"
+  },
+  {
+    "id": "c-compilation-stages",
+    "title": "Compilation Stages:",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#compilation-stages"
+  },
+  {
+    "id": "c-gcc-flags",
+    "title": "GCC Flags:",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#gcc-flags"
+  },
+  {
+    "id": "c-static-vs-dynamic-linking",
+    "title": "Static vs Dynamic Linking:",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#static-vs-dynamic-linking"
+  },
+  {
+    "id": "c-52-inline-assembly",
+    "title": "5.2 Inline Assembly",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#52-inline-assembly"
+  },
+  {
+    "id": "c-53-embedded-systems-concepts",
+    "title": "5.3 Embedded Systems Concepts",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#53-embedded-systems-concepts"
+  },
+  {
+    "id": "c-register-manipulation",
+    "title": "Register Manipulation:",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#register-manipulation"
+  },
+  {
+    "id": "c-interrupt-service-routines",
+    "title": "Interrupt Service Routines:",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#interrupt-service-routines"
+  },
+  {
+    "id": "c-54-performance-optimization",
+    "title": "5.4 Performance Optimization",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#54-performance-optimization"
+  },
+  {
+    "id": "c-profiling",
+    "title": "Profiling:",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#profiling"
+  },
+  {
+    "id": "c-cache-optimization",
+    "title": "Cache Optimization:",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#cache-optimization"
+  },
+  {
+    "id": "c-simd-single-instruction-multiple-data",
+    "title": "SIMD (Single Instruction Multiple Data):",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#simd-single-instruction-multiple-data"
+  },
+  {
+    "id": "c-55-operating-system-concepts",
+    "title": "5.5 Operating System Concepts",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#55-operating-system-concepts"
+  },
+  {
+    "id": "c-process-management",
+    "title": "Process Management:",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#process-management"
+  },
+  {
+    "id": "c-deep-dive-system-calls-user-vs-kernel-mode",
+    "title": "\udde0 Deep Dive: System Calls (User vs Kernel Mode)",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#deep-dive-system-calls-user-vs-kernel-mode"
+  },
+  {
+    "id": "c-inter-process-communication",
+    "title": "Inter-Process Communication:",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#inter-process-communication"
+  },
+  {
+    "id": "c-warm-up-isinmə",
+    "title": "\udd38 Warm-up (İsinmə)",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#warm-up-isinmə"
+  },
+  {
+    "id": "c-data-structures-güc-məşqləri",
+    "title": "\udcaa Data Structures (Güc Məşqləri)",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#data-structures-güc-məşqləri"
+  },
+  {
+    "id": "c-sorting-arena-kardio",
+    "title": "\udfc3 Sorting Arena (Kardio)",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#sorting-arena-kardio"
+  },
+  {
+    "id": "c-compiler-və-build-tools",
+    "title": "Compiler və Build Tools",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#compiler-və-build-tools"
+  },
+  {
+    "id": "c-gcc-clang",
+    "title": "GCC / Clang",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#gcc-clang"
+  },
+  {
+    "id": "c-cmake",
+    "title": "CMake",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#cmake"
+  },
+  {
+    "id": "c-make-makefile-ilə-işləmək",
+    "title": "Make / Makefile İlə İşləmək",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#make-makefile-ilə-işləmək"
+  },
+  {
+    "id": "c-debugging-və-memory-tools-həyati-əhəmiyyətli",
+    "title": "Debugging və Memory Tools (Həyati Əhəmiyyətli!)",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#debugging-və-memory-tools-həyati-əhəmiyyətli"
+  },
+  {
+    "id": "c-valgrind-yaddaş-polisimiz",
+    "title": "Valgrind (Yaddaş Polisimiz)",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#valgrind-yaddaş-polisimiz"
+  },
+  {
+    "id": "c-gdb",
+    "title": "GDB",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#gdb"
+  },
+  {
+    "id": "c-valgrind",
+    "title": "Valgrind",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#valgrind"
+  },
+  {
+    "id": "c-addresssanitizer",
+    "title": "AddressSanitizer",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#addresssanitizer"
+  },
+  {
+    "id": "c-static-analysis",
+    "title": "Static Analysis",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#static-analysis"
+  },
+  {
+    "id": "c-cppcheck",
+    "title": "Cppcheck",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#cppcheck"
+  },
+  {
+    "id": "c-clang-static-analyzer",
+    "title": "Clang Static Analyzer",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#clang-static-analyzer"
+  },
+  {
+    "id": "c-profiling-tools",
+    "title": "Profiling Tools",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#profiling-tools"
+  },
+  {
+    "id": "c-gprof",
+    "title": "gprof",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#gprof"
+  },
+  {
+    "id": "c-perf-linux",
+    "title": "perf (Linux)",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#perf-linux"
+  },
+  {
+    "id": "c-version-control",
+    "title": "Version Control",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#version-control"
+  },
+  {
+    "id": "c-git",
+    "title": "Git",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#git"
+  },
+  {
+    "id": "c-documentation",
+    "title": "Documentation",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#documentation"
+  },
+  {
+    "id": "c-doxygen",
+    "title": "Doxygen",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#doxygen"
+  },
+  {
+    "id": "c-başlanğıc-junior",
+    "title": "\udfe2 Başlanğıc (Junior)",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#başlanğıc-junior"
+  },
+  {
+    "id": "c-1-tələbə-idarəetmə-sistemi-student-management-system",
+    "title": "1. Tələbə İdarəetmə Sistemi (Student Management System)",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#1-tələbə-idarəetmə-sistemi-student-management-system"
+  },
+  {
+    "id": "c-2-tic-tac-toe-x-o-oyunu",
+    "title": "2. Tic-Tac-Toe (X-O Oyunu)",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#2-tic-tac-toe-x-o-oyunu"
+  },
+  {
+    "id": "c-orta-səviyyə-mid-level",
+    "title": "\udfe1 Orta Səviyyə (Mid-Level)",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#orta-səviyyə-mid-level"
+  },
+  {
+    "id": "c-3-bank-idarəetmə-sistemi",
+    "title": "3. Bank İdarəetmə Sistemi",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#3-bank-idarəetmə-sistemi"
+  },
+  {
+    "id": "c-4-sadə-text-editor-eg-mini-vim",
+    "title": "4. Sadə Text Editor (e.g., \"mini-vim\")",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#4-sadə-text-editor-eg-mini-vim"
+  },
+  {
+    "id": "c-qabaqcıl-seniorsystem",
+    "title": "\udd34 Qabaqcıl (Senior/System)",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#qabaqcıl-seniorsystem"
+  },
+  {
+    "id": "c-5-custom-shell-terminal",
+    "title": "5. Custom Shell (Terminal)",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#5-custom-shell-terminal"
+  },
+  {
+    "id": "c-6-http-server",
+    "title": "6. HTTP Server",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#6-http-server"
+  },
+  {
+    "id": "c-7-memory-allocator-mallocfree",
+    "title": "7. Memory Allocator (malloc/free)",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#7-memory-allocator-mallocfree"
+  },
+  {
+    "id": "c-kitablar",
+    "title": "Kitablar:",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#kitablar"
+  },
+  {
+    "id": "c-online-kurslar",
+    "title": "Online Kurslar:",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#online-kurslar"
+  },
+  {
+    "id": "c-websaytlar",
+    "title": "Websaytlar:",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#websaytlar"
+  },
+  {
+    "id": "c-practice",
+    "title": "Practice:",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#practice"
+  },
+  {
+    "id": "c-github-repos",
+    "title": "GitHub Repos:",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#github-repos"
+  },
+  {
+    "id": "c-həftə-1-2-level-1",
+    "title": "Həftə 1-2: Level 1",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#həftə-1-2-level-1"
+  },
+  {
+    "id": "c-həftə-3-6-level-2",
+    "title": "Həftə 3-6: Level 2",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#həftə-3-6-level-2"
+  },
+  {
+    "id": "c-həftə-7-12-level-3",
+    "title": "Həftə 7-12: Level 3",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#həftə-7-12-level-3"
+  },
+  {
+    "id": "c-həftə-13-24-level-4",
+    "title": "Həftə 13-24: Level 4",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#həftə-13-24-level-4"
+  },
+  {
+    "id": "c-həftə-25-level-5",
+    "title": "Həftə 25+: Level 5",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#həftə-25-level-5"
+  },
+  {
+    "id": "c-basics",
+    "title": "Basics:",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#basics"
+  },
+  {
+    "id": "c-intermediate",
+    "title": "Intermediate:",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#intermediate"
+  },
+  {
+    "id": "c-advanced",
+    "title": "Advanced:",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#advanced"
+  },
+  {
+    "id": "c-expert",
+    "title": "Expert:",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#expert"
+  },
+  {
+    "id": "c-mini-challenge-custom-allocator",
+    "title": "\udde0 Mini-Challenge: Custom Allocator",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#mini-challenge-custom-allocator"
+  },
+  {
+    "id": "c-code-quality",
+    "title": "Code Quality:",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#code-quality"
+  },
+  {
+    "id": "c-learning-strategy",
+    "title": "Learning Strategy:",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#learning-strategy"
+  },
+  {
+    "id": "c-common-pitfalls",
+    "title": "Common Pitfalls:",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#common-pitfalls"
+  },
+  {
+    "id": "c-contribution",
+    "title": "\udd1d Contribution",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#contribution"
+  },
+  {
+    "id": "c-əlaqə",
+    "title": "\udcec Əlaqə",
+    "roadmap": "C",
+    "level": 5,
+    "url": "/c#əlaqə"
+  },
+  {
+    "id": "git-öyrənmə-səviyyələri",
+    "title": "\udfaf Öyrənmə Səviyyələri",
+    "roadmap": "Git",
+    "level": 0,
+    "url": "/git#öyrənmə-səviyyələri"
+  },
+  {
+    "id": "git-git-quraşdırma",
+    "title": "Git Quraşdırma",
+    "roadmap": "Git",
+    "level": 0,
+    "url": "/git#git-quraşdırma"
+  },
+  {
+    "id": "git-linux",
+    "title": "Linux",
+    "roadmap": "Git",
+    "level": 0,
+    "url": "/git#linux"
+  },
+  {
+    "id": "git-macos",
+    "title": "macOS",
+    "roadmap": "Git",
+    "level": 0,
+    "url": "/git#macos"
+  },
+  {
+    "id": "git-windows",
+    "title": "Windows",
+    "roadmap": "Git",
+    "level": 0,
+    "url": "/git#windows"
+  },
+  {
+    "id": "git-ilk-konfiqurasiya",
+    "title": "İlk Konfiqurasiya",
+    "roadmap": "Git",
+    "level": 0,
+    "url": "/git#ilk-konfiqurasiya"
+  },
+  {
+    "id": "git-git-əsas-konseptlər",
+    "title": "Git Əsas Konseptlər",
+    "roadmap": "Git",
+    "level": 0,
+    "url": "/git#git-əsas-konseptlər"
+  },
+  {
+    "id": "git-repository-yaratmaq",
+    "title": "Repository Yaratmaq",
+    "roadmap": "Git",
+    "level": 1,
+    "url": "/git#repository-yaratmaq"
+  },
+  {
+    "id": "git-yeni-repo",
+    "title": "Yeni Repo",
+    "roadmap": "Git",
+    "level": 1,
+    "url": "/git#yeni-repo"
+  },
+  {
+    "id": "git-mövcud-repo-clone",
+    "title": "Mövcud Repo Clone",
+    "roadmap": "Git",
+    "level": 1,
+    "url": "/git#mövcud-repo-clone"
+  },
+  {
+    "id": "git-git-workflow-əsas-3-sahə",
+    "title": "Git Workflow - Əsas 3 Sahə",
+    "roadmap": "Git",
+    "level": 1,
+    "url": "/git#git-workflow-əsas-3-sahə"
+  },
+  {
+    "id": "git-deep-dive-git-folderinin-içi",
+    "title": "\udde0 Deep Dive: .git Folderinin İçi",
+    "roadmap": "Git",
+    "level": 1,
+    "url": "/git#deep-dive-git-folderinin-içi"
+  },
+  {
+    "id": "git-əsas-komandalar",
+    "title": "Əsas Komandalar",
+    "roadmap": "Git",
+    "level": 1,
+    "url": "/git#əsas-komandalar"
+  },
+  {
+    "id": "git-git-status",
+    "title": "git status",
+    "roadmap": "Git",
+    "level": 1,
+    "url": "/git#git-status"
+  },
+  {
+    "id": "git-git-add",
+    "title": "git add",
+    "roadmap": "Git",
+    "level": 1,
+    "url": "/git#git-add"
+  },
+  {
+    "id": "git-git-commit",
+    "title": "git commit",
+    "roadmap": "Git",
+    "level": 1,
+    "url": "/git#git-commit"
+  },
+  {
+    "id": "git-dəyişiklikləri-görmək",
+    "title": "Dəyişiklikləri Görmək",
+    "roadmap": "Git",
+    "level": 1,
+    "url": "/git#dəyişiklikləri-görmək"
+  },
+  {
+    "id": "git-git-diff",
+    "title": "git diff",
+    "roadmap": "Git",
+    "level": 1,
+    "url": "/git#git-diff"
+  },
+  {
+    "id": "git-faylları-silmək-və-adını-dəyişmək",
+    "title": "Faylları Silmək və Adını Dəyişmək",
+    "roadmap": "Git",
+    "level": 1,
+    "url": "/git#faylları-silmək-və-adını-dəyişmək"
+  },
+  {
+    "id": "git-gitignore",
+    "title": ".gitignore",
+    "roadmap": "Git",
+    "level": 1,
+    "url": "/git#gitignore"
+  },
+  {
+    "id": "git-tarix-və-log",
+    "title": "Tarix və Log",
+    "roadmap": "Git",
+    "level": 1,
+    "url": "/git#tarix-və-log"
+  },
+  {
+    "id": "git-git-log",
+    "title": "git log",
+    "roadmap": "Git",
+    "level": 1,
+    "url": "/git#git-log"
+  },
+  {
+    "id": "git-git-show",
+    "title": "git show",
+    "roadmap": "Git",
+    "level": 1,
+    "url": "/git#git-show"
+  },
+  {
+    "id": "git-branch-nədir",
+    "title": "Branch Nədir?",
+    "roadmap": "Git",
+    "level": 2,
+    "url": "/git#branch-nədir"
+  },
+  {
+    "id": "git-branch-komandaları",
+    "title": "Branch Komandaları",
+    "roadmap": "Git",
+    "level": 2,
+    "url": "/git#branch-komandaları"
+  },
+  {
+    "id": "git-branch-strategiyaları",
+    "title": "Branch Strategiyaları",
+    "roadmap": "Git",
+    "level": 2,
+    "url": "/git#branch-strategiyaları"
+  },
+  {
+    "id": "git-git-flow",
+    "title": "Git Flow",
+    "roadmap": "Git",
+    "level": 2,
+    "url": "/git#git-flow"
+  },
+  {
+    "id": "git-github-flow-sadə",
+    "title": "GitHub Flow (Sadə)",
+    "roadmap": "Git",
+    "level": 2,
+    "url": "/git#github-flow-sadə"
+  },
+  {
+    "id": "git-merging",
+    "title": "Merging",
+    "roadmap": "Git",
+    "level": 2,
+    "url": "/git#merging"
+  },
+  {
+    "id": "git-əsas-merge",
+    "title": "Əsas Merge",
+    "roadmap": "Git",
+    "level": 2,
+    "url": "/git#əsas-merge"
+  },
+  {
+    "id": "git-merge-options",
+    "title": "Merge Options",
+    "roadmap": "Git",
+    "level": 2,
+    "url": "/git#merge-options"
+  },
+  {
+    "id": "git-merge-conflicts",
+    "title": "Merge Conflicts",
+    "roadmap": "Git",
+    "level": 2,
+    "url": "/git#merge-conflicts"
+  },
+  {
+    "id": "git-iki-branch-eyni-fayl-eyni-yerdə-fərqli-dəyişikliklər-edibsə-conflict-olur",
+    "title": "İki branch eyni fayl, eyni yerdə fərqli dəyişikliklər edibsə conflict olur.",
+    "roadmap": "Git",
+    "level": 2,
+    "url": "/git#iki-branch-eyni-fayl-eyni-yerdə-fərqli-dəyişikliklər-edibsə-conflict-olur"
+  },
+  {
+    "id": "git-conflict-marker-ları",
+    "title": "Conflict Marker-ları",
+    "roadmap": "Git",
+    "level": 2,
+    "url": "/git#conflict-marker-ları"
+  },
+  {
+    "id": "git-merge-conflict-gym",
+    "title": "\udd4a Merge Conflict Gym",
+    "roadmap": "Git",
+    "level": 2,
+    "url": "/git#merge-conflict-gym"
+  },
+  {
+    "id": "git-rebase",
+    "title": "Rebase",
+    "roadmap": "Git",
+    "level": 2,
+    "url": "/git#rebase"
+  },
+  {
+    "id": "git-interactive-rebase",
+    "title": "Interactive Rebase",
+    "roadmap": "Git",
+    "level": 2,
+    "url": "/git#interactive-rebase"
+  },
+  {
+    "id": "git-autosquash-ilə-avtomatik-rebase",
+    "title": "Autosquash ilə Avtomatik Rebase",
+    "roadmap": "Git",
+    "level": 2,
+    "url": "/git#autosquash-ilə-avtomatik-rebase"
+  },
+  {
+    "id": "git-remote-repository",
+    "title": "Remote Repository",
+    "roadmap": "Git",
+    "level": 3,
+    "url": "/git#remote-repository"
+  },
+  {
+    "id": "git-ssh-key-yaratmaq",
+    "title": "SSH Key yaratmaq",
+    "roadmap": "Git",
+    "level": 3,
+    "url": "/git#ssh-key-yaratmaq"
+  },
+  {
+    "id": "git-remote-əlavə-etmək",
+    "title": "Remote Əlavə Etmək",
+    "roadmap": "Git",
+    "level": 3,
+    "url": "/git#remote-əlavə-etmək"
+  },
+  {
+    "id": "git-push-pull",
+    "title": "Push & Pull",
+    "roadmap": "Git",
+    "level": 3,
+    "url": "/git#push-pull"
+  },
+  {
+    "id": "git-git-push",
+    "title": "git push",
+    "roadmap": "Git",
+    "level": 3,
+    "url": "/git#git-push"
+  },
+  {
+    "id": "git-git-pull",
+    "title": "git pull",
+    "roadmap": "Git",
+    "level": 3,
+    "url": "/git#git-pull"
+  },
+  {
+    "id": "git-git-fetch",
+    "title": "git fetch",
+    "roadmap": "Git",
+    "level": 3,
+    "url": "/git#git-fetch"
+  },
+  {
+    "id": "git-pull-requests-github",
+    "title": "Pull Requests (GitHub)",
+    "roadmap": "Git",
+    "level": 3,
+    "url": "/git#pull-requests-github"
+  },
+  {
+    "id": "git-pr-workflow",
+    "title": "PR Workflow",
+    "roadmap": "Git",
+    "level": 3,
+    "url": "/git#pr-workflow"
+  },
+  {
+    "id": "git-pr-best-practices",
+    "title": "PR Best Practices",
+    "roadmap": "Git",
+    "level": 3,
+    "url": "/git#pr-best-practices"
+  },
+  {
+    "id": "git-fork-contribute",
+    "title": "Fork & Contribute",
+    "roadmap": "Git",
+    "level": 3,
+    "url": "/git#fork-contribute"
+  },
+  {
+    "id": "git-stash",
+    "title": "Stash",
+    "roadmap": "Git",
+    "level": 4,
+    "url": "/git#stash"
+  },
+  {
+    "id": "git-cherry-pick",
+    "title": "Cherry-pick",
+    "roadmap": "Git",
+    "level": 4,
+    "url": "/git#cherry-pick"
+  },
+  {
+    "id": "git-expert-tools",
+    "title": "Expert Tools",
+    "roadmap": "Git",
+    "level": 4,
+    "url": "/git#expert-tools"
+  },
+  {
+    "id": "git-git-bisect-bug-hunter",
+    "title": "git bisect (Bug Hunter)",
+    "roadmap": "Git",
+    "level": 4,
+    "url": "/git#git-bisect-bug-hunter"
+  },
+  {
+    "id": "git-git-reflog-time-machine",
+    "title": "git reflog (Time Machine)",
+    "roadmap": "Git",
+    "level": 4,
+    "url": "/git#git-reflog-time-machine"
+  },
+  {
+    "id": "git-git-rerere-reuse-recorded-resolution",
+    "title": "git rerere (Reuse Recorded Resolution)",
+    "roadmap": "Git",
+    "level": 4,
+    "url": "/git#git-rerere-reuse-recorded-resolution"
+  },
+  {
+    "id": "git-reset-revert-restore",
+    "title": "Reset, Revert, Restore",
+    "roadmap": "Git",
+    "level": 4,
+    "url": "/git#reset-revert-restore"
+  },
+  {
+    "id": "git-git-reset",
+    "title": "git reset",
+    "roadmap": "Git",
+    "level": 4,
+    "url": "/git#git-reset"
+  },
+  {
+    "id": "git-git-revert",
+    "title": "git revert",
+    "roadmap": "Git",
+    "level": 4,
+    "url": "/git#git-revert"
+  },
+  {
+    "id": "git-git-restore",
+    "title": "git restore",
+    "roadmap": "Git",
+    "level": 4,
+    "url": "/git#git-restore"
+  },
+  {
+    "id": "git-reflog",
+    "title": "Reflog",
+    "roadmap": "Git",
+    "level": 4,
+    "url": "/git#reflog"
+  },
+  {
+    "id": "git-git-aliases",
+    "title": "Git Aliases",
+    "roadmap": "Git",
+    "level": 4,
+    "url": "/git#git-aliases"
+  },
+  {
+    "id": "git-performance-optimization",
+    "title": "Performance Optimization",
+    "roadmap": "Git",
+    "level": 5,
+    "url": "/git#performance-optimization"
+  },
+  {
+    "id": "git-git-lfs",
+    "title": "Git LFS",
+    "roadmap": "Git",
+    "level": 5,
+    "url": "/git#git-lfs"
+  },
+  {
+    "id": "git-stash",
+    "title": "Stash",
+    "roadmap": "Git",
+    "level": 4,
+    "url": "/git#stash"
+  },
+  {
+    "id": "git-shallow-clone",
+    "title": "Shallow Clone",
+    "roadmap": "Git",
+    "level": 4,
+    "url": "/git#shallow-clone"
+  },
+  {
+    "id": "git-git-worktrees",
+    "title": "Git Worktrees \udf33",
+    "roadmap": "Git",
+    "level": 4,
+    "url": "/git#git-worktrees"
+  },
+  {
+    "id": "git-git-submodules-subtrees",
+    "title": "Git Submodules & Subtrees \udce6",
+    "roadmap": "Git",
+    "level": 4,
+    "url": "/git#git-submodules-subtrees"
+  },
+  {
+    "id": "git-submodules-link-kimi-saxlayır",
+    "title": "Submodules (Link kimi saxlayır)",
+    "roadmap": "Git",
+    "level": 4,
+    "url": "/git#submodules-link-kimi-saxlayır"
+  },
+  {
+    "id": "git-git-hooks",
+    "title": "Git Hooks \ude9d",
+    "roadmap": "Git",
+    "level": 4,
+    "url": "/git#git-hooks"
+  },
+  {
+    "id": "git-security-best-practices",
+    "title": "Security Best Practices",
+    "roadmap": "Git",
+    "level": 4,
+    "url": "/git#security-best-practices"
+  },
+  {
+    "id": "git-secret-ləri-sil",
+    "title": "Secret-ləri Sil",
+    "roadmap": "Git",
+    "level": 4,
+    "url": "/git#secret-ləri-sil"
+  },
+  {
+    "id": "git-debugging-git",
+    "title": "Debugging Git",
+    "roadmap": "Git",
+    "level": 4,
+    "url": "/git#debugging-git"
+  },
+  {
+    "id": "git-git-tips-tricks",
+    "title": "Git Tips & Tricks",
+    "roadmap": "Git",
+    "level": 4,
+    "url": "/git#git-tips-tricks"
+  },
+  {
+    "id": "git-search-in-code-history",
+    "title": "Search in Code History",
+    "roadmap": "Git",
+    "level": 4,
+    "url": "/git#search-in-code-history"
+  },
+  {
+    "id": "git-blame",
+    "title": "Blame",
+    "roadmap": "Git",
+    "level": 4,
+    "url": "/git#blame"
+  },
+  {
+    "id": "git-clean-repo",
+    "title": "Clean Repo",
+    "roadmap": "Git",
+    "level": 4,
+    "url": "/git#clean-repo"
+  },
+  {
+    "id": "linux-öyrənmə-səviyyələri",
+    "title": "\udfaf Öyrənmə Səviyyələri",
+    "roadmap": "Linux",
+    "level": 0,
+    "url": "/linux#öyrənmə-səviyyələri"
+  },
+  {
+    "id": "linux-linux-distributions-seçimi",
+    "title": "Linux Distributions Seçimi",
+    "roadmap": "Linux",
+    "level": 0,
+    "url": "/linux#linux-distributions-seçimi"
+  },
+  {
+    "id": "linux-terminal-emulatorları",
+    "title": "Terminal Emulatorları",
+    "roadmap": "Linux",
+    "level": 0,
+    "url": "/linux#terminal-emulatorları"
+  },
+  {
+    "id": "linux-shell-types",
+    "title": "Shell Types",
+    "roadmap": "Linux",
+    "level": 0,
+    "url": "/linux#shell-types"
+  },
+  {
+    "id": "linux-ilk-komandalar",
+    "title": "İlk Komandalar",
+    "roadmap": "Linux",
+    "level": 0,
+    "url": "/linux#ilk-komandalar"
+  },
+  {
+    "id": "linux-terminal-shortcuts",
+    "title": "Terminal Shortcuts",
+    "roadmap": "Linux",
+    "level": 0,
+    "url": "/linux#terminal-shortcuts"
+  },
+  {
+    "id": "linux-deep-dive-kernel-vs-user-space",
+    "title": "\udde0 Deep Dive: Kernel vs User Space",
+    "roadmap": "Linux",
+    "level": 0,
+    "url": "/linux#deep-dive-kernel-vs-user-space"
+  },
+  {
+    "id": "linux-linux-file-system-hierarchy",
+    "title": "Linux File System Hierarchy",
+    "roadmap": "Linux",
+    "level": 1,
+    "url": "/linux#linux-file-system-hierarchy"
+  },
+  {
+    "id": "linux-navigation-komandaları",
+    "title": "Navigation Komandaları",
+    "roadmap": "Linux",
+    "level": 1,
+    "url": "/linux#navigation-komandaları"
+  },
+  {
+    "id": "linux-file-operations",
+    "title": "File Operations",
+    "roadmap": "Linux",
+    "level": 1,
+    "url": "/linux#file-operations"
+  },
+  {
+    "id": "linux-file-permissions",
+    "title": "File Permissions",
+    "roadmap": "Linux",
+    "level": 1,
+    "url": "/linux#file-permissions"
+  },
+  {
+    "id": "linux-deep-dive-inodes",
+    "title": "\udde0 Deep Dive: Inodes",
+    "roadmap": "Linux",
+    "level": 1,
+    "url": "/linux#deep-dive-inodes"
+  },
+  {
+    "id": "linux-wildcards-patterns",
+    "title": "Wildcards (Patterns)",
+    "roadmap": "Linux",
+    "level": 1,
+    "url": "/linux#wildcards-patterns"
+  },
+  {
+    "id": "linux-grep-search-in-text",
+    "title": "grep - Search in Text",
+    "roadmap": "Linux",
+    "level": 2,
+    "url": "/linux#grep-search-in-text"
+  },
+  {
+    "id": "linux-sed-stream-editor",
+    "title": "sed - Stream Editor",
+    "roadmap": "Linux",
+    "level": 2,
+    "url": "/linux#sed-stream-editor"
+  },
+  {
+    "id": "linux-awk-pattern-scanning",
+    "title": "awk - Pattern Scanning",
+    "roadmap": "Linux",
+    "level": 2,
+    "url": "/linux#awk-pattern-scanning"
+  },
+  {
+    "id": "linux-sort-uniq-cut",
+    "title": "sort, uniq, cut",
+    "roadmap": "Linux",
+    "level": 2,
+    "url": "/linux#sort-uniq-cut"
+  },
+  {
+    "id": "linux-pipes-redirection",
+    "title": "Pipes & Redirection",
+    "roadmap": "Linux",
+    "level": 2,
+    "url": "/linux#pipes-redirection"
+  },
+  {
+    "id": "linux-bash-script-basics",
+    "title": "Bash Script Basics",
+    "roadmap": "Linux",
+    "level": 3,
+    "url": "/linux#bash-script-basics"
+  },
+  {
+    "id": "linux-variables",
+    "title": "Variables",
+    "roadmap": "Linux",
+    "level": 3,
+    "url": "/linux#variables"
+  },
+  {
+    "id": "linux-conditionals",
+    "title": "Conditionals",
+    "roadmap": "Linux",
+    "level": 3,
+    "url": "/linux#conditionals"
+  },
+  {
+    "id": "linux-loops",
+    "title": "Loops",
+    "roadmap": "Linux",
+    "level": 3,
+    "url": "/linux#loops"
+  },
+  {
+    "id": "linux-functions",
+    "title": "Functions",
+    "roadmap": "Linux",
+    "level": 3,
+    "url": "/linux#functions"
+  },
+  {
+    "id": "linux-arrays",
+    "title": "Arrays",
+    "roadmap": "Linux",
+    "level": 3,
+    "url": "/linux#arrays"
+  },
+  {
+    "id": "linux-scripting-gym-automation-challenges",
+    "title": "\udd4a Scripting Gym: Automation Challenges",
+    "roadmap": "Linux",
+    "level": 3,
+    "url": "/linux#scripting-gym-automation-challenges"
+  },
+  {
+    "id": "linux-process-management",
+    "title": "Process Management",
+    "roadmap": "Linux",
+    "level": 4,
+    "url": "/linux#process-management"
+  },
+  {
+    "id": "linux-system-information",
+    "title": "System Information",
+    "roadmap": "Linux",
+    "level": 4,
+    "url": "/linux#system-information"
+  },
+  {
+    "id": "linux-user-management",
+    "title": "User Management",
+    "roadmap": "Linux",
+    "level": 4,
+    "url": "/linux#user-management"
+  },
+  {
+    "id": "linux-package-management",
+    "title": "Package Management",
+    "roadmap": "Linux",
+    "level": 4,
+    "url": "/linux#package-management"
+  },
+  {
+    "id": "linux-ubuntudebian-apt",
+    "title": "Ubuntu/Debian (apt)",
+    "roadmap": "Linux",
+    "level": 4,
+    "url": "/linux#ubuntudebian-apt"
+  },
+  {
+    "id": "linux-fedora-dnf",
+    "title": "Fedora (dnf)",
+    "roadmap": "Linux",
+    "level": 4,
+    "url": "/linux#fedora-dnf"
+  },
+  {
+    "id": "linux-arch-pacman",
+    "title": "Arch (pacman)",
+    "roadmap": "Linux",
+    "level": 4,
+    "url": "/linux#arch-pacman"
+  },
+  {
+    "id": "linux-services-systemd",
+    "title": "Services (systemd)",
+    "roadmap": "Linux",
+    "level": 4,
+    "url": "/linux#services-systemd"
+  },
+  {
+    "id": "linux-öz-custom-service-ni-yaratmaq-systemd-unit-file",
+    "title": "Öz Custom Service-ni Yaratmaq (Systemd Unit File)",
+    "roadmap": "Linux",
+    "level": 4,
+    "url": "/linux#öz-custom-service-ni-yaratmaq-systemd-unit-file"
+  },
+  {
+    "id": "linux-networking",
+    "title": "Networking",
+    "roadmap": "Linux",
+    "level": 4,
+    "url": "/linux#networking"
+  },
+  {
+    "id": "linux-logs",
+    "title": "Logs",
+    "roadmap": "Linux",
+    "level": 4,
+    "url": "/linux#logs"
+  },
+  {
+    "id": "linux-disk-management",
+    "title": "Disk Management",
+    "roadmap": "Linux",
+    "level": 4,
+    "url": "/linux#disk-management"
+  },
+  {
+    "id": "linux-cron-jobs-scheduled-tasks",
+    "title": "Cron Jobs (Scheduled Tasks)",
+    "roadmap": "Linux",
+    "level": 4,
+    "url": "/linux#cron-jobs-scheduled-tasks"
+  },
+  {
+    "id": "linux-linux-security-hardening",
+    "title": "Linux Security & Hardening \udee1",
+    "roadmap": "Linux",
+    "level": 4,
+    "url": "/linux#linux-security-hardening"
+  },
+  {
+    "id": "linux-selinux-və-apparmor-macoswindows-da-olmayan-xüsusiyyətlər",
+    "title": "SELinux və AppArmor (MacOS/Windows-da olmayan xüsusiyyətlər!)",
+    "roadmap": "Linux",
+    "level": 4,
+    "url": "/linux#selinux-və-apparmor-macoswindows-da-olmayan-xüsusiyyətlər"
+  },
+  {
+    "id": "linux-ufw-uncomplicated-firewall-və-iptables",
+    "title": "UFW (Uncomplicated Firewall) və iptables",
+    "roadmap": "Linux",
+    "level": 4,
+    "url": "/linux#ufw-uncomplicated-firewall-və-iptables"
+  },
+  {
+    "id": "linux-ssh-hardening-serverin-qapısını-bərkitmək",
+    "title": "SSH Hardening (Serverin qapısını bərkitmək)",
+    "roadmap": "Linux",
+    "level": 4,
+    "url": "/linux#ssh-hardening-serverin-qapısını-bərkitmək"
+  },
+  {
+    "id": "linux-docker-və-containerization-qısa-baxış",
+    "title": "Docker və Containerization (Qısa Baxış) \udc33",
+    "roadmap": "Linux",
+    "level": 4,
+    "url": "/linux#docker-və-containerization-qısa-baxış"
+  },
+  {
+    "id": "linux-git-advanced",
+    "title": "Git Advanced",
+    "roadmap": "Linux",
+    "level": 4,
+    "url": "/linux#git-advanced"
+  },
+  {
+    "id": "linux-performance-monitoring-advanced",
+    "title": "Performance Monitoring (Advanced)",
+    "roadmap": "Linux",
+    "level": 4,
+    "url": "/linux#performance-monitoring-advanced"
+  },
+  {
+    "id": "linux-security",
+    "title": "Security",
+    "roadmap": "Linux",
+    "level": 4,
+    "url": "/linux#security"
+  },
+  {
+    "id": "vim-giriş",
+    "title": "\udcda Giriş",
+    "roadmap": "Vim",
+    "level": 0,
+    "url": "/vim#giriş"
+  },
+  {
+    "id": "vim-səviyyələr",
+    "title": "\udfaf Səviyyələr",
+    "roadmap": "Vim",
+    "level": 0,
+    "url": "/vim#səviyyələr"
+  },
+  {
+    "id": "vim-quraşdırma",
+    "title": "Quraşdırma",
+    "roadmap": "Vim",
+    "level": 0,
+    "url": "/vim#quraşdırma"
+  },
+  {
+    "id": "vim-linux",
+    "title": "Linux:",
+    "roadmap": "Vim",
+    "level": 0,
+    "url": "/vim#linux"
+  },
+  {
+    "id": "vim-macos",
+    "title": "macOS:",
+    "roadmap": "Vim",
+    "level": 0,
+    "url": "/vim#macos"
+  },
+  {
+    "id": "vim-windows",
+    "title": "Windows:",
+    "roadmap": "Vim",
+    "level": 0,
+    "url": "/vim#windows"
+  },
+  {
+    "id": "vim-vim-ə-giriş",
+    "title": "Vim-ə Giriş",
+    "roadmap": "Vim",
+    "level": 0,
+    "url": "/vim#vim-ə-giriş"
+  },
+  {
+    "id": "vim-ilk-dəfə-açmaq",
+    "title": "İlk dəfə açmaq:",
+    "roadmap": "Vim",
+    "level": 0,
+    "url": "/vim#ilk-dəfə-açmaq"
+  },
+  {
+    "id": "vim-vim-i-bağlamaq-əsas-problem-yeni-başlayanlar-üçün",
+    "title": "Vim-i bağlamaq (əsas problem yeni başlayanlar üçün \ude04):",
+    "roadmap": "Vim",
+    "level": 0,
+    "url": "/vim#vim-i-bağlamaq-əsas-problem-yeni-başlayanlar-üçün"
+  },
+  {
+    "id": "vim-vim-modları",
+    "title": "Vim Modları",
+    "roadmap": "Vim",
+    "level": 0,
+    "url": "/vim#vim-modları"
+  },
+  {
+    "id": "vim-6-əsas-mod",
+    "title": "6 Əsas Mod:",
+    "roadmap": "Vim",
+    "level": 0,
+    "url": "/vim#6-əsas-mod"
+  },
+  {
+    "id": "vim-ilk-addımlar",
+    "title": "İlk Addımlar",
+    "roadmap": "Vim",
+    "level": 1,
+    "url": "/vim#ilk-addımlar"
+  },
+  {
+    "id": "vim-fayl-açmaq",
+    "title": "Fayl açmaq:",
+    "roadmap": "Vim",
+    "level": 1,
+    "url": "/vim#fayl-açmaq"
+  },
+  {
+    "id": "vim-insert-mode-a-keçid",
+    "title": "Insert Mode-a keçid:",
+    "roadmap": "Vim",
+    "level": 1,
+    "url": "/vim#insert-mode-a-keçid"
+  },
+  {
+    "id": "vim-hərəkət-motion-əsas",
+    "title": "Hərəkət (Motion) - Əsas:",
+    "roadmap": "Vim",
+    "level": 1,
+    "url": "/vim#hərəkət-motion-əsas"
+  },
+  {
+    "id": "vim-yadda-saxlamaq",
+    "title": "Yadda saxlamaq:",
+    "roadmap": "Vim",
+    "level": 1,
+    "url": "/vim#yadda-saxlamaq"
+  },
+  {
+    "id": "vim-sil-və-undoredo",
+    "title": "Sil və Undo/Redo:",
+    "roadmap": "Vim",
+    "level": 1,
+    "url": "/vim#sil-və-undoredo"
+  },
+  {
+    "id": "vim-kopyala-və-yapışdır",
+    "title": "Kopyala və Yapışdır:",
+    "roadmap": "Vim",
+    "level": 1,
+    "url": "/vim#kopyala-və-yapışdır"
+  },
+  {
+    "id": "vim-ilk-gün-praktikası",
+    "title": "İlk Gün Praktikası:",
+    "roadmap": "Vim",
+    "level": 1,
+    "url": "/vim#ilk-gün-praktikası"
+  },
+  {
+    "id": "vim-hərəkət-navigation-advanced",
+    "title": "Hərəkət (Navigation) - Advanced",
+    "roadmap": "Vim",
+    "level": 2,
+    "url": "/vim#hərəkət-navigation-advanced"
+  },
+  {
+    "id": "vim-söz-üzrə",
+    "title": "Söz üzrə:",
+    "roadmap": "Vim",
+    "level": 2,
+    "url": "/vim#söz-üzrə"
+  },
+  {
+    "id": "vim-sətir-üzrə",
+    "title": "Sətir üzrə:",
+    "roadmap": "Vim",
+    "level": 2,
+    "url": "/vim#sətir-üzrə"
+  },
+  {
+    "id": "vim-ekran-üzrə",
+    "title": "Ekran üzrə:",
+    "roadmap": "Vim",
+    "level": 2,
+    "url": "/vim#ekran-üzrə"
+  },
+  {
+    "id": "vim-skrolling",
+    "title": "Skrolling:",
+    "roadmap": "Vim",
+    "level": 2,
+    "url": "/vim#skrolling"
+  },
+  {
+    "id": "vim-editing-advanced",
+    "title": "Editing - Advanced",
+    "roadmap": "Vim",
+    "level": 2,
+    "url": "/vim#editing-advanced"
+  },
+  {
+    "id": "vim-silmə-delete",
+    "title": "Silmə (Delete):",
+    "roadmap": "Vim",
+    "level": 2,
+    "url": "/vim#silmə-delete"
+  },
+  {
+    "id": "vim-dəyişdirmə-change",
+    "title": "Dəyişdirmə (Change):",
+    "roadmap": "Vim",
+    "level": 2,
+    "url": "/vim#dəyişdirmə-change"
+  },
+  {
+    "id": "vim-kopyalama-yank",
+    "title": "Kopyalama (Yank):",
+    "roadmap": "Vim",
+    "level": 2,
+    "url": "/vim#kopyalama-yank"
+  },
+  {
+    "id": "vim-yapışdırma-paste",
+    "title": "Yapışdırma (Paste):",
+    "roadmap": "Vim",
+    "level": 2,
+    "url": "/vim#yapışdırma-paste"
+  },
+  {
+    "id": "vim-simvol-dəyişdirmə",
+    "title": "Simvol dəyişdirmə:",
+    "roadmap": "Vim",
+    "level": 2,
+    "url": "/vim#simvol-dəyişdirmə"
+  },
+  {
+    "id": "vim-axtarış-search",
+    "title": "Axtarış (Search)",
+    "roadmap": "Vim",
+    "level": 2,
+    "url": "/vim#axtarış-search"
+  },
+  {
+    "id": "vim-əsas-axtarış",
+    "title": "Əsas axtarış:",
+    "roadmap": "Vim",
+    "level": 2,
+    "url": "/vim#əsas-axtarış"
+  },
+  {
+    "id": "vim-simvol-üzrə",
+    "title": "Simvol üzrə:",
+    "roadmap": "Vim",
+    "level": 2,
+    "url": "/vim#simvol-üzrə"
+  },
+  {
+    "id": "vim-dəyişdirmə-və-əvəzetmə-replace",
+    "title": "Dəyişdirmə və Əvəzetmə (Replace)",
+    "roadmap": "Vim",
+    "level": 2,
+    "url": "/vim#dəyişdirmə-və-əvəzetmə-replace"
+  },
+  {
+    "id": "vim-sadə-əvəzetmə",
+    "title": "Sadə əvəzetmə:",
+    "roadmap": "Vim",
+    "level": 2,
+    "url": "/vim#sadə-əvəzetmə"
+  },
+  {
+    "id": "vim-regex-ilə",
+    "title": "Regex ilə:",
+    "roadmap": "Vim",
+    "level": 2,
+    "url": "/vim#regex-ilə"
+  },
+  {
+    "id": "vim-praktika-2-4-həftə",
+    "title": "Praktika (2-4 həftə):",
+    "roadmap": "Vim",
+    "level": 2,
+    "url": "/vim#praktika-2-4-həftə"
+  },
+  {
+    "id": "vim-operators-və-motions",
+    "title": "Operators və Motions",
+    "roadmap": "Vim",
+    "level": 3,
+    "url": "/vim#operators-və-motions"
+  },
+  {
+    "id": "vim-operator-konsepti",
+    "title": "Operator Konsepti:",
+    "roadmap": "Vim",
+    "level": 3,
+    "url": "/vim#operator-konsepti"
+  },
+  {
+    "id": "vim-kombinasiyalar",
+    "title": "Kombinasiyalar:",
+    "roadmap": "Vim",
+    "level": 3,
+    "url": "/vim#kombinasiyalar"
+  },
+  {
+    "id": "vim-text-objects",
+    "title": "Text Objects:",
+    "roadmap": "Vim",
+    "level": 3,
+    "url": "/vim#text-objects"
+  },
+  {
+    "id": "vim-praktiki-nümunələr",
+    "title": "Praktiki nümunələr:",
+    "roadmap": "Vim",
+    "level": 3,
+    "url": "/vim#praktiki-nümunələr"
+  },
+  {
+    "id": "vim-registers-yaddaş",
+    "title": "Registers (Yaddaş)",
+    "roadmap": "Vim",
+    "level": 3,
+    "url": "/vim#registers-yaddaş"
+  },
+  {
+    "id": "vim-register-nədir",
+    "title": "Register nədir?",
+    "roadmap": "Vim",
+    "level": 3,
+    "url": "/vim#register-nədir"
+  },
+  {
+    "id": "vim-register-növləri",
+    "title": "Register növləri:",
+    "roadmap": "Vim",
+    "level": 3,
+    "url": "/vim#register-növləri"
+  },
+  {
+    "id": "vim-istifadə",
+    "title": "İstifadə:",
+    "roadmap": "Vim",
+    "level": 3,
+    "url": "/vim#istifadə"
+  },
+  {
+    "id": "vim-macros",
+    "title": "Macros",
+    "roadmap": "Vim",
+    "level": 3,
+    "url": "/vim#macros"
+  },
+  {
+    "id": "vim-macro-yaratmak",
+    "title": "Macro yaratmak:",
+    "roadmap": "Vim",
+    "level": 3,
+    "url": "/vim#macro-yaratmak"
+  },
+  {
+    "id": "vim-nümunə",
+    "title": "Nümunə:",
+    "roadmap": "Vim",
+    "level": 3,
+    "url": "/vim#nümunə"
+  },
+  {
+    "id": "vim-marks-işarələr",
+    "title": "Marks (İşarələr)",
+    "roadmap": "Vim",
+    "level": 3,
+    "url": "/vim#marks-işarələr"
+  },
+  {
+    "id": "vim-istifadə",
+    "title": "İstifadə:",
+    "roadmap": "Vim",
+    "level": 3,
+    "url": "/vim#istifadə"
+  },
+  {
+    "id": "vim-xüsusi-marks",
+    "title": "Xüsusi marks:",
+    "roadmap": "Vim",
+    "level": 3,
+    "url": "/vim#xüsusi-marks"
+  },
+  {
+    "id": "vim-splits-və-tabs",
+    "title": "Splits və Tabs",
+    "roadmap": "Vim",
+    "level": 3,
+    "url": "/vim#splits-və-tabs"
+  },
+  {
+    "id": "vim-window-splits",
+    "title": "Window Splits:",
+    "roadmap": "Vim",
+    "level": 3,
+    "url": "/vim#window-splits"
+  },
+  {
+    "id": "vim-tabs",
+    "title": "Tabs:",
+    "roadmap": "Vim",
+    "level": 3,
+    "url": "/vim#tabs"
+  },
+  {
+    "id": "vim-folding-qatlamaq",
+    "title": "Folding (Qatlamaq)",
+    "roadmap": "Vim",
+    "level": 3,
+    "url": "/vim#folding-qatlamaq"
+  },
+  {
+    "id": "vim-praktika-1-2-ay",
+    "title": "Praktika (1-2 ay):",
+    "roadmap": "Vim",
+    "level": 3,
+    "url": "/vim#praktika-1-2-ay"
+  },
+  {
+    "id": "vim-vimrc-configuration",
+    "title": ".vimrc Configuration",
+    "roadmap": "Vim",
+    "level": 4,
+    "url": "/vim#vimrc-configuration"
+  },
+  {
+    "id": "vim-vimrc-faylı",
+    "title": ".vimrc faylı:",
+    "roadmap": "Vim",
+    "level": 4,
+    "url": "/vim#vimrc-faylı"
+  },
+  {
+    "id": "vim-key-mappings-öz-komandaların",
+    "title": "Key Mappings (Öz komandaların)",
+    "roadmap": "Vim",
+    "level": 4,
+    "url": "/vim#key-mappings-öz-komandaların"
+  },
+  {
+    "id": "vim-mapping-yaratmaq",
+    "title": "Mapping yaratmaq:",
+    "roadmap": "Vim",
+    "level": 4,
+    "url": "/vim#mapping-yaratmaq"
+  },
+  {
+    "id": "vim-faydalı-mappings",
+    "title": "Faydalı mappings:",
+    "roadmap": "Vim",
+    "level": 4,
+    "url": "/vim#faydalı-mappings"
+  },
+  {
+    "id": "vim-plugins",
+    "title": "Plugins",
+    "roadmap": "Vim",
+    "level": 4,
+    "url": "/vim#plugins"
+  },
+  {
+    "id": "vim-plugin-manager-vim-plug",
+    "title": "Plugin Manager - vim-plug",
+    "roadmap": "Vim",
+    "level": 4,
+    "url": "/vim#plugin-manager-vim-plug"
+  },
+  {
+    "id": "vim-ən-populyar-pluginlər",
+    "title": "Ən Populyar Pluginlər:",
+    "roadmap": "Vim",
+    "level": 4,
+    "url": "/vim#ən-populyar-pluginlər"
+  },
+  {
+    "id": "vim-advanced-commands",
+    "title": "Advanced Commands",
+    "roadmap": "Vim",
+    "level": 4,
+    "url": "/vim#advanced-commands"
+  },
+  {
+    "id": "vim-buffer-idarəsi",
+    "title": "Buffer İdarəsi:",
+    "roadmap": "Vim",
+    "level": 4,
+    "url": "/vim#buffer-idarəsi"
+  },
+  {
+    "id": "vim-global-command",
+    "title": "Global Command:",
+    "roadmap": "Vim",
+    "level": 4,
+    "url": "/vim#global-command"
+  },
+  {
+    "id": "vim-quickfix-list",
+    "title": "Quickfix List:",
+    "roadmap": "Vim",
+    "level": 4,
+    "url": "/vim#quickfix-list"
+  },
+  {
+    "id": "vim-ex-commands",
+    "title": "Ex Commands:",
+    "roadmap": "Vim",
+    "level": 4,
+    "url": "/vim#ex-commands"
+  },
+  {
+    "id": "vim-praktika-2-4-ay",
+    "title": "Praktika (2-4 ay):",
+    "roadmap": "Vim",
+    "level": 4,
+    "url": "/vim#praktika-2-4-ay"
+  },
+  {
+    "id": "vim-vimscript",
+    "title": "Vimscript",
+    "roadmap": "Vim",
+    "level": 5,
+    "url": "/vim#vimscript"
+  },
+  {
+    "id": "vim-əsaslar",
+    "title": "Əsaslar:",
+    "roadmap": "Vim",
+    "level": 5,
+    "url": "/vim#əsaslar"
+  },
+  {
+    "id": "vim-faydalı-funksiyalar",
+    "title": "Faydalı Funksiyalar:",
+    "roadmap": "Vim",
+    "level": 5,
+    "url": "/vim#faydalı-funksiyalar"
+  },
+  {
+    "id": "vim-autocommands",
+    "title": "Autocommands",
+    "roadmap": "Vim",
+    "level": 5,
+    "url": "/vim#autocommands"
+  },
+  {
+    "id": "vim-advanced-text-objects",
+    "title": "Advanced Text Objects",
+    "roadmap": "Vim",
+    "level": 5,
+    "url": "/vim#advanced-text-objects"
+  },
+  {
+    "id": "vim-öz-text-object-lərini-yarat",
+    "title": "Öz text object-lərini yarat:",
+    "roadmap": "Vim",
+    "level": 5,
+    "url": "/vim#öz-text-object-lərini-yarat"
+  },
+  {
+    "id": "vim-neovim",
+    "title": "Neovim",
+    "roadmap": "Vim",
+    "level": 5,
+    "url": "/vim#neovim"
+  },
+  {
+    "id": "vim-quraşdırma",
+    "title": "Quraşdırma:",
+    "roadmap": "Vim",
+    "level": 5,
+    "url": "/vim#quraşdırma"
+  },
+  {
+    "id": "vim-initvim-neovim-config",
+    "title": "init.vim (Neovim config):",
+    "roadmap": "Vim",
+    "level": 5,
+    "url": "/vim#initvim-neovim-config"
+  },
+  {
+    "id": "vim-lua-config-neovim-05",
+    "title": "Lua config (Neovim 0.5+):",
+    "roadmap": "Vim",
+    "level": 5,
+    "url": "/vim#lua-config-neovim-05"
+  },
+  {
+    "id": "vim-neovim-specific-plugins-müasir-ide-təcrübəsi",
+    "title": "Neovim-specific plugins (Müasir IDE Təcrübəsi):",
+    "roadmap": "Vim",
+    "level": 5,
+    "url": "/vim#neovim-specific-plugins-müasir-ide-təcrübəsi"
+  },
+  {
+    "id": "vim-lsp-language-server-protocol-nədir",
+    "title": "LSP (Language Server Protocol) Nədir?",
+    "roadmap": "Vim",
+    "level": 5,
+    "url": "/vim#lsp-language-server-protocol-nədir"
+  },
+  {
+    "id": "vim-vim-tmux-terminal-multiplexing",
+    "title": "Vim + Tmux (Terminal Multiplexing)",
+    "roadmap": "Vim",
+    "level": 5,
+    "url": "/vim#vim-tmux-terminal-multiplexing"
+  },
+  {
+    "id": "vim-performance-optimization",
+    "title": "Performance Optimization",
+    "roadmap": "Vim",
+    "level": 5,
+    "url": "/vim#performance-optimization"
+  },
+  {
+    "id": "vim-profiling",
+    "title": "Profiling:",
+    "roadmap": "Vim",
+    "level": 5,
+    "url": "/vim#profiling"
+  },
+  {
+    "id": "vim-lazy-loading-plugins",
+    "title": "Lazy loading plugins:",
+    "roadmap": "Vim",
+    "level": 5,
+    "url": "/vim#lazy-loading-plugins"
+  },
+  {
+    "id": "vim-regex-mastery",
+    "title": "Regex Mastery",
+    "roadmap": "Vim",
+    "level": 5,
+    "url": "/vim#regex-mastery"
+  },
+  {
+    "id": "vim-vim-regex-i",
+    "title": "Vim regex-i:",
+    "roadmap": "Vim",
+    "level": 5,
+    "url": "/vim#vim-regex-i"
+  },
+  {
+    "id": "vim-praktiki-nümunələr",
+    "title": "Praktiki nümunələr:",
+    "roadmap": "Vim",
+    "level": 5,
+    "url": "/vim#praktiki-nümunələr"
+  },
+  {
+    "id": "vim-practical-workflows",
+    "title": "Practical Workflows",
+    "roadmap": "Vim",
+    "level": 5,
+    "url": "/vim#practical-workflows"
+  },
+  {
+    "id": "vim-ide-kimi-istifadə",
+    "title": "IDE kimi istifadə:",
+    "roadmap": "Vim",
+    "level": 5,
+    "url": "/vim#ide-kimi-istifadə"
+  },
+  {
+    "id": "vim-multi-cursor-simulation",
+    "title": "Multi-cursor simulation:",
+    "roadmap": "Vim",
+    "level": 5,
+    "url": "/vim#multi-cursor-simulation"
+  },
+  {
+    "id": "vim-30-günlük-challenge",
+    "title": "30 Günlük Challenge:",
+    "roadmap": "Vim",
+    "level": 5,
+    "url": "/vim#30-günlük-challenge"
+  },
+  {
+    "id": "vim-həftə-1-basics",
+    "title": "Həftə 1: Basics",
+    "roadmap": "Vim",
+    "level": 5,
+    "url": "/vim#həftə-1-basics"
+  },
+  {
+    "id": "vim-həftə-2-motions",
+    "title": "Həftə 2: Motions",
+    "roadmap": "Vim",
+    "level": 5,
+    "url": "/vim#həftə-2-motions"
+  },
+  {
+    "id": "vim-həftə-3-operators",
+    "title": "Həftə 3: Operators",
+    "roadmap": "Vim",
+    "level": 5,
+    "url": "/vim#həftə-3-operators"
+  },
+  {
+    "id": "vim-həftə-4-customization",
+    "title": "Həftə 4: Customization",
+    "roadmap": "Vim",
+    "level": 5,
+    "url": "/vim#həftə-4-customization"
+  },
+  {
+    "id": "vim-praktika-məsələləri",
+    "title": "Praktika Məsələləri:",
+    "roadmap": "Vim",
+    "level": 5,
+    "url": "/vim#praktika-məsələləri"
+  },
+  {
+    "id": "vim-online-resources",
+    "title": "Online Resources:",
+    "roadmap": "Vim",
+    "level": 5,
+    "url": "/vim#online-resources"
+  },
+  {
+    "id": "vim-interactive",
+    "title": "Interactive:",
+    "roadmap": "Vim",
+    "level": 5,
+    "url": "/vim#interactive"
+  },
+  {
+    "id": "vim-kitablar",
+    "title": "Kitablar:",
+    "roadmap": "Vim",
+    "level": 5,
+    "url": "/vim#kitablar"
+  },
+  {
+    "id": "vim-video",
+    "title": "Video:",
+    "roadmap": "Vim",
+    "level": 5,
+    "url": "/vim#video"
+  },
+  {
+    "id": "vim-websites",
+    "title": "Websites:",
+    "roadmap": "Vim",
+    "level": 5,
+    "url": "/vim#websites"
+  },
+  {
+    "id": "vim-cheat-sheets",
+    "title": "Cheat Sheets:",
+    "roadmap": "Vim",
+    "level": 5,
+    "url": "/vim#cheat-sheets"
+  },
+  {
+    "id": "vim-community",
+    "title": "Community:",
+    "roadmap": "Vim",
+    "level": 5,
+    "url": "/vim#community"
+  },
+  {
+    "id": "vim-learning-tips",
+    "title": "Learning Tips:",
+    "roadmap": "Vim",
+    "level": 5,
+    "url": "/vim#learning-tips"
+  },
+  {
+    "id": "vim-common-mistakes",
+    "title": "Common Mistakes:",
+    "roadmap": "Vim",
+    "level": 5,
+    "url": "/vim#common-mistakes"
+  },
+  {
+    "id": "vim-productivity-hacks",
+    "title": "Productivity Hacks:",
+    "roadmap": "Vim",
+    "level": 5,
+    "url": "/vim#productivity-hacks"
+  },
+  {
+    "id": "vim-contribution",
+    "title": "\udd1d Contribution",
+    "roadmap": "Vim",
+    "level": 5,
+    "url": "/vim#contribution"
+  },
+  {
+    "id": "vim-feedback",
+    "title": "\udcec Feedback",
+    "roadmap": "Vim",
+    "level": 5,
+    "url": "/vim#feedback"
+  },
+  {
+    "id": "ai-hansı-aləti-nə-zaman-istifadə-etməli",
+    "title": "Hansı Aləti Nə Zaman İstifadə Etməli?",
+    "roadmap": "AI Mühəndisi",
+    "level": 0,
+    "url": "/ai#hansı-aləti-nə-zaman-istifadə-etməli"
+  },
+  {
+    "id": "ai-1-söhbət-əsaslı-modellər-chatbots",
+    "title": "1. Söhbət Əsaslı Modellər (Chatbots)",
+    "roadmap": "AI Mühəndisi",
+    "level": 0,
+    "url": "/ai#1-söhbət-əsaslı-modellər-chatbots"
+  },
+  {
+    "id": "ai-2-ide-inteqrasiyaları-kod-redaktorunda-iç-içə",
+    "title": "2. IDE İnteqrasiyaları (Kod Redaktorunda İç-içə)",
+    "roadmap": "AI Mühəndisi",
+    "level": 0,
+    "url": "/ai#2-ide-inteqrasiyaları-kod-redaktorunda-iç-içə"
+  },
+  {
+    "id": "ai-1-kontekst-hökmdardır-context-is-king",
+    "title": "1. Kontekst Hökmdardır (Context is King)",
+    "roadmap": "AI Mühəndisi",
+    "level": 1,
+    "url": "/ai#1-kontekst-hökmdardır-context-is-king"
+  },
+  {
+    "id": "ai-2-zero-shot-vs-few-shot-prompting",
+    "title": "2. Zero-Shot vs Few-Shot Prompting",
+    "roadmap": "AI Mühəndisi",
+    "level": 1,
+    "url": "/ai#2-zero-shot-vs-few-shot-prompting"
+  },
+  {
+    "id": "ai-3-rol-təyin-etmək-system-prompt-roleplaying",
+    "title": "3. Rol Təyin Etmək (System Prompt / Roleplaying)",
+    "roadmap": "AI Mühəndisi",
+    "level": 1,
+    "url": "/ai#3-rol-təyin-etmək-system-prompt-roleplaying"
+  },
+  {
+    "id": "ai-1-boilerplate-təməl-kodların-yaradılması",
+    "title": "1. Boilerplate (Təməl) Kodların Yaradılması",
+    "roadmap": "AI Mühəndisi",
+    "level": 2,
+    "url": "/ai#1-boilerplate-təməl-kodların-yaradılması"
+  },
+  {
+    "id": "ai-2-unit-testlərin-yazılması",
+    "title": "2. Unit Testlərin Yazılması",
+    "roadmap": "AI Mühəndisi",
+    "level": 2,
+    "url": "/ai#2-unit-testlərin-yazılması"
+  },
+  {
+    "id": "ai-3-regex-regular-expressions-və-sql-sorğuları",
+    "title": "3. RegEx (Regular Expressions) və SQL Sorğuları",
+    "roadmap": "AI Mühəndisi",
+    "level": 2,
+    "url": "/ai#3-regex-regular-expressions-və-sql-sorğuları"
+  },
+  {
+    "id": "ai-1-rubber-duck-debugging-20",
+    "title": "1. Rubber Duck Debugging 2.0",
+    "roadmap": "AI Mühəndisi",
+    "level": 3,
+    "url": "/ai#1-rubber-duck-debugging-20"
+  },
+  {
+    "id": "ai-2-refactoring-kodu-təmizləmək-və-yaxşılaşdırmaq",
+    "title": "2. Refactoring (Kodu Təmizləmək və Yaxşılaşdırmaq)",
+    "roadmap": "AI Mühəndisi",
+    "level": 3,
+    "url": "/ai#2-refactoring-kodu-təmizləmək-və-yaxşılaşdırmaq"
+  },
+  {
+    "id": "ai-3-legacy-köhnə-kodu-oxumaq",
+    "title": "3. Legacy (Köhnə) Kodu Oxumaq",
+    "roadmap": "AI Mühəndisi",
+    "level": 3,
+    "url": "/ai#3-legacy-köhnə-kodu-oxumaq"
+  },
+  {
+    "id": "ai-architecture-review-ideyanı-sınaqdan-keçirmək",
+    "title": "Architecture Review (İdeyanı Sınaqdan Keçirmək)",
+    "roadmap": "AI Mühəndisi",
+    "level": 4,
+    "url": "/ai#architecture-review-ideyanı-sınaqdan-keçirmək"
+  },
+  {
+    "id": "ai-texnologiya-steki-stack-seçimi",
+    "title": "Texnologiya Steki (Stack) Seçimi",
+    "roadmap": "AI Mühəndisi",
+    "level": 4,
+    "url": "/ai#texnologiya-steki-stack-seçimi"
+  },
+  {
+    "id": "ai-1-hallucinations-hallüsinasiya",
+    "title": "1. Hallucinations (Hallüsinasiya)",
+    "roadmap": "AI Mühəndisi",
+    "level": 5,
+    "url": "/ai#1-hallucinations-hallüsinasiya"
+  },
+  {
+    "id": "ai-2-təhlükəsizlik-və-məxfilik-security-privacy",
+    "title": "2. Təhlükəsizlik və Məxfilik (Security / Privacy)",
+    "roadmap": "AI Mühəndisi",
+    "level": 5,
+    "url": "/ai#2-təhlükəsizlik-və-məxfilik-security-privacy"
+  },
+  {
+    "id": "ai-3-asılılıq-yaradır-the-ai-crutch",
+    "title": "3. Asılılıq Yaradır (The AI Crutch)",
+    "roadmap": "AI Mühəndisi",
+    "level": 5,
+    "url": "/ai#3-asılılıq-yaradır-the-ai-crutch"
+  }
+]

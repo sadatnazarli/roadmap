@@ -873,6 +873,29 @@ sudo journalctl -u service_name
 sudo journalctl -u nginx -f          # follow
 ```
 
+### Öz Custom Service-ni Yaratmaq (Systemd Unit File)
+`/etc/systemd/system/myapp.service` faylı yaradırıq:
+```ini
+[Unit]
+Description=My Custom Node.js App
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/node /home/user/myapp/app.js
+Restart=always
+User=user
+Environment=NODE_ENV=production
+
+[Install]
+WantedBy=multi-user.target
+```
+Daha sonra:
+```bash
+sudo systemctl daemon-reload   # Systemd-ni yenilə
+sudo systemctl start myapp     # İşə sal
+sudo systemctl enable myapp    # Boot vaxtı avtomatik açılmasını təmin et
+```
+
 ## Networking
 
 ```bash
@@ -880,6 +903,10 @@ sudo journalctl -u nginx -f          # follow
 ip addr show                 # IP addresses
 ip link show                 # interfaces
 ip link set eth0 up/down     # enable/disable
+
+# Socket Statistics (Köhnəlmiş netstat əvəzinə)
+ss -tuln                     # dinləyən TCP/UDP portları
+ss -s                        # statiskika
 
 # Routing
 ip route show                # routing table
@@ -893,6 +920,10 @@ dig domain.com               # advanced DNS
 # Connectivity test
 ping google.com              # ICMP test
 traceroute google.com        # route trace
+
+# Şəbəkə Trafikinə Nəzarət
+sudo tcpdump -i eth0         # eth0 interfeysində gedib-gələn paketləri oxu
+sudo tcpdump port 80         # yalnız HTTP trafiki
 
 # SSH
 ssh user@hostname
@@ -1012,35 +1043,45 @@ crontab -l
 
 # 💡 Final Tips
 
-# Level 5: Advanced & DevOps 🚀
+## Linux Security & Hardening 🛡️
 
-## SSH Advanced
+### SELinux və AppArmor (MacOS/Windows-da olmayan xüsusiyyətlər!)
+Bütün Linux prosesləri müəyyən istifadəçi haqqı ilə işləyir. Amma əgər o proses hack edilərsə?
+SELinux (RedHat/CentOS) və AppArmor (Ubuntu/Debian) **Mandatory Access Control (MAC)** sistemləridir. Onlar bildirir ki: *"Bu Nginx prosesi ancaq /var/www qovluğunu oxuya bilər, başqa yerə baxa bilməz!"*
 
 ```bash
-# SSH config (~/.ssh/config)
-Host myserver
-    HostName 192.168.1.100
-    User username
-    Port 22
-    IdentityFile ~/.ssh/id_rsa
+# AppArmor statusu yoxla (Ubuntu)
+sudo apparmor_status
 
-# SSH key generation
-ssh-keygen -t ed25519 -C "email@example.com"
-ssh-keygen -t rsa -b 4096
-
-# Copy public key
-ssh-copy-id user@host
-
-# SSH agent
-eval $(ssh-agent)
-ssh-add ~/.ssh/id_rsa
-
-# Port forwarding
-ssh -L 8080:localhost:80 user@host     # local
-ssh -R 8080:localhost:80 user@host     # remote
+# SELinux statusu yoxla (CentOS/RHEL)
+sestatus
 ```
 
-## Docker Basics
+### UFW (Uncomplicated Firewall) və iptables
+```bash
+# UFW (Asan)
+sudo ufw enable
+sudo ufw allow ssh          # 22 portuna icazə ver
+sudo ufw allow 80/tcp       # HTTP
+
+# iptables (Core Firewall - Dərin öyrənmək istəyənlər üçün)
+sudo iptables -L                      # Qaydaları listələ
+sudo iptables -A INPUT -p tcp --dport 22 -j ACCEPT # SSH icazəsi əlavə et
+```
+
+### SSH Hardening (Serverin qapısını bərkitmək)
+`/etc/ssh/sshd_config` faylını edit edib bu sətirləri dəyiş:
+```ini
+PermitRootLogin no          # Root girişi bağla
+PasswordAuthentication no   # Şifrə ilə girişi bağla (Yalnız SSH Key!)
+Port 2222                   # Standart portu dəyiş
+```
+
+## Docker və Containerization (Qısa Baxış) 🐳
+
+Docker əslində Linux-un **Namespaces** və **Cgroups** adlı iki vacib kernel texnologiyası üzərində qurulub.
+- **Namespaces**: Prosesi izolyasiya edir (sanki başqa maşındadır).
+- **Cgroups**: Prosesin neçə CPU və ya nə qədər RAM istifadə edəcəyini limitləyir.
 
 ```bash
 # Images
@@ -1049,21 +1090,10 @@ docker pull ubuntu:20.04                # download
 docker build -t name:tag .              # build
 
 # Containers
-docker run ubuntu                       # run
-docker run -it ubuntu bash              # interactive
-docker run -d nginx                     # detached
-docker run -p 8080:80 nginx             # port mapping
-docker ps                               # running
-docker ps -a                            # all
-docker stop container_id                # stop
-docker rm container_id                  # remove
-
-# Execute command
-docker exec -it container_id bash
-
-# Logs
-docker logs container_id
-docker logs -f container_id             # follow
+docker run -it ubuntu bash              # interactive terminal kimi aç
+docker run -d -p 8080:80 nginx          # detached mode, port mapping (8080 -> 80)
+docker ps                               # işləyən containerləri listələ
+docker logs -f container_id             # canlı logları izlə
 ```
 
 ## Git Advanced
@@ -1087,25 +1117,26 @@ git clean -fd                   # remove untracked
 git gc                          # garbage collect
 ```
 
-## Performance Monitoring
+## Performance Monitoring (Advanced)
+
+Sistem yavaşlayıb? Bu alətlər səni xilas edəcək:
 
 ```bash
-# CPU
+# Proses Sistemi zəbt edib?
 top                             # basic
-htop                            # better
-mpstat 1                        # CPU stats
+htop                            # daha yaxşı oxunan (rəngli)
+strace -p PID                   # Prosesin sistemlə (kernel) nə danışdığını canlı izlə!
 
-# Memory
-free -h                         # RAM
-vmstat 1                        # virtual memory
+# RAM bitib?
+free -h                         # Ümumi vəziyyət
+vmstat 1                        # Virtual yaddaş statistikası (hər saniyə)
 
-# Disk I/O
-iostat 1                        # I/O stats
-iotop                           # I/O per process
+# Diskin oxuma/yazma sürəti zəifləyib?
+iostat -x 1                     # I/O yüklənməsi
+iotop                           # Hansı proses diski çox yorur?
 
 # Network
-iftop                           # network usage
-nethogs                         # per process
+iftop                           # network bandwidth usage
 ```
 
 ## Security

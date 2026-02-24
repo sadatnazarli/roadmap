@@ -5,6 +5,7 @@ import CRoadmap from './pages/c-roadmap.mdx';
 import GitRoadmap from './pages/git-roadmap.mdx';
 import LinuxRoadmap from './pages/linux-roadmap.mdx';
 import VimRoadmap from './pages/vim-roadmap.mdx';
+import AiRoadmap from './pages/ai-roadmap.mdx';
 import NotFound from './pages/NotFound';
 import RoadmapLayout from './layouts/RoadmapLayout';
 import Layout from './layouts/Layout';
@@ -73,6 +74,17 @@ function App() {
         <Route path="/vim-roadmap" element={
           <RoadmapLayout roadmapSlug="vim">
             <VimRoadmap />
+          </RoadmapLayout>
+        } />
+
+        <Route path="/ai" element={
+          <RoadmapLayout roadmapSlug="ai">
+            <AiRoadmap />
+          </RoadmapLayout>
+        } />
+        <Route path="/ai-roadmap" element={
+          <RoadmapLayout roadmapSlug="ai">
+            <AiRoadmap />
           </RoadmapLayout>
         } />
 

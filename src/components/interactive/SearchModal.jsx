@@ -1,44 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 import { Search, X } from 'lucide-react';
 import Fuse from 'fuse.js';
+import searchIndexData from '../../data/searchIndex.json';
 
-const searchIndex = [
-  // C Roadmap
-  { id: 'c-intro', title: 'C Dili Giriş', roadmap: 'C', level: 1, url: '/c-roadmap#c-intro' },
-  { id: 'c-variables', title: 'Dəyişənlər və Məlumat Tiplər', roadmap: 'C', level: 1, url: '/c-roadmap#variables' },
-  { id: 'c-operators', title: 'Operatorlar', roadmap: 'C', level: 2, url: '/c-roadmap#operators' },
-  { id: 'c-control-flow', title: 'İdarə Strukturları', roadmap: 'C', level: 2, url: '/c-roadmap#control-flow' },
-  { id: 'c-functions', title: 'Funksiyalar', roadmap: 'C', level: 3, url: '/c-roadmap#functions' },
-  { id: 'c-pointers', title: 'İşarəçilər', roadmap: 'C', level: 4, url: '/c-roadmap#pointers' },
-  { id: 'c-arrays', title: 'Massivilər', roadmap: 'C', level: 2, url: '/c-roadmap#arrays' },
-  { id: 'c-strings', title: 'Sətirlər', roadmap: 'C', level: 3, url: '/c-roadmap#strings' },
-  { id: 'c-structures', title: 'Strukturlar', roadmap: 'C', level: 4, url: '/c-roadmap#structures' },
-  
-  // Git Roadmap
-  { id: 'git-intro', title: 'Git Giriş', roadmap: 'Git', level: 1, url: '/git-roadmap#intro' },
-  { id: 'git-setup', title: 'Git Kurulumu', roadmap: 'Git', level: 1, url: '/git-roadmap#setup' },
-  { id: 'git-basic', title: 'Əsas Əmrlər', roadmap: 'Git', level: 1, url: '/git-roadmap#basic' },
-  { id: 'git-branching', title: 'Şaxələndirmə', roadmap: 'Git', level: 2, url: '/git-roadmap#branching' },
-  { id: 'git-merging', title: 'Birləşdirmə', roadmap: 'Git', level: 3, url: '/git-roadmap#merging' },
-  { id: 'git-github', title: 'GitHub İş Axını', roadmap: 'Git', level: 3, url: '/git-roadmap#github' },
-  { id: 'git-advanced', title: 'Səviyyəli Əmrlər', roadmap: 'Git', level: 4, url: '/git-roadmap#advanced' },
-  
-  // Vim Roadmap
-  { id: 'vim-intro', title: 'Vim Giriş', roadmap: 'Vim', level: 1, url: '/vim-roadmap#intro' },
-  { id: 'vim-modes', title: 'Vim Rejimləri', roadmap: 'Vim', level: 1, url: '/vim-roadmap#modes' },
-  { id: 'vim-motions', title: 'Hərəkət Əmrləri', roadmap: 'Vim', level: 2, url: '/vim-roadmap#motions' },
-  { id: 'vim-editing', title: 'Redaktə Texnikaları', roadmap: 'Vim', level: 2, url: '/vim-roadmap#editing' },
-  { id: 'vim-search', title: 'Axtarış və Əvəzləmə', roadmap: 'Vim', level: 3, url: '/vim-roadmap#search' },
-  { id: 'vim-macros', title: 'Makroslar', roadmap: 'Vim', level: 4, url: '/vim-roadmap#macros' },
-  
-  // Linux Roadmap
-  { id: 'linux-intro', title: 'Linux Giriş', roadmap: 'Linux', level: 1, url: '/linux-roadmap#intro' },
-  { id: 'linux-filesystem', title: 'Fayl Sistemi', roadmap: 'Linux', level: 1, url: '/linux-roadmap#filesystem' },
-  { id: 'linux-shell', title: 'Qabıq (Shell)', roadmap: 'Linux', level: 1, url: '/linux-roadmap#shell' },
-  { id: 'linux-users', title: 'İstifadəçilər və İcazələr', roadmap: 'Linux', level: 2, url: '/linux-roadmap#users' },
-  { id: 'linux-processes', title: 'Proseslər və Tasklar', roadmap: 'Linux', level: 2, url: '/linux-roadmap#processes' },
-  { id: 'linux-networking', title: 'Şəbəkə', roadmap: 'Linux', level: 3, url: '/linux-roadmap#networking' },
-];
+const searchIndex = searchIndexData;
 
 export default function SearchModal() {
   const [isOpen, setIsOpen] = useState(false);
@@ -172,11 +137,10 @@ export default function SearchModal() {
                 <li key={item.id}>
                   <a
                     href={item.url}
-                    className={`block p-4 transition-colors ${
-                      index === selectedIndex
+                    className={`block p-4 transition-colors ${index === selectedIndex
                         ? 'bg-blue-50 dark:bg-blue-900/20'
                         : 'hover:bg-gray-50 dark:hover:bg-slate-800'
-                    }`}
+                      }`}
                   >
                     <div className="flex items-start justify-between gap-4">
                       <div className="min-w-0 flex-1">

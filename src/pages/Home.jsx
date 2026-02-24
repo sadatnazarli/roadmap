@@ -50,6 +50,7 @@ export default function Home() {
                             { to: "/vim", label: "Vim", color: "bg-emerald-600 hover:bg-emerald-700" },
                             { to: "/git", label: "Git", color: "bg-orange-600 hover:bg-orange-700" },
                             { to: "/linux", label: "Linux", color: "bg-slate-700 hover:bg-slate-800" },
+                            { to: "/ai", label: "AI Mühəndisi", color: "bg-purple-600 hover:bg-purple-700" },
                         ].map((btn) => (
                             <motion.div key={btn.to} variants={item}>
                                 <Link
@@ -146,6 +147,15 @@ export default function Home() {
                                 stats: "5 Level • 60+ Mövzu",
                                 accent: "group-hover:text-slate-600 dark:group-hover:text-slate-300",
                                 border: "hover:border-slate-500/50"
+                            },
+                            {
+                                to: "/ai",
+                                icon: "🤖",
+                                title: "AI Proqram Mühəndisi",
+                                desc: "Süni intellekt alətlərini (ChatGPT, Claude, Copilot) professional şəkildə istifadə edərək məhsuldarlığınızı 10x artırın.",
+                                stats: "6 Level • 30+ Mövzu",
+                                accent: "group-hover:text-purple-600 dark:group-hover:text-purple-400",
+                                border: "hover:border-purple-500/50"
                             },
                         ].map((card, idx) => (
                             <motion.div

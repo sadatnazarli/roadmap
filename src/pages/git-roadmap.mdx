@@ -589,7 +589,24 @@ git rebase -i HEAD~5
 # drop mno345 Fifth commit      # sil
 ```
 
-Komandalar: pick, reword, edit, squash, fixup, drop
+Komandalar:
+- **`pick`**: Commit-i olduğu kimi saxla.
+- **`reword`**: Commit mesajını dəyiş, amma dəyişiklikləri saxla.
+- **`edit`**: Commit-də dayan, faylları dəyişdir (`git commit --amend` edə bilərsən), sonra `git rebase --continue` ilə davam et.
+- **`squash`**: Bu commit-i yuxarıdakı commit-lə birləşdir (mesajları da birləşdirir).
+- **`fixup`**: Squash kimi, amma bu commit-in mesajını atır (görməzlikdən gəlir).
+- **`drop`**: Commit-i tamamilə sil.
+
+### Autosquash ilə Avtomatik Rebase
+Əvvəlcədən `fixup` və ya `squash` edəcəyiniz commit-ləri planlaşdırmaq üçün:
+```bash
+# Səhv etdiyin commit-in ID-sini tap (məs. abc123)
+# Düzəlişləri et, sonra:
+git commit --fixup=abc123
+
+# Rebase edərkən avtomatik sıraya düzür:
+git rebase -i --autosquash HEAD~3
+```
 
 <ProgressTracker  lessonId="git-level-2" roadmapSlug="git" />
 
@@ -1084,6 +1101,56 @@ git clone --depth 10 https://github.com/user/repo.git
 # Single branch
 git clone --single-branch --branch main https://github.com/user/repo.git
 ```
+
+## Git Worktrees 🌳
+
+Müxtəlif branch-larda eyni anda işləmək lazımdırsa (məsələn, bir branch-da server işləyir, digərində təcili fix etməlisən), stash əvəzinə `worktree` istifadə et. Bu, eyni repo üçün ayrı bir fiziki qovluq yaradır!
+
+```bash
+# Yeni worktree yarat (../hotfix qovluğunda 'hotfix' branch-ı ilə)
+git worktree add ../hotfix -b hotfix-branch
+
+# Bütün worktree-ləri göstər
+git worktree list
+
+# İşi qurtarandan sonra worktree-ni sil (qovluq özü silinməlidir)
+git worktree remove ../hotfix
+```
+
+## Git Submodules & Subtrees 📦
+
+Bir layihənin içində başqa bir Git repository-sini saxlamaq üçün istifadə olunur (məs. xarici kitabxanalar).
+
+### Submodules (Link kimi saxlayır)
+```bash
+# Submodule əlavə et
+git submodule add https://github.com/vendor/library.git vendor/lib
+
+# Submodule olan reponu clone edərkən
+git clone --recurse-submodules https://github.com/your/repo.git
+
+# Submodule-u son versiyaya update etmək
+git submodule update --remote
+```
+
+### Git Hooks 🪝
+
+Git komandalarından əvvəl və ya sonra avtomatik işə düşən script-lərdir (`.git/hooks/` qovluğunda yerləşir).
+
+- **`pre-commit`**: Commit olunmamışdan əvvəl işə düşür (Linting, Test qaçırtmaq üçün əladır).
+- **`pre-push`**: Push olunmamışdan əvvəl işə düşür (Daha böyük testləri yoxlamaq üçün).
+
+#### Pre-commit Nümunəsi (`.git/hooks/pre-commit`)
+```bash
+#!/bin/sh
+# Əgər testlər keçməsə, commit etməyəcək!
+npm run test
+if [ $? -ne 0 ]; then
+  echo "Tests failed! Commit aborted."
+  exit 1
+fi
+```
+(İcra icazəsi verməyi unutma: `chmod +x .git/hooks/pre-commit`)
 
 ## Security Best Practices
 

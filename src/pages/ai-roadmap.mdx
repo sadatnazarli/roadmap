@@ -1,0 +1,333 @@
+import ProgressTracker from '../components/interactive/ProgressTracker';
+import QuizBlock from '../components/interactive/QuizBlock';
+import CodeBlock from '../components/content/CodeBlock';
+import InfoBox from '../components/content/InfoBox';
+import ConceptCard from '../components/content/ConceptCard';
+import TaskList from '../components/content/TaskList';
+
+# AI-Destəkli Proqram mühəndisliyi (AI-Assisted Software Engineering) 🤖💻
+
+> **"Süni İntellekt (AI) səni əvəz etməyəcək, amma AI istifadə edən proqramçı səni əvəz edəcək."**
+
+Bu yol xəritəsi sizə ChatGPT, Claude, GitHub Copilot kimi Süni İntellekt alətlərindən istifadə edərək necə 10x daha məhsuldar və effektiv bir proqram mühəndisi ola biləcəyinizi öyrədəcək.
+
+**Səviyyələr:**
+- **Level 0:** AI Alətlərinə Baxış (İlk Addımlar) - 1 həftə
+- **Level 1:** Prompt Engineering (Düzgün Sual Vermək) - 1-2 həftə
+- **Level 2:** AI Pair Programming (AI ilə Cütlükdə Kod Yazmaq) - 2-3 həftə
+- **Level 3:** Debugging & Refactoring (Xətaları Tapmaq və Kodu Yaxşılaşdırmaq) - 3-4 həftə
+- **Level 4:** Sistem Arxitekturası və Planlama - 1-2 ay
+- **Level 5:** Etika, Təhlükəsizlik və Gələcək - Davamlı
+
+---
+
+# Level 0: AI Alətlərinə Baxış 🔰
+
+## Hansı Aləti Nə Zaman İstifadə Etməli?
+
+Müasir proqramlaşdırma dünyasında tək bir AI aləti bütün problemləri həll etmir.
+
+### 1. Söhbət Əsaslı Modellər (Chatbots)
+Böyük arxitektura qurmaq, yeni texnologiya öyrənmək və kod bloklarını vizual təhlil etmək üçündür.
+
+<ConceptCard title="ChatGPT (OpenAI / O1 / O3)" subtitle="Riyaziyyat və Məntiq Ustası">
+Ən yaxşı alqoritmik düşüncə, mürəkkəb riyaziyyat və kod səhvlərinin səbəblərini aradan qaldırma gücü. (Yeni o-seriyası qat-qat ağıllıdır, düşünmə müddətini özü təyin edir).
+</ConceptCard>
+
+<ConceptCard title="Claude 3.5 Sonnet (Anthropic)" subtitle="İnsana Bənzər Kod və Kontekst Cəngavəri">
+Front-end yazmaq, uzun faylları (.md, .ts, .py) oxuyub anlamaq və insana bənzər (daha təbii, boilerplate-siz) kod yazmaq üçün *hazırda mütləq favoritdir*.
+</ConceptCard>
+
+<ConceptCard title="Gemini 1.5 Pro (Google)" subtitle="Sonsuz Yaddaş">
+Tək səfərdə yüzlərlə PDF və ya bütöv repository-ni (kod bazasını) analiz etmək üçün nəhəng kontekst pəncərəsi (2 Milyon token) təqdim edir.
+</ConceptCard>
+
+### 2. IDE İnteqrasiyaları (Kod Redaktorunda İç-içə)
+Kod yazarkən sətir-sətir kömək edən alətlər.
+
+<InfoBox type="tip" title="Bilməlisən">
+VSCode kimi standart redaktorlara "Extension" yükləmək əvəzinə, birbaşa AI-mahiyyətli redaktorlara keçmək sənə inanılmaz vaxt qazandıracaq.
+</InfoBox>
+
+*   **GitHub Copilot:** Sən kodu yazdıqca növbəti sətirləri (autocomplete) təxmin edir. Sürətli boilerplatelər üçün əladır.
+*   **Cursor IDE / Windsurf:** Sadəcə VSCode extentionsu deyil, bütövlükdə AI-first redaktorlardır. Bütün layihəni analiz edib `.cursorrules` faylı ilə layihənizə xüsusi cavablar verə bilirlər.
+
+<TaskList 
+  lessonId="ai-level-0" 
+  roadmapSlug="ai" 
+  items={[
+    "Cursor IDE və ya Windsurf yüklə və quraşdır.",
+    "Claude 3.5 Sonnet və ChatGPT o1-in fərqlərini araşdır.",
+    "Öz kompüterində ilk dəfə `.cursorrules` faylı yarat."
+  ]} 
+/>
+
+<ProgressTracker lessonId="ai-level-0" roadmapSlug="ai" />
+
+<QuizBlock 
+  questions={[
+    {
+      q: "Hansı AI növü sırf kod yazarkən avtomatik tamamlama (autocomplete) funksiyasına xidmət edir?",
+      options: ["ChatGPT", "GitHub Copilot", "Midjourney", "Google Translate"],
+      correctIndex: 1,
+      explanation: "GitHub Copilot sənin IDE-də (VSCode, IntelliJ) işləyir və yazdığın koda əsasən növbəti sətirləri təklif edir."
+    },
+    {
+      q: "Niyə tək bir AI modeli əvəzinə fərqli alətlər istifadə edilməlidir?",
+      options: ["Çünki pulsuzdur", "Hər modelin fərqli güclü tərəfləri (məsələn, Claude-un frontend-də, OpenAi O1-in logikada) olduğu üçün", "Fərqi yoxdur, hamısı eyni şeydir"],
+      correctIndex: 1,
+      explanation: "Pro proqramçılar məqsədə uyğun alət seçirlər (Claude böyük fayllar, Copilot isə autocomplete üçün)."
+    }
+  ]}
+/>
+
+---
+
+# Level 1: Prompt Engineering (Düzgün Sual Vermək) 🗣️
+
+AI sənə ancaq verdiyin məlumata ("prompt") uyğun gələn cavab verəcək. Garbage In, Garbage Out (Pis məlumat ver, pis cavab al).
+
+## 1. Kontekst Hökmdardır (Context is King)
+
+<InfoBox type="error" title="PİS PROMPT ❌">
+"React error verir, kömək et" 
+</InfoBox>
+
+Heç bir insan bu suala cavab verə bilməz, AI niyə versin?
+
+<InfoBox type="success" title="YAXŞI PROMPT ✅">
+"Mən React 18 və Vite istifadə edirəm. `useEffect` daxilində state-i yeniləmək istədikdə 'Too many re-renders' xətası alıram. Kodum belədir: `// kodunuz`. Bunun səbəbi nədir və necə həll edə bilərəm?"
+</InfoBox>
+
+**Mükəmməl Promptun 3 Qızıl Qaydası:**
+1. **Texnologiya stekini** (versiya daxil) de.
+2. **Məqsədini** (nə etmək istədiyini) aşkar izah et.
+3. **Mövcud Kodu və ya Error Logunu** yapışdır.
+
+## 2. Zero-Shot vs Few-Shot Prompting
+Konteksti artırdıqca cavabın keyfiyyəti geometrik şəkildə artır.
+
+<ConceptCard title="Zero-Shot (Sıfır İpucu)" subtitle="AI-ın insafına qalmaq">
+"Mənə istifadəçi siyahısını validasiya edən Python funksiyası yaz." (AI öz bildiyi kimi, sənə aid olmayan bir formatda yazacaq).
+</ConceptCard>
+
+<ConceptCard title="Few-Shot (Nümunəvi İpucu)" subtitle="Dəqiq format idarəsi">
+AI-a nümunə göstərdikdə kod tərzi sənin layihənin kod tərzinə uyğun olur.
+*Nümunə Prompt:* 
+"Aşağıdakı kimi bir validasiya funksiyası yaz:
+Nümunə: `isEmailValid("test@test.com") // qaytarır: true`
+İndi sən eyni strukturda `isPhoneValid(number)` yaz."
+</ConceptCard>
+
+## 3. Rol Təyin Etmək (System Prompt / Roleplaying)
+AI-a spesifik bir arxetip, vəzifə və ton təyin etdiyinizdə o həmin xarakterin çərçivəsində, cəfəngiyatdan uzaq və daha qatı professional cavablar verir.
+
+<InfoBox type="tip" title="Roleplaying Nümunəsi">
+"Sən 20 illik təcrübəsi olan Senior DevOps mühəndisisən və AWS təhlükəsizliyi üzrə eksertsən. Kodumdakı təhlükəsizlik boşluqlarını çox sərt şəkildə kritika et və ən yaxşı enterprise standartlarındakı həllini göstər. Sadəcə kodu ver, başqa heç bir giriş cümləsi qurma."
+</InfoBox>
+
+<TaskList 
+  lessonId="ai-level-1" 
+  roadmapSlug="ai" 
+  items={[
+    "Mövcud layihəndəki bir bug-ı 'Yaxşı Prompt' qaydalarına uyğun soruş.",
+    "Bütün proyektlərin üçün ümumi bir 'System Prompt' (Sən kimsən) şablonu yaz.",
+    "Few-Shot prompting istifadə edərək kompleks bir data strukturu generasiya et."
+  ]} 
+/>
+
+<ProgressTracker lessonId="ai-level-1" roadmapSlug="ai" />
+
+<QuizBlock 
+  questions={[
+    {
+      q: "Aşağıdakılardan hansı EN YAXŞI debug promptudur?",
+      options: ["Kodumda xəta var. Düzəlt.", "Bu C++ kodunda SegFault verir.", "Ubuntu 22.04-də G++ 11 ilə kompilyasiya edirəm. Bu `addNode()` funksiyasında Segmentation fault (core dumped) alıram. Məqsədim bağlı siyahının (linked list) sonuna element əlavə etməkdir. Budur kodum: [...]", "C++ node əlavə etmir"],
+      correctIndex: 2,
+      explanation: "Yaxşı promptda stekin (Ubuntu, G++ 11), dəqiq problemin (SegFault), məqsədin və kodun özü olmalıdır."
+    },
+    {
+      q: "Few-shot prompting nədir?",
+      options: ["AI-a çoxlu sual vermək", "AI-a nümunələr (examples) verərək ondan eyni formatda və məntiqdə cavab istəmək", "AI modelini yandırıb söndürmək", "İnternet axtarışı etmək"],
+      correctIndex: 1,
+      explanation: "Few-shot süni intellektə giriş və gözlənilən çıxış nümunələri təqdim etməyə deyilir, beləcə format və tərz zəmanətə alınır."
+    }
+  ]}
+/>
+
+---
+
+# Level 2: AI as a Pair Programmer 🧑‍💻🤖
+
+## 1. Boilerplate (Təməl) Kodların Yaradılması
+Proqramlaşdırma vaxtının çoxu strukturu qurmağa və eyni təkrar kodları yazmağa gedir. Bunu AI-a verin.
+
+<ConceptCard title="Boilerplate Generator" subtitle="Təməl arxitektura">
+**Prompt:** "Express.js, TypeScript və PostgreSQL istifadə edərək bir istifadəçi qeydiyyatı (Auth) modulu üçün controller, service və route strukturunu hazırlayıb mənə ver. Şifrələri bcrypt ilə həşlə və JWT qaytar. Tam qovluq strukturunu göstər."
+</ConceptCard>
+
+## 2. Unit Testlərin Yazılması
+Test yazmaq yorucudur amma enterprise layihələrdə mütləqdir.
+1. Kodunuzu AI-a kopyalayın və ya Cursor-da həmin faylı "Context"-ə atın (`@filename`).
+2. **Prompt:** "Aşağıdakı bu `calculateTotalDiscount` funksiyası üçün Jest və TypeScript istifadə edərək Unit testlər yaz. Bütün edge-case-ləri (boş array, mənfi məbləğ, tip xətaları) yoxla."
+3. AI bir neçə saniyəyə testləri yazacaq. Sənə qalan sadəcə onları oxuyub təsdiqləməkdir.
+
+## 3. RegEx (Regular Expressions) və SQL Sorğuları
+RegEx sintaksisini və mürəkkəb SQL cədvəl birləşmələrini (JOIN) əzbərləməyə ehtiyac qalmır.
+
+<InfoBox type="tip" title="SADƏ İZAH İLƏ MÜRƏKKƏB KOD">
+**Prompt:** "Məndə `Users`, `Orders` və `Products` adlı üç table var. Son 30 gündə ən azı 3 fərqli kateqoriyadan mal alan və ümumi xərci 500$-ı keçən istifadəçilərin adlarını gətirən effektiv (index-lərdən istifadə edən, optimized) bir PostgreSQL Query yaz."
+</InfoBox>
+
+<TaskList 
+  lessonId="ai-level-2" 
+  roadmapSlug="ai" 
+  items={[
+    "AI istifadə edərək sıfırdan sadə bir Express.js server boilerplate-i yarat.",
+    "Yazdığın bir funksiya üçün AI-a 5 dənə edge-case Unit Test yazdır.",
+    "Keçərli bir 'Azərbaycan nömrəsi (+994)' tapan RegEx-i AI vasitəsilə yaz."
+  ]} 
+/>
+
+<ProgressTracker lessonId="ai-level-2" roadmapSlug="ai" />
+
+<QuizBlock 
+  questions={[
+    {
+      q: "Unit testləri yazarkən AI-ın ən böyük faydası nədir?",
+      options: ["Testlərin nəticəsini proqnozlaşdırır", "Gözdən qaçan `edge-case`-ləri aşkar edir və boilerplate test kodunu sürətlə yazır", "Bütün proqramı test edir", "Testləri silir"],
+      correctIndex: 1,
+      explanation: "AI insanın düşünə bilməyəcəyi (və ya üşəndiyi) edge-case testlərini generasiya etmək kimi darıxdırıcı vəziyyətlərdə çox vaxt qazandırır."
+    }
+  ]}
+/>
+
+---
+
+# Level 3: Debugging & Refactoring 🐛🔨
+
+## 1. Rubber Duck Debugging 2.0
+Əvvəllər proqramçılar kodu plastmas bir ördəkçəyə danışaraq izah edirdilər ki, problemi tapsınlar. İndi "Ağamlı Ördək" var.
+
+<InfoBox type="success" title="Öz Səhvini Özün Tap">
+**Prompt:** "Mən bu kodun necə işlədiyini tam anlamıram. Davamlı olaraq state update xətası alıram. Zəhmət olmasa bu React komponentinin render dövrünü (render cycle) və state idarəetməsini sətir-sətir mənə əsas insan dilində xırda detalları ilə izah et."
+Çox vaxt AI kodu sənə izah edəndə **sən özün səhvini tapırsan**.
+</InfoBox>
+
+## 2. Refactoring (Kodu Təmizləmək və Yaxşılaşdırmaq)
+Zibil (spaghetti) kodu götür, mükəmməl koda çevir.
+
+<ConceptCard title="Clean Code Çevirici" subtitle="Senior proqramçı kimi dizayn et">
+**Prompt:** "Gördüyün bu JavaScript kodu çox pis ardıcıl İF-ELSE bloku yazıb. Bunu vizual olaraq oxunması çətindirvə maintainable deyil. Bunu Obyektə-yönümlü dizayn pattern-ləri istifadə edərək (məsələn: Map obyekti, Dictionary Look-up və ya Strategy pattern) daha professional və təmiz (Clean Code) versiyaya 'Refactor' et və SOLID prinsiplərinə uyğunlaşdır."
+</ConceptCard>
+
+## 3. Legacy (Köhnə) Kodu Oxumaq
+İşə yeni girdin, və 7 il əvvəl yazılmış sənədsiz (undocumented) Perl/PHP kodunu anlamaq lazımdır.
+
+<InfoBox type="warning" title="Qorxulu Kod Bazaları">
+Əgər şirkət kodunun bir hissəsini anlaya bilmirsənsə, abstraktizasiya tələb et.
+**Prompt:** "Mən PHP dilində və qədim Zend fremvorkündə rahat deyiləm, amma bu faylları başa düşməliyəm. Zəhmət olmasa bu faylların yekun məqsədini yüksək səviyyəli bir arxitektura olaraq C# proqramçısının (öz ana dilin) anlaya biləcəyi terminlərlə mənə abstrakt izah et."
+</InfoBox>
+
+<TaskList 
+  lessonId="ai-level-3" 
+  roadmapSlug="ai" 
+  items={[
+    "Uzun və mürəkkəb bir switch-case və ya if-else blokunu AI ilə 'Strategy Pattern'-ə refactor et.",
+    "Tamamilə bilmədiyin bir dildə (məs: Rust və ya Go) yazılmış GitHub repository-sindən bir fayl kopyala və AI-dan onu izah etməsini istə."
+  ]} 
+/>
+
+<ProgressTracker lessonId="ai-level-3" roadmapSlug="ai" />
+
+---
+
+# Level 4: Architecture & Planning 🏗️
+
+Software Engineering ancaq kod yazmaq deyil, həm də "necə yazım, hansı aləti seçim, verilənlər bazasını necə qurum?" deməkdir.
+
+### Architecture Review (İdeyanı Sınaqdan Keçirmək)
+Ağlında bir tətbiq fikri var amma database olaraq MongoDB, yoxsa PostgreSQL seçəcəyini bilmirsən.
+
+<ConceptCard title="Arxitektura Müzakirəsi" subtitle="Təkbaşına Startup Qurmaq">
+**Prompt:** "Mən startup kimi bir e-ticarət tətbiqi qururam. Məhsul kataloqu, səbət sistemi və ödəniş tranzaksiyaları olacaq. Verilənlər bazası olaraq NoSQL (MongoDB) və SQL (PostgreSQL) fərqlərini mənim bu spesifik vəziyyətim üçün müqayisə et. Gələcəkdə böyüməni (Scale) düşünərək ACID prinsiplərinə necə əməl edəcəyimi də daxil et və qərar verməm üçün mənə fərqli variantlar təklif et."
+</ConceptCard>
+
+### Texnologiya Steki (Stack) Seçimi
+
+<InfoBox type="tip" title="Staff Engineer Simulyasiyası">
+Sistemin memarlığını insandan deyil, AI-dan soruşaraq fərqli perspektivlər qazan.
+**Prompt:** "Sən FAANG şirkətində Senior Staff Engineer-sən. Aylıq 100,000 aktiv istifadəçisi olacaq, real-time çalışmalı olan bir video-streaming tətbiqinin server arxitekturasını qurmalısan. Hansı bulud provayderlərini (AWS vs GCP), hansı dilləri (Go vs Nodejs) istifadə edərdin? Cavabını maddələrlə və "Trade-off" (nəyi qurban verdiyini/nə qazandığını) əsaslandıraraq ver."
+</InfoBox>
+
+<TaskList 
+  lessonId="ai-level-4" 
+  roadmapSlug="ai" 
+  items={[
+    "Ağlındakı bir proyektin ideyasını AI-a ver və sənə Məlumat Bazası (Database) sxeması cızmasını istə.",
+    "Microservice vs Monolithic arxitekturasını öz ehtiyaclarına uyğun müqayisə edən bir müzakirə başlat."
+  ]} 
+/>
+
+<ProgressTracker lessonId="ai-level-4" roadmapSlug="ai" />
+
+---
+
+# Level 5: Etika, Təhlükəsizlik və Hallüsinasiya 🚨
+
+Süni intellektə o qədər də güvənməyin, kor-koranə tətbiq edilən AI həlləri həm məntiqi, həm də fəlakətli təhlükəsizlik problemlərinə gətirib çıxarır.
+
+## 1. Hallucinations (Hallüsinasiya)
+AI bəzən ümumiyyətlə mövcud olmayan kitabxanalar (libraries), saxta sənədlər və ya funksiyalar uydurur! Bu ona görə baş verir ki, LLM-lər əslində həqiqəti yox, "ehtimal olunan növbəti sözü" təxmin edirlər.
+
+<InfoBox type="error" title="Kor-Koranə Copy-Paste Etmə!">
+**Həll:** Verilən kodları oxumadan (copy-paste edib) layihəyə atmaq olmaz. Həmişə təklif edilən kitabxananın (`npm install fiktiv-paket`) rəsmi dokumentasiyasına bax!
+</InfoBox>
+
+## 2. Təhlükəsizlik və Məxfilik (Security / Privacy)
+
+<ConceptCard title="AI-a Nələri ƏSLA Göndərməli Deyilsən" subtitle="Data Məxfiliyi">
+1. **API Keys / Secrets:** AWS key, Stripe token, Database şifrələri.
+2. **PII (Personal Identifiable Information):** Müştərilərin real adları, email və pasport nömrələri.
+3. **Core Intellectual Property (IP):** Şirkətin ən gizli hesablanma alqoritmləri.
+</ConceptCard>
+
+**Səbəb:** Public AI modelləri sizin verdiyiniz məlumatlardan öyrənir (training data) və təsadüfən başqa bir istifadəçiyə həmin məlumatı verə bilər! Əgər iş kodunu incələdirsənsə, məlumatı **Anonimləşdir** (Dəyişən adlarını və bazanı `fake_user`, `xxx_token` kimi şərti adlarla dəyişdir). 
+
+## 3. Asılılıq Yaradır (The AI Crutch)
+Əgər sadə bir `for loop`-u, təməl string manipulyasiyasını da AI-a yazdırırsansa, psixoloji asılılıq yaranır. Alqoritmik düşüncəni itirməmək üçün hərdənbir AI-ı bağla, öz beyninlə düşün və LeetCode həll et!
+
+<TaskList 
+  lessonId="ai-level-5" 
+  roadmapSlug="ai" 
+  items={[
+    "LLM Hallüsinasiyasının nə olduğunu və təsadüfi nümunələrini araşdır.",
+    "Öz kompüterində lokal işləyən (və data sızdırmayan) məs: Ollama və Llama 3 qurmağı yoxla.",
+    "Bir həftə ərzində kod yazarkən aradabir Copilot-u söndür və öz gücünü sına."
+  ]} 
+/>
+
+<ProgressTracker lessonId="ai-level-5" roadmapSlug="ai" />
+
+<QuizBlock 
+  questions={[
+    {
+      q: "AI 'Hallüsinasiya' edir deyərkən nə nəzərdə tutulur?",
+      options: ["Çox qəribə rəsmlər çəkməsi", "Mövcud olmayan faktları, kodları və kitabxanaları həqiqətmiş kimi sənə verməsi", "Serverin çökməsi", "Sualı başa düşməməsi"],
+      correctIndex: 1,
+      explanation: "AI tamamilə professional tonla yalan kod uydura bilər. O bilir ki 'bura bir funksiya gəlməlidir', amma o funksiya əslində reallıqda yoxdur. Bunu ancaq insan gözü yoxlamalıdır."
+    },
+    {
+      q: "Mürəkkəb problemi olan iş kodunuzu AI-a göndərərkən hansı MÜTLƏQ YASAQDIR?",
+      options: ["Dili və frameworku yazmaq", "Xəta mesajını kopyalamaq", "Parolları, DB bağlantı stringlərini (Token) və Şirkət sirlərini əlavə etmək", "Uzun kodlama forması vermək"],
+      correctIndex: 2,
+      explanation: "Həssas məlumatları, gizli tokenləri əsla public AI modellərinə vermək olmaz, çünki bu məlumatlar başqalarının modellərinə öyrədilə bilər."
+    }
+  ]}
+/>
+
+---
+
+# 🎓 Nəticə
+
+AI proqramçıları işsiz qoymayacaq. Amma **AI-dan effektiv istifadə etməyi bilməyən proqramçılar** çətinlik çəkəcək. Bir qamçı kimi istifadə et, amma sənə hakim olmasına icazə vermə! 🚀
